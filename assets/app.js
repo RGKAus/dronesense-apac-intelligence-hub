@@ -209,19 +209,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ----------------------------------------------------------------
-  // Prompt Library — category filter chips (client-side show/hide).
+  // Prompt Library — category filter chips + keyword search, combined.
   // ----------------------------------------------------------------
   const promptFilterBar = document.querySelector('[data-prompt-filters]');
-  if (promptFilterBar) {
-    const chips = promptFilterBar.querySelectorAll('.facet-chip');
+  const promptSearch = document.querySelector('[data-prompt-search]');
+  if (promptFilterBar || promptSearch) {
+    const chips = promptFilterBar ? promptFilterBar.querySelectorAll('.facet-chip') : [];
     const cards = document.querySelectorAll('.prompt-card');
     const countEl = document.querySelector('[data-prompt-count]');
-    const applyFilter = (cat) => {
+    let activeCategory = 'all';
+    const applyPromptFilters = () => {
+      const q = promptSearch ? promptSearch.value.trim().toLowerCase() : '';
       let shown = 0;
       cards.forEach(card => {
-        const match = cat === 'all' || card.dataset.category === cat;
-        card.style.display = match ? '' : 'none';
-        if (match) shown++;
+        const matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+        const haystack = (card.dataset.search || card.textContent).toLowerCase();
+        const matchesSearch = !q || haystack.includes(q);
+        const show = matchesCategory && matchesSearch;
+        card.style.display = show ? '' : 'none';
+        if (show) shown++;
       });
       if (countEl) countEl.textContent = shown + ' prompt' + (shown === 1 ? '' : 's');
     };
@@ -229,10 +235,12 @@ document.addEventListener('DOMContentLoaded', () => {
       chip.addEventListener('click', () => {
         chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
         chip.setAttribute('aria-pressed', 'true');
-        applyFilter(chip.dataset.filter);
+        activeCategory = chip.dataset.filter;
+        applyPromptFilters();
       });
     });
-    applyFilter('all');
+    if (promptSearch) promptSearch.addEventListener('input', applyPromptFilters);
+    applyPromptFilters();
   }
 
   // ----------------------------------------------------------------

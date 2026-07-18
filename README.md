@@ -16,7 +16,7 @@ time:
 | Addition | File(s) | What it does |
 |---|---|---|
 | Research Toolkit | `research-toolkit-hub.html` | Official government/aviation/public-safety/industry sources, procurement portals, a 6-step research methodology, trade press, and an AI research workflow — the "where to look and how to rate it" reference. |
-| Prompt Library | `prompt-library-hub.html` | 30 ready-to-copy AI research prompts across 10 categories (Regulations, Agencies, Public Safety, Critical Infrastructure, Technology, Competitors, Sales Discovery, Customer Research, Procurement, Mission Profiles), with category filter chips and one-click copy. |
+| Prompt Library | `prompt-library-hub.html` | 50 ready-to-copy AI research prompts across 10 categories (Regulations, Agencies, Public Safety, Critical Infrastructure, Technology, Competitor Analysis, Customer Research, Sales Discovery, Procurement, Mission Profiles), with category filter chips, a keyword search field, and one-click copy. Written to work in any AI assistant with web access (Claude, ChatGPT, Perplexity, etc.). |
 | Keyword Library | `keyword-library-hub.html` | Searchable starter set of acronyms/terms with related legislation, organisations and technology, live text search plus category filters. Grows as intelligence pages are added. |
 | Search Library | `search-library-hub.html` | Reusable search strings for Google, `site:`, `filetype:`, government sites, procurement portals, academic search and AI prompts, all copyable. |
 | Standard Intelligence Template | *(existing — formalised)* | The unified 17-section template (see below) was already built; Phase 1 treats it as the single template every future intelligence page must use, and links every hub/template to the Prompt Library and Keyword Library. |
