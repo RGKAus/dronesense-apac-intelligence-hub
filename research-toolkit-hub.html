@@ -30,7 +30,16 @@
     This hub is a framework, not a finished index — links point to the authoritative home page or portal for each organisation. When a source here is used for a specific fact, copy the precise URL and access date into that intelligence page's <a href="regulation-page-template.html#sources">Sources section</a>, not just this general link.
   </div>
 
-  <h2>1. Official Sources Directory</h2>
+  <nav class="page-toc" aria-label="On this page">
+    <a href="#official-sources">1. Official Sources Directory</a>
+    <a href="#research-methodology">2. Research Methodology</a>
+    <a href="#search-operators">3. Search Operators</a>
+    <a href="#research-checklists">4. Research Checklists</a>
+    <a href="#useful-websites">Useful websites</a>
+    <a href="#ai-workflows">AI research workflows</a>
+  </nav>
+
+  <h2 id="official-sources">1. Official Sources Directory</h2>
   <p>Two markets only for this version — both by design. Every category below exists for each country so the two are directly comparable side by side.</p>
 
   <div class="grid-2">
@@ -63,7 +72,27 @@
     </div>
   </div>
 
-  <h2>2. Research Methodology</h2>
+  <h3 style="margin-top:22px;">Government Procurement — state, territory &amp; regional detail</h3>
+  <p style="font-size:.83rem;">The directory above lists the single national portal per country. Most tenders relevant to public safety and critical infrastructure agencies are actually published at state/territory (Australia) or council (New Zealand) level, so check these too.</p>
+  <div class="grid-2">
+    <div class="panel"><h3>Australia — state &amp; territory portals</h3>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">NSW eTendering</span><span class="item-meta">tenders.nsw.gov.au</span></div></div>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">VIC — Tenders VIC / Buying for Victoria</span><span class="item-meta">tenders.vic.gov.au</span></div></div>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">QLD — QTenders</span><span class="item-meta">qtenders.epw.qld.gov.au</span></div></div>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">WA Tenders</span><span class="item-meta">tenders.wa.gov.au</span></div></div>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">SA Tenders&amp;Contracts</span><span class="item-meta">tenders.sa.gov.au</span></div></div>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">Tenders Tasmania</span><span class="item-meta">tenders.tas.gov.au</span></div></div>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">ACT Procurement &amp; Capital Works</span><span class="item-meta">procurement.act.gov.au</span></div></div>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">NT Tenders Online</span><span class="item-meta">tendersonline.nt.gov.au</span></div></div>
+    </div>
+    <div class="panel"><h3>New Zealand — council &amp; sector-specific</h3>
+      <div class="item-row"><span class="status-tab confirmed"></span><div><span class="item-title">GETS</span><span class="item-meta">gets.govt.nz — mandatory for central government contracts over NZ$100,000</span></div></div>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">Individual council tenders</span><span class="item-meta">New Zealand has no state-level tier — territorial authorities (city/district councils) typically publish tenders on their own websites or via GETS; check the specific council site</span></div></div>
+      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">Police / FENZ / Health NZ direct procurement</span><span class="item-meta">Larger agencies sometimes run their own supplier portals in addition to GETS — check the agency's own procurement page</span></div></div>
+    </div>
+  </div>
+
+  <h2 id="research-methodology">2. Research Methodology</h2>
   <div class="callout template-note">This is the platform's working method for taking a topic from "unresearched" to a page carrying a real Confidence Level. Apply it consistently, for both Australia and New Zealand, so confidence ratings mean the same thing across every page.</div>
   <ol class="method-steps">
     <li><div><span class="step-title">Scope the question</span><span class="step-body">Write the specific question before searching — "does Agency X operate BVLOS" is answerable; "tell me about drones in policing" is not.</span></div></li>
@@ -98,9 +127,10 @@
     <li>Is this fact still current, or has it since been superseded — check the regulator's own changelog or news page if one exists?</li>
   </ul>
 
-  <h2>3. Search Operators</h2>
+  <h2 id="search-operators">3. Search Operators</h2>
   <p>A quick reference for constructing precise queries — copy an example and swap the bracketed terms. Combine operators for the tightest results (e.g. <span class="mono">site:</span> + <span class="mono">filetype:</span> together).</p>
 
+  <h3 style="margin-top:22px;">Operator basics</h3>
   <div class="grid-2">
     <div class="search-string-card">
       <div class="prompt-card-head"><h4><span class="mono">site:</span> — restrict to one domain</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
@@ -118,26 +148,87 @@
       <div class="prompt-card-head"><h4><span class="mono">inurl:</span> — term must appear in the URL</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
       <p class="search-string-text">inurl:tender OR inurl:rfq "unmanned aerial" site:gets.govt.nz</p>
     </div>
+  </div>
+
+  <h3 style="margin-top:22px;">Government procurement searches</h3>
+  <div class="grid-2">
     <div class="search-string-card">
-      <div class="prompt-card-head"><h4>Procurement searches</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
-      <p class="search-string-text">site:tenders.gov.au OR site:gets.govt.nz "drone" OR "UAS" OR "RPAS"</p>
+      <div class="prompt-card-head"><h4>Australia — AusTender + state portals</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">site:tenders.gov.au OR site:tenders.nsw.gov.au OR site:tenders.vic.gov.au "drone" OR "UAS" OR "RPAS"</p>
     </div>
     <div class="search-string-card">
-      <div class="prompt-card-head"><h4>PDF searches (regulatory guidance)</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
-      <p class="search-string-text">"[regulation name]" filetype:pdf site:casa.gov.au OR site:aviation.govt.nz</p>
-    </div>
-    <div class="search-string-card">
-      <div class="prompt-card-head"><h4>Government searches (either market)</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
-      <p class="search-string-text">site:gov.au OR site:govt.nz "[topic]" media release</p>
-    </div>
-    <div class="search-string-card">
-      <div class="prompt-card-head"><h4>AI search technique — force sourcing</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
-      <p class="search-string-text">Search for [topic] in Australia and New Zealand and cite the specific source URL and date for every claim — say "not publicly confirmed" rather than guessing.</p>
+      <div class="prompt-card-head"><h4>New Zealand — GETS</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">site:gets.govt.nz "unmanned aircraft" OR "UAV" OR "drone"</p>
     </div>
   </div>
 
-  <h2>4. Research Checklists</h2>
-  <p>Reusable checklists for the five recurring research tasks. Work down each list before marking a page's Confidence Level above "unverified".</p>
+  <h3 style="margin-top:22px;">PDF searches</h3>
+  <div class="grid-2">
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Regulatory guidance PDF</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">"[regulation name]" filetype:pdf site:casa.gov.au OR site:aviation.govt.nz</p>
+    </div>
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Agency annual report PDF</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">"[agency name]" "annual report" [year] filetype:pdf</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:22px;">CASA searches</h3>
+  <div class="grid-2">
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Advisory circulars &amp; guidance</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">site:casa.gov.au "advisory circular" [topic]</p>
+    </div>
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>RPAS operating categories</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">site:casa.gov.au intitle:"RPAS" OR intitle:"drone" [category or activity]</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:22px;">CAA NZ searches</h3>
+  <div class="grid-2">
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Part 101 / 102 rules</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">site:aviation.govt.nz "Part 101" OR "Part 102" [topic]</p>
+    </div>
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Rule changes &amp; consultations</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">site:aviation.govt.nz "consultation" OR "proposed rule" drone</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:22px;">Standards searches</h3>
+  <div class="grid-2">
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Standards Australia</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">site:standards.org.au "unmanned aircraft" OR "UAS" OR drone</p>
+    </div>
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Standards New Zealand</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">site:standards.govt.nz "unmanned aircraft" OR "UAS" OR drone</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:22px;">AI-assisted research techniques</h3>
+  <p style="font-size:.82rem;">Ready-to-copy examples of the techniques below; see <a href="#ai-workflows">AI research workflows</a> further down this page for the full step-by-step process these fit into.</p>
+  <div class="grid-2">
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Force sourcing on every claim</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">Search for [topic] in Australia and New Zealand and cite the specific source URL and date for every claim — say "not publicly confirmed" rather than guessing.</p>
+    </div>
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Cross-jurisdiction comparison</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">Compare how [topic] is treated in Australia versus New Zealand. Present as a table with a source for each cell, and flag anything you could not verify.</p>
+    </div>
+    <div class="search-string-card">
+      <div class="prompt-card-head"><h4>Falsification follow-up</h4><button class="copy-btn" data-copy-btn=".search-string-text" type="button">Copy</button></div>
+      <p class="search-string-text">What would prove your last answer about [topic] wrong? Search specifically for evidence that contradicts it before I treat it as confirmed.</p>
+    </div>
+  </div>
+
+  <h2 id="research-checklists">4. Research Checklists</h2>
+  <p>Reusable checklists for the five recurring research tasks, plus a quick-scan triage checklist for a fast first pass on any new agency or topic. Work down each list before marking a page's Confidence Level above "unverified".</p>
 
   <div class="grid-2">
     <div class="panel"><h3>Agency research</h3>
@@ -189,9 +280,20 @@
         <li>Cross-linked to the agencies, regulations and technologies involved?</li>
       </ul>
     </div>
+    <div class="panel"><h3>Quick-scan triage checklist</h3>
+      <p style="font-size:.8rem;margin-bottom:8px;">Run this first on any new agency or topic to decide where to dig deeper — one question per theme.</p>
+      <ul class="research-questions">
+        <li>Key stakeholders — who owns aviation, innovation or procurement decisions here?</li>
+        <li>Drone programmes — has this organisation publicly confirmed any UAS activity?</li>
+        <li>Procurement opportunities — is there an open tender, panel, or standing offer they could buy against?</li>
+        <li>Legislation — which regulation(s) or Act(s) govern what they can do with UAS?</li>
+        <li>Operational capability — do they already operate aircraft in-house, or contract it out?</li>
+        <li>Technology partners — which vendors, if any, are publicly linked to them?</li>
+      </ul>
+    </div>
   </div>
 
-  <h2>Useful websites (industry news &amp; trade press)</h2>
+  <h2 id="useful-websites">Useful websites (industry news &amp; trade press)</h2>
   <div class="grid-3">
     <div class="panel"><h3>General UAS trade press</h3>
       <div class="item-row"><span class="status-tab confirmed"></span><div><span class="item-title">DroneLife</span><span class="item-meta">dronelife.com</span></div></div>
@@ -206,7 +308,7 @@
     </div>
   </div>
 
-  <h2>AI research workflows</h2>
+  <h2 id="ai-workflows">AI research workflows</h2>
   <div class="callout">A prompt is a starting point, not an answer. Use the workflow below with any prompt from the <a href="prompt-library-hub.html">Prompt Library</a>, in any assistant with web access.</div>
   <ol class="method-steps">
     <li><div><span class="step-title">Run the prompt with search enabled</span><span class="step-body">Prompts in this library are written to request sources — if a response has none, ask for them explicitly before trusting any claim.</span></div></li>
