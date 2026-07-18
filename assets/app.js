@@ -131,4 +131,37 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(`Filter "${sel.closest('.filter-group')?.querySelector('label')?.textContent}" set to`, sel.value, '— not yet wired to live data.');
     });
   });
+
+  // My Notes — saved locally in this browser only (per page, per device).
+  // Not shared with other users and not part of the platform's verified
+  // content; purely a personal scratchpad while researching a page.
+  document.querySelectorAll('[data-notes-key]').forEach(box => {
+    const key = 'ds-apac-notes:' + box.dataset.notesKey;
+    const textarea = box.querySelector('textarea');
+    const status = box.querySelector('.notes-status');
+    const saveBtn = box.querySelector('[data-notes-save]');
+    const clearBtn = box.querySelector('[data-notes-clear]');
+
+    try {
+      const saved = window.localStorage.getItem(key);
+      if (saved && textarea) textarea.value = saved;
+      if (saved && status) status.textContent = 'Loaded from this browser.';
+    } catch (e) {
+      if (status) status.textContent = 'Local storage unavailable in this browser — notes will not persist.';
+    }
+
+    if (saveBtn) saveBtn.addEventListener('click', () => {
+      try {
+        window.localStorage.setItem(key, textarea.value);
+        if (status) status.textContent = 'Saved to this browser · ' + new Date().toLocaleString();
+      } catch (e) {
+        if (status) status.textContent = 'Could not save — local storage unavailable.';
+      }
+    });
+    if (clearBtn) clearBtn.addEventListener('click', () => {
+      try { window.localStorage.removeItem(key); } catch (e) { /* noop */ }
+      if (textarea) textarea.value = '';
+      if (status) status.textContent = 'Cleared.';
+    });
+  });
 });
