@@ -15,7 +15,19 @@ const AU_SECTIONS = [
   { id: 'regulatory-updates',   label: 'Regulatory Updates', href: 'regulatory-updates-hub.html' },
 ];
 
+// Research Engine — cross-market tools (Phase 1). These sit above the
+// per-country tree because they support research across every market,
+// not just Australia.
+const RESEARCH_TOOLS_SECTIONS = [
+  { id: 'research-toolkit', label: 'Research Toolkit', href: 'research-toolkit-hub.html' },
+  { id: 'prompt-library',   label: 'Prompt Library',   href: 'prompt-library-hub.html' },
+  { id: 'keyword-library',  label: 'Keyword Library',  href: 'keyword-library-hub.html' },
+  { id: 'search-library',   label: 'Search Library',   href: 'search-library-hub.html' },
+  { id: 'my-notebook',      label: 'My Notebook',      href: 'my-notebook.html' },
+];
+
 const NAV_TREE = [
+  { name: 'Research Tools', status: 'tools', items: RESEARCH_TOOLS_SECTIONS },
   { name: 'Australia', status: 'active', items: AU_SECTIONS },
   { name: 'New Zealand', status: 'soon' },
   { name: 'Singapore', status: 'soon' },
@@ -59,6 +71,21 @@ function renderShell(activePageId) {
   `;
 
   sidebar.innerHTML = NAV_TREE.map(country => {
+    if (country.status === 'tools') {
+      const items = country.items.map(item => `
+        <a href="${item.href}" class="${item.id === activePageId ? 'active' : ''}">
+          <span class="dot"></span>${item.label}
+        </a>`).join('');
+      return `
+        <div class="nav-country nav-tools-group open">
+          <div class="nav-country-head">
+            <span class="chev tools-icon">◆</span>
+            <span class="country-name">${country.name}</span>
+          </div>
+          <div class="nav-country-items">${items}</div>
+        </div>
+        <div class="nav-group-divider"></div>`;
+    }
     if (country.status === 'active') {
       const items = country.items.map(item => `
         <a href="${item.href}" class="${item.id === activePageId ? 'active' : ''}">
@@ -164,4 +191,156 @@ document.addEventListener('DOMContentLoaded', () => {
       if (status) status.textContent = 'Cleared.';
     });
   });
+
+  // ----------------------------------------------------------------
+  // Copy-to-clipboard — used across the Prompt Library and Search
+  // Library so every ready-made prompt/search string is one click to
+  // reuse. Falls back gracefully if the Clipboard API is unavailable.
+  // ----------------------------------------------------------------
+  document.querySelectorAll('[data-copy-btn]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetSel = btn.getAttribute('data-copy-btn');
+      const container = btn.closest('.prompt-card, .search-string-card');
+      const textEl = container ? container.querySelector(targetSel) : document.querySelector(targetSel);
+      const text = textEl ? textEl.textContent.trim() : '';
+      const done = () => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied ✓';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1600);
+      };
+      if (navigator.clipboard && text) {
+        navigator.clipboard.writeText(text).then(done).catch(done);
+      } else if (text) {
+        // Fallback for browsers without async clipboard support
+        const ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (e) { /* noop */ }
+        document.body.removeChild(ta);
+        done();
+      }
+    });
+  });
+
+  // ----------------------------------------------------------------
+  // Prompt Library — category filter chips (client-side show/hide).
+  // ----------------------------------------------------------------
+  const promptFilterBar = document.querySelector('[data-prompt-filters]');
+  if (promptFilterBar) {
+    const chips = promptFilterBar.querySelectorAll('.facet-chip');
+    const cards = document.querySelectorAll('.prompt-card');
+    const countEl = document.querySelector('[data-prompt-count]');
+    const applyFilter = (cat) => {
+      let shown = 0;
+      cards.forEach(card => {
+        const match = cat === 'all' || card.dataset.category === cat;
+        card.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      if (countEl) countEl.textContent = shown + ' prompt' + (shown === 1 ? '' : 's');
+    };
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+        chip.setAttribute('aria-pressed', 'true');
+        applyFilter(chip.dataset.filter);
+      });
+    });
+    applyFilter('all');
+  }
+
+  // ----------------------------------------------------------------
+  // Keyword Library — live search across term, acronym, definition,
+  // related organisations/technologies/legislation, and category.
+  // ----------------------------------------------------------------
+  const keywordSearch = document.querySelector('[data-keyword-search]');
+  if (keywordSearch) {
+    const cards = document.querySelectorAll('.keyword-card');
+    const countEl = document.querySelector('[data-keyword-count]');
+    const runSearch = () => {
+      const q = keywordSearch.value.trim().toLowerCase();
+      let shown = 0;
+      cards.forEach(card => {
+        const haystack = card.dataset.search || card.textContent.toLowerCase();
+        const match = !q || haystack.toLowerCase().includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      if (countEl) countEl.textContent = shown + ' term' + (shown === 1 ? '' : 's');
+    };
+    keywordSearch.addEventListener('input', runSearch);
+    runSearch();
+
+    // category chips work alongside the text search
+    const catChips = document.querySelectorAll('[data-keyword-filters] .facet-chip');
+    catChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        catChips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+        chip.setAttribute('aria-pressed', 'true');
+        const cat = chip.dataset.filter;
+        document.querySelectorAll('.keyword-card').forEach(card => {
+          if (cat !== 'all' && card.dataset.category !== cat) {
+            card.dataset.hiddenByCat = '1';
+          } else {
+            delete card.dataset.hiddenByCat;
+          }
+        });
+        runSearch();
+      });
+    });
+  }
+
+  // ----------------------------------------------------------------
+  // My Notebook — aggregates every "My Notes" entry saved anywhere on
+  // the platform (all share the ds-apac-notes: localStorage prefix),
+  // so research notes never get lost across dozens of pages.
+  // ----------------------------------------------------------------
+  const notebookList = document.querySelector('[data-notebook-list]');
+  if (notebookList) {
+    const PREFIX = 'ds-apac-notes:';
+    const PAGE_LABELS = {
+      'regulation-page-template': 'Regulation page',
+      'agency-profile-template': 'Agency profile',
+      'company-profile-template': 'Company profile',
+      'mission-profile-template': 'Mission profile',
+      'critical-infrastructure-template': 'Critical infrastructure sector',
+      'technology-template': 'Technology topic',
+    };
+    const renderNotebook = () => {
+      let entries = [];
+      try {
+        for (let i = 0; i < window.localStorage.length; i++) {
+          const key = window.localStorage.key(i);
+          if (key && key.indexOf(PREFIX) === 0) {
+            const value = window.localStorage.getItem(key);
+            if (value && value.trim()) {
+              entries.push({ key: key.slice(PREFIX.length), value });
+            }
+          }
+        }
+      } catch (e) { /* localStorage unavailable */ }
+
+      if (!entries.length) {
+        notebookList.innerHTML = '<div class="callout">No notes saved in this browser yet. Open any regulation, agency, company, mission profile, critical infrastructure or technology page and use the "My Notes" section — entries appear here automatically.</div>';
+        return;
+      }
+      notebookList.innerHTML = entries.map(e => `
+        <div class="notebook-entry panel">
+          <h3>${PAGE_LABELS[e.key] || e.key}</h3>
+          <p class="notebook-entry-text">${e.value.replace(/</g,'&lt;')}</p>
+          <div class="notebook-entry-actions">
+            <button class="mono" data-notebook-delete="${e.key}" type="button">Delete this note</button>
+          </div>
+        </div>`).join('');
+
+      notebookList.querySelectorAll('[data-notebook-delete]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          try { window.localStorage.removeItem(PREFIX + btn.dataset.notebookDelete); } catch (e) {}
+          renderNotebook();
+        });
+      });
+    };
+    renderNotebook();
+  }
 });

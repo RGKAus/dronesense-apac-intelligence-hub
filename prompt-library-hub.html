@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt Library | DroneSense APAC Intelligence Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="prompt-library">
+
+<div id="shell-topbar"></div>
+<div id="shell-sidebar"></div>
+
+<div id="shell-main">
+<div class="container">
+
+  <div class="page-head">
+    <span class="eyebrow">Research Tools · Prompt Library</span>
+    <h1>Prompt Library</h1>
+    <p>Ready-to-copy AI research prompts organised by topic. Every prompt is written to request sources and dates — pair it with the <a href="research-toolkit-hub.html#ai-research-workflows">AI research workflow</a> so findings get verified before they go into an intelligence page.</p>
+    <div class="tags">
+      <span class="badge-scope">10 categories · 30 prompts</span>
+    </div>
+  </div>
+
+  <div class="library-filter-row" data-prompt-filters>
+    <span class="facet-chip" aria-pressed="true" data-filter="all">All</span>
+    <span class="facet-chip" data-filter="regulations">Regulations</span>
+    <span class="facet-chip" data-filter="agencies">Agencies</span>
+    <span class="facet-chip" data-filter="public-safety">Public Safety</span>
+    <span class="facet-chip" data-filter="critical-infra">Critical Infrastructure</span>
+    <span class="facet-chip" data-filter="technology">Technology</span>
+    <span class="facet-chip" data-filter="competitors">Competitors</span>
+    <span class="facet-chip" data-filter="sales-discovery">Sales Discovery</span>
+    <span class="facet-chip" data-filter="customer-research">Customer Research</span>
+    <span class="facet-chip" data-filter="procurement">Procurement</span>
+    <span class="facet-chip" data-filter="mission-profiles">Mission Profiles</span>
+    <span class="library-count" data-prompt-count></span>
+  </div>
+
+  <div class="prompt-card" data-category="regulations">
+    <div class="prompt-card-head"><h4>Summarise a regulation, with clause citation</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Summarise the current requirements of [regulation name] under [CASR Part 101 / equivalent instrument] in [country]. Cite the specific clause or section number for each requirement, and state the source URL and the date the source was last updated.</p>
+    <span class="prompt-card-meta">Regulations · pairs with the regulation page template</span>
+  </div>
+  <div class="prompt-card" data-category="regulations">
+    <div class="prompt-card-head"><h4>Detect recent regulatory change</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">What has changed in [regulation or requirement] in [country] in the last 12 months? List each change with the date it took effect, the regulator that issued it, and a link to the primary notice — do not include changes you cannot source.</p>
+    <span class="prompt-card-meta">Regulations · regulatory alert tracking</span>
+  </div>
+  <div class="prompt-card" data-category="regulations">
+    <div class="prompt-card-head"><h4>Compare a requirement across two jurisdictions</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Compare how [country A] and [country B] regulate [BVLOS operations / RPAS licensing / operator certification]. Present as a table: requirement, [country A] position with source, [country B] position with source, and the practical difference for an operator working across both.</p>
+    <span class="prompt-card-meta">Regulations · cross-market comparison</span>
+  </div>
+
+  <div class="prompt-card" data-category="agencies">
+    <div class="prompt-card-head"><h4>Confirm an agency's drone program</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Has [agency name] publicly announced any drone, UAS or RPAS program? Search their official website, annual reports and government media releases specifically. Cite each source and state whether the information is confirmed, claimed, or unverified.</p>
+    <span class="prompt-card-meta">Agencies · agency profile research</span>
+  </div>
+  <div class="prompt-card" data-category="agencies">
+    <div class="prompt-card-head"><h4>Map an agency's aviation unit structure</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Summarise the aviation or air-support unit structure of [agency name] from public sources — reporting line, current aircraft types if disclosed, and any stated intention to add uncrewed capability. Cite sources for every claim.</p>
+    <span class="prompt-card-meta">Agencies · operational context</span>
+  </div>
+  <div class="prompt-card" data-category="agencies">
+    <div class="prompt-card-head"><h4>Identify the decision-maker</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Based on public organisational charts, annual reports and media releases, who within [agency name] appears to own aviation, innovation, or emerging-technology decisions? Note where this is inferred rather than confirmed.</p>
+    <span class="prompt-card-meta">Agencies · sales discovery input</span>
+  </div>
+
+  <div class="prompt-card" data-category="public-safety">
+    <div class="prompt-card-head"><h4>Survey Drone as First Responder programs</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">List publicly confirmed Drone as First Responder (DFR) programs operated by public safety agencies in [country/region]. For each, cite the announcing source, the agency, and the launch date.</p>
+    <span class="prompt-card-meta">Public Safety · mission adoption tracking</span>
+  </div>
+  <div class="prompt-card" data-category="public-safety">
+    <div class="prompt-card-head"><h4>Search &amp; rescue technology adoption</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">What UAS technologies (thermal, multispectral, tethered, BVLOS) are documented as in use for land or marine search and rescue in [country]? Distinguish operational deployments from trials, with sources.</p>
+    <span class="prompt-card-meta">Public Safety · mission profile research</span>
+  </div>
+  <div class="prompt-card" data-category="public-safety">
+    <div class="prompt-card-head"><h4>Regulatory pathway for public safety BVLOS</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Explain the regulatory pathway a public safety agency in [country] would need to follow to gain BVLOS approval for emergency response, citing the relevant risk-assessment methodology and issuing authority.</p>
+    <span class="prompt-card-meta">Public Safety · regulations cross-link</span>
+  </div>
+
+  <div class="prompt-card" data-category="critical-infra">
+    <div class="prompt-card-head"><h4>Identify major sector operators</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Who are the major organisations operating in the [electricity transmission / ports / rail / water] sector in [country]? For each, note whether any drone inspection program has been publicly confirmed, with sources.</p>
+    <span class="prompt-card-meta">Critical Infrastructure · sector mapping</span>
+  </div>
+  <div class="prompt-card" data-category="critical-infra">
+    <div class="prompt-card-head"><h4>Sector-specific regulatory obligations</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">What obligations does [relevant critical infrastructure act, e.g. SOCI Act] place on organisations in the [sector name] sector, and how might a drone inspection program interact with those obligations? Cite the legislation directly.</p>
+    <span class="prompt-card-meta">Critical Infrastructure · compliance context</span>
+  </div>
+  <div class="prompt-card" data-category="critical-infra">
+    <div class="prompt-card-head"><h4>Production vs pilot use cases</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">For [sector name] in [country], distinguish drone inspection use cases that are in production/business-as-usual from those still at pilot or trial stage. Cite the source for each classification.</p>
+    <span class="prompt-card-meta">Critical Infrastructure · maturity assessment</span>
+  </div>
+
+  <div class="prompt-card" data-category="technology">
+    <div class="prompt-card-head"><h4>Explain a technology's regulatory treatment</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Explain how [drone-in-a-box operations / detect-and-avoid / Remote ID] is currently regulated for RPAS use in [country], citing the specific regulator guidance or standard.</p>
+    <span class="prompt-card-meta">Technology · technology page template</span>
+  </div>
+  <div class="prompt-card" data-category="technology">
+    <div class="prompt-card-head"><h4>Providers by technology category</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">List companies that publicly offer [technology name] for RPAS operations in [country/region], with a source for each claim. Note which are shipping today versus roadmap-only.</p>
+    <span class="prompt-card-meta">Technology · UAS ecosystem cross-link</span>
+  </div>
+  <div class="prompt-card" data-category="technology">
+    <div class="prompt-card-head"><h4>Technology maturity check</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Is [technology name] operational today, emerging, or regulatory-dependent for use in [country]? Justify the classification with at least one primary source per claim.</p>
+    <span class="prompt-card-meta">Technology · Key Facts field</span>
+  </div>
+
+  <div class="prompt-card" data-category="competitors">
+    <div class="prompt-card-head"><h4>Classify a company's actual role</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Based on [company name]'s public website and materials, what specific organisation-type classification best describes it (e.g. systems integrator, hardware OEM, drone-in-a-box provider, UTM provider) — not a generic "drone company" label? Justify with sources.</p>
+    <span class="prompt-card-meta">Competitors · company profile template</span>
+  </div>
+  <div class="prompt-card" data-category="competitors">
+    <div class="prompt-card-head"><h4>Confirmed customers, sourced</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">List [company name]'s publicly confirmed public safety or critical infrastructure customers, with a source for each. Do not include speculative or inferred customers.</p>
+    <span class="prompt-card-meta">Competitors · related agencies field</span>
+  </div>
+  <div class="prompt-card" data-category="competitors">
+    <div class="prompt-card-head"><h4>Recent competitor announcements</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">What has [company name] publicly announced in the last 6 months — product launches, partnerships, funding, or regulatory approvals? List each with date and source.</p>
+    <span class="prompt-card-meta">Competitors · monitoring cadence</span>
+  </div>
+
+  <div class="prompt-card" data-category="sales-discovery">
+    <div class="prompt-card-head"><h4>Pre-meeting agency brief</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Prepare a pre-meeting brief on [agency name]: mandate, current operational model, any publicly known UAS activity, recent relevant news, and two or three well-informed questions to ask in the meeting. Cite sources for every factual claim.</p>
+    <span class="prompt-card-meta">Sales Discovery · customer meeting prep</span>
+  </div>
+  <div class="prompt-card" data-category="sales-discovery">
+    <div class="prompt-card-head"><h4>Likely objections and how they're grounded</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Given [agency name]'s public regulatory environment and operational context, what objections or constraints (budget cycle, procurement rules, regulatory approval, data sovereignty) are they likely to raise about adopting UAS technology? Ground each in a cited source where possible.</p>
+    <span class="prompt-card-meta">Sales Discovery · objection handling prep</span>
+  </div>
+  <div class="prompt-card" data-category="sales-discovery">
+    <div class="prompt-card-head"><h4>Budget cycle and procurement timing</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">What is the public budget/fiscal-year cycle for [agency or government level] in [country], and when do relevant procurement opportunities typically open? Cite the government's own budget or procurement documentation.</p>
+    <span class="prompt-card-meta">Sales Discovery · timing intelligence</span>
+  </div>
+
+  <div class="prompt-card" data-category="customer-research">
+    <div class="prompt-card-head"><h4>Organisation structure and reporting lines</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Summarise the publicly available organisational structure of [organisation name], including how the aviation/technology/innovation function reports upward. Note where structure is inferred versus explicitly published.</p>
+    <span class="prompt-card-meta">Customer Research · agency profile Key Facts</span>
+  </div>
+  <div class="prompt-card" data-category="customer-research">
+    <div class="prompt-card-head"><h4>Strategic priorities from public documents</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Based on [organisation name]'s most recent published strategic plan or annual report, what are its stated top priorities, and where — if anywhere — does technology or aerial capability appear? Quote no more than a short phrase and cite the document and page.</p>
+    <span class="prompt-card-meta">Customer Research · strategic alignment</span>
+  </div>
+  <div class="prompt-card" data-category="customer-research">
+    <div class="prompt-card-head"><h4>Past technology partnerships</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Has [organisation name] publicly partnered with any technology vendor in the last 3 years for aviation, surveillance, or emergency response capability? List each with date and source.</p>
+    <span class="prompt-card-meta">Customer Research · related companies field</span>
+  </div>
+
+  <div class="prompt-card" data-category="procurement">
+    <div class="prompt-card-head"><h4>Find open or recent tenders</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Search [AusTender / relevant state procurement portal] for open or recently awarded tenders mentioning drone, UAS, RPAS, or uncrewed aerial systems in [jurisdiction]. List each with agency, closing/award date, and a link.</p>
+    <span class="prompt-card-meta">Procurement · tender monitoring</span>
+  </div>
+  <div class="prompt-card" data-category="procurement">
+    <div class="prompt-card-head"><h4>Explain a procurement pathway</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Explain the standard procurement pathway (panel, direct approach, open tender, standing offer) an agency in [jurisdiction] would use to acquire UAS hardware and services, citing the relevant procurement policy or framework.</p>
+    <span class="prompt-card-meta">Procurement · process research</span>
+  </div>
+  <div class="prompt-card" data-category="procurement">
+    <div class="prompt-card-head"><h4>Historical award patterns</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Based on publicly available tender award data, which vendors have previously won UAS-related contracts with [agency or jurisdiction]? Cite the award notices directly.</p>
+    <span class="prompt-card-meta">Procurement · competitive intelligence</span>
+  </div>
+
+  <div class="prompt-card" data-category="mission-profiles">
+    <div class="prompt-card-head"><h4>Confirm agencies performing a mission</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Which agencies in [country/region] have publicly confirmed performing [mission name, e.g. bushfire hotspot detection] with UAS? Cite the source for each and note the typical aircraft/sensor configuration if disclosed.</p>
+    <span class="prompt-card-meta">Mission Profiles · agency cross-link</span>
+  </div>
+  <div class="prompt-card" data-category="mission-profiles">
+    <div class="prompt-card-head"><h4>Regulatory pathway for a mission type</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">What regulatory category or approval does [mission name] typically require in [country]? Reference the specific operating category, risk assessment methodology, or exemption pathway involved.</p>
+    <span class="prompt-card-meta">Mission Profiles · regulations field</span>
+  </div>
+  <div class="prompt-card" data-category="mission-profiles">
+    <div class="prompt-card-head"><h4>Case studies with outcomes</h4><button class="copy-btn" data-copy-btn=".prompt-card-text" type="button">Copy</button></div>
+    <p class="prompt-card-text">Find documented case studies of [mission name] being performed operationally (not a demo or trial) in [country/region]. Summarise the outcome and cite the source — prefer official agency or government reporting over vendor case studies.</p>
+    <span class="prompt-card-meta">Mission Profiles · operational context</span>
+  </div>
+
+  <h2>Cross-references</h2>
+  <div class="crosslinks">
+    <a href="research-toolkit-hub.html">Research Toolkit</a>
+    <a href="search-library-hub.html">Search Library</a>
+    <a href="keyword-library-hub.html">Keyword Library</a>
+    <a href="index.html">Dashboard</a>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container" style="padding:0;">
+    <span>DroneSense APAC Intelligence Hub — Prompt Library, Phase 1 framework.</span>
+    <span><a href="index.html">Back to dashboard</a></span>
+  </div>
+</footer>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

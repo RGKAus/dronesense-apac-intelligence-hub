@@ -1,11 +1,33 @@
-# DroneSense APAC Intelligence Hub — structural prototype (unified template)
+# DroneSense APAC Intelligence Hub
 
 Internal operational knowledge platform for DroneSense by Versaterm. This
-pass replaces the differentiated per-type templates with **one identical
-17-section template** used by every content page on the platform. Content
-is still placeholder — nothing below should be read as researched or
-verified. Navigation and visual design from the previous pass are
-unchanged.
+is the researcher's primary workspace for RPAS regulation, public safety,
+critical infrastructure and UAS ecosystem intelligence — not a marketing
+site. Content on intelligence pages is still placeholder; nothing below
+should be read as researched or verified. Navigation and visual design
+are unchanged from earlier passes.
+
+## Phase 1 — Research Engine (this pass)
+
+Phase 1 deliberately does not populate intelligence content. It builds
+the framework that will support thousands of intelligence pages over
+time:
+
+| Addition | File(s) | What it does |
+|---|---|---|
+| Research Toolkit | `research-toolkit-hub.html` | Official government/aviation/public-safety/industry sources, procurement portals, a 6-step research methodology, trade press, and an AI research workflow — the "where to look and how to rate it" reference. |
+| Prompt Library | `prompt-library-hub.html` | 30 ready-to-copy AI research prompts across 10 categories (Regulations, Agencies, Public Safety, Critical Infrastructure, Technology, Competitors, Sales Discovery, Customer Research, Procurement, Mission Profiles), with category filter chips and one-click copy. |
+| Keyword Library | `keyword-library-hub.html` | Searchable starter set of acronyms/terms with related legislation, organisations and technology, live text search plus category filters. Grows as intelligence pages are added. |
+| Search Library | `search-library-hub.html` | Reusable search strings for Google, `site:`, `filetype:`, government sites, procurement portals, academic search and AI prompts, all copyable. |
+| Standard Intelligence Template | *(existing — formalised)* | The unified 17-section template (see below) was already built; Phase 1 treats it as the single template every future intelligence page must use, and links every hub/template to the Prompt Library and Keyword Library. |
+| My Notebook | `my-notebook.html` | Aggregates every "My Notes" entry saved anywhere on the platform (same `ds-apac-notes:` localStorage prefix) onto one page, so personal research notes never get lost across dozens of pages. |
+| Cross-linking | all hub + template files, `assets/app.js` | Every existing hub and template now links to the relevant Prompt Library category and/or Keyword Library; a new "Research Tools" sidebar group (always expanded, sits above the country tree) makes all five tools one click from anywhere; dashboard gained a "Research Tools" quick-nav row. |
+
+New shared behaviours added to `assets/app.js` (no build step, same
+vanilla-JS approach as before): copy-to-clipboard for prompt/search
+cards, category filter chips for the Prompt and Keyword libraries,
+live text search for the Keyword Library, and the notebook aggregator.
+All are additive — nothing existing was removed or restructured.
 
 ## The unified 17-section template
 
@@ -35,7 +57,7 @@ template file):
 The enterprise metadata bar (owner, last reviewed, last verified,
 confidence, source count) sits above the 17 sections as a quick-glance
 strip; the standardized footer (internal notes, change history, version,
-last updated) sits below. Both carry over from the previous pass.
+last updated) sits below.
 
 ## Files
 
@@ -47,32 +69,35 @@ last updated) sits below. Both carry over from the previous pass.
 | `mission-profile-template.html` | Mission profiles (DFR, SAR, disaster mapping, etc.) |
 | `critical-infrastructure-template.html` | Critical infrastructure sector pages |
 | `technology-template.html` | Technology / advanced operations topics |
+| `research-toolkit-hub.html` | Research Toolkit (Phase 1) |
+| `prompt-library-hub.html` | Prompt Library (Phase 1) |
+| `keyword-library-hub.html` | Keyword Library (Phase 1) |
+| `search-library-hub.html` | Search Library (Phase 1) |
+| `my-notebook.html` | My Notebook (Phase 1) |
 
-All six were generated from one shared section skeleton
-(`/home/claude/build/gen_templates.py` if you need to regenerate or add a
-seventh page type) so the structure cannot drift between page types —
-only the domain-specific placeholder labels differ.
-
-Hub/landing pages (`index.html`, `*-hub.html`) are navigational index
-pages, not content pages, and keep their existing card/grid layout rather
-than the 17-section template.
+Hub/landing pages (`index.html`, `*-hub.html`, the five Phase 1 tool
+pages) are navigational/reference pages and keep the card/panel/grid
+layout rather than the 17-section template, which is reserved for
+individual intelligence pages (regulation, agency, company, mission
+profile, sector, technology).
 
 ## My Notes — how it actually works
 
-Section 14 is a real, working feature, not just a placeholder box: it's a
+Section 14 of the unified template is a real, working feature: a
 `<textarea>` wired to the browser's local storage (`assets/app.js`),
 keyed per page. Each researcher's notes stay on their own device/browser
-and are never sent anywhere or shared with other users — it's a
-scratchpad while researching, separate from the "Internal notes" field in
-the standardized footer (which is meant for the page owner/team, not an
-individual's working notes).
+and are never sent anywhere or shared with other users. `my-notebook.html`
+(Phase 1) reads every saved note across the site and lists them on one
+page — still local-only, just aggregated for convenience.
 
 ## Design system
 
-Unchanged from the previous pass: dark operational-command theme, HUD-cyan
-primary, IBM Plex Sans/Inter/IBM Plex Mono type system, and the
-confidence-colour-tab signature element — now also driving the new Key
-Facts and Confidence Level sections.
+Unchanged: dark operational-command theme, HUD-cyan primary, IBM Plex
+Sans/Inter/IBM Plex Mono type system, and the confidence-colour-tab
+signature element. Phase 1 additions (prompt cards, keyword cards,
+search-string cards, the notebook, the Research Tools nav group) reuse
+the existing CSS variables and component patterns — no new colours,
+fonts, or layout primitives were introduced.
 
 ## Deploying to GitHub Pages
 
@@ -80,8 +105,12 @@ Same static-site workflow as before: push all files (all `.html` pages
 plus `assets/`) to a Pages-enabled repository root, then set the source in
 **Settings → Pages**. No build step required.
 
-## Suggested next step
+## Suggested next phase
 
-Structure review, then begin content research — start with CASA/Part 101
-and AusSORA, since they're cross-referenced by almost every other page.
+Phase 1 is a framework, not content. The recommended Phase 2 is to begin
+populating actual intelligence pages using the research engine just
+built — starting with CASA/Part 101 and AusSORA (cross-referenced by
+almost every other page), then the highest-priority public safety
+agencies. See the assistant's phase summary for the full recommendation.
+
 

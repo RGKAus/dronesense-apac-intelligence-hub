@@ -561,3 +561,91 @@ footer.site-footer a{ color: var(--text-faint); }
   html{ scroll-behavior:auto; }
   *{ transition:none !important; animation:none !important; }
 }
+
+/* ============================================================
+   PHASE 1 — Research Engine additions
+   ============================================================ */
+
+/* Research Tools nav group (sits above the country tree) */
+.nav-tools-group{ margin-bottom: 4px; }
+.nav-tools-group .nav-country-head{ cursor:default; }
+.nav-tools-group .nav-country-head:hover{ background:none; }
+.nav-tools-group .tools-icon{ font-size:.5rem; color: var(--primary); }
+.nav-tools-group .country-name{ color: var(--primary); }
+.nav-group-divider{ height:1px; background: var(--border); margin: 8px 18px 10px; }
+
+/* Prompt Library / Search Library — copyable card */
+.prompt-card, .search-string-card{
+  background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md);
+  padding: 14px 16px; margin-bottom:12px;
+}
+.prompt-card-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:8px; }
+.prompt-card-head h4{ font-family: var(--font-display); font-size:.87rem; color: var(--text); margin:0; font-weight:600; }
+.prompt-card-text, .search-string-text{
+  font-family: var(--font-mono); font-size:.8rem; color: var(--text); background: var(--surface-2);
+  border:1px solid var(--border); border-radius: var(--radius-sm); padding:10px 12px; margin:0 0 10px;
+  white-space: pre-wrap; word-break: break-word;
+}
+.copy-btn{
+  font-family: var(--font-mono); font-size:.66rem; letter-spacing:.03em; text-transform:uppercase;
+  border:1px solid var(--border-strong); background: var(--surface-2); color: var(--text-soft);
+  border-radius: var(--radius-sm); padding:5px 11px; cursor:pointer; flex-shrink:0; white-space:nowrap;
+}
+.copy-btn:hover{ border-color: var(--primary); color: var(--primary); }
+.copy-btn.copied{ border-color: var(--green); color: var(--green); }
+.prompt-card-meta{ font-family: var(--font-mono); font-size:.66rem; color: var(--text-faint); }
+
+/* Category / facet filter rows on library pages */
+.library-filter-row{ display:flex; flex-wrap:wrap; gap:8px; margin: 14px 0 22px; align-items:center; }
+.library-count{ font-family: var(--font-mono); font-size:.72rem; color: var(--text-faint); margin-left:auto; }
+
+/* Keyword Library */
+.keyword-search-bar{ position:relative; margin: 18px 0 14px; }
+.keyword-search-bar input{
+  width:100%; background: var(--surface); border:1px solid var(--border-strong); color: var(--text);
+  border-radius: var(--radius-sm); padding: 11px 14px 11px 34px; font-family: var(--font-body); font-size:.9rem;
+}
+.keyword-search-bar input::placeholder{ color: var(--text-faint); }
+.keyword-search-bar::before{
+  content:"⌕"; position:absolute; left:13px; top:50%; transform:translateY(-50%);
+  color: var(--text-faint); font-size:1rem; pointer-events:none;
+}
+.keyword-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap:12px; margin: 6px 0 30px; }
+.keyword-card{
+  background: var(--surface); border:1px solid var(--border); border-left:4px solid var(--primary);
+  border-radius: var(--radius-md); padding: 13px 15px;
+}
+.keyword-card .kc-term{ font-family: var(--font-mono); font-size:.92rem; font-weight:700; color: var(--primary); }
+.keyword-card .kc-full{ font-size:.83rem; color: var(--text); margin: 2px 0 8px; display:block; }
+.keyword-card .kc-row{ font-size:.76rem; color: var(--text-soft); margin-top:4px; }
+.keyword-card .kc-row b{ color: var(--text-faint); font-family: var(--font-mono); font-size:.66rem; text-transform:uppercase; letter-spacing:.04em; font-weight:500; margin-right:5px; }
+.keyword-card .kc-tag{ display:inline-block; font-family: var(--font-mono); font-size:.62rem; text-transform:uppercase; letter-spacing:.04em; color: var(--text-faint); background: var(--surface-2); border:1px solid var(--border); border-radius:100px; padding:2px 8px; margin-top:8px; }
+
+/* My Notebook */
+.notebook-entry{ margin-bottom:14px; padding-bottom:12px; }
+.notebook-entry h3{ border-bottom:0; padding-bottom:0; margin-bottom:6px; color: var(--primary); font-size:.78rem; }
+.notebook-entry-text{ font-size:.86rem; color: var(--text); white-space:pre-wrap; margin-bottom:10px; }
+.notebook-entry-actions button{
+  font-size:.66rem; letter-spacing:.03em; text-transform:uppercase; border:1px solid var(--border-strong);
+  background: var(--surface-2); color: var(--text-faint); border-radius: var(--radius-sm); padding:5px 11px; cursor:pointer;
+}
+.notebook-entry-actions button:hover{ border-color: var(--red); color: var(--red); }
+
+/* Methodology / workflow step blocks (Research Toolkit) */
+.method-steps{ list-style:none; margin:0; padding:0; counter-reset: step; }
+.method-steps li{
+  display:flex; gap:12px; padding:12px 0; border-top:1px solid var(--border); font-size:.85rem; color: var(--text);
+}
+.method-steps li:first-child{ border-top:0; }
+.method-steps li::before{
+  counter-increment: step; content: counter(step);
+  font-family: var(--font-mono); font-weight:700; font-size:.72rem; color:#04181A;
+  background: var(--primary); width:20px; height:20px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;
+}
+.method-steps .step-title{ font-weight:600; display:block; margin-bottom:2px; }
+.method-steps .step-body{ color: var(--text-soft); font-size:.83rem; }
+
+@media (max-width: 900px){
+  .keyword-grid{ grid-template-columns: 1fr; }
+}
