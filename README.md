@@ -1,13 +1,71 @@
-# DroneSense APAC Intelligence Hub
+# DroneSense — Australian Public Safety & RPAS Intelligence Platform
 
-Internal operational knowledge platform for DroneSense by Versaterm. This
-is the researcher's primary workspace for RPAS regulation, public safety,
-critical infrastructure and UAS ecosystem intelligence — not a marketing
-site. Content on intelligence pages is still placeholder; nothing below
-should be read as researched or verified. Navigation and visual design
-are unchanged from earlier passes.
+## Version 2.0 — Information Architecture Restructure
 
-## Phase 1 — Research Engine (this pass)
+The platform has moved from a country-library layout to a flat,
+task-oriented structure. Primary focus: Australia. New Zealand remains
+included but secondary. No other APAC countries are present — none were
+added as placeholders.
+
+**New top-level navigation** (`assets/app.js`): Overview · Intelligence ·
+Agency Directory · Regulations · Reports, plus two collapsible groups —
+**Research** (Research Toolkit, Prompt Library, Keyword Library, Search
+Library, Source Directory, My Notebook) and **Countries** (Australia,
+New Zealand only — the old 12-country "coming soon" list is gone).
+
+**New pages:**
+- `intelligence-hub.html` — Political, Budget, Procurement, Regulatory,
+  Public Safety, Critical Infrastructure and Market Intelligence, plus
+  a Current Watch List. Political/Budget content is structural only
+  (no fabricated ministers, dates, or figures) — same "unverified"
+  convention used everywhere else on the platform.
+- `reports-hub.html` — 10 report templates (Agency, Country, Regulatory,
+  Public Safety, Critical Infrastructure, Procurement Opportunity,
+  Political & Budget Impact, Competitor, Customer Brief, Meeting Brief)
+  plus a working client-side **Report Builder**: pick a type, jurisdiction,
+  subject and date range, and it generates a formatted section scaffold
+  with Copy and Print buttons. No backend — GitHub Pages compatible.
+
+**Enhanced in place (not rebuilt):**
+- `agencies-hub.html` (now "Agency Directory") — real, working text
+  search and jurisdiction/agency-type filters (previously decorative),
+  a new "Other sectors" reference table (Civil Aviation, Air Navigation,
+  Border & Federal, Defence, Energy, Utilities, Mining, Oil & Gas, Ports,
+  Rail, Telecommunications, Local Government), and URL query-param
+  pre-selection (e.g. `agencies-hub.html?type=Police`) used by the
+  Overview page's quick-access cards.
+- `regulations-hub.html` — added a compact quick-reference table (CASA,
+  Part 101, ReOC, RePL, AROC, BVLOS, EVLOS, AusSORA, FIMS, Remote ID,
+  ADS-B, etc.) above the existing detailed content, which is unchanged.
+- `index.html` (now "Overview") — trimmed to a minimal, scannable set of
+  quick-access cards per the v2.0 spec, plus Current Coverage badges.
+
+**Global search** — a real, client-side search (`SEARCH_INDEX` in
+`assets/app.js`) now backs both the topbar search and the Overview page
+search. It indexes agencies, regulations, intelligence sections,
+research tools, report templates and official sources, and shows a
+dropdown of `{type, title}` results as you type. No backend.
+
+**Preserved, not deleted:** `public-safety-hub.html`,
+`critical-infrastructure-hub.html`, `uas-ecosystem-hub.html`,
+`mission-profiles-hub.html`, `technology-hub.html`,
+`regulatory-updates-hub.html`, all 6 content templates, and every
+Research tool page — all still exist with their original content, now
+reachable via cross-links from Overview / Intelligence / Agency
+Directory rather than the old country-nested sidebar.
+
+**Frontend-only / no backend, by design:**
+- Report Builder generates a text scaffold only — it does not
+  auto-populate facts from a database (none exists yet).
+- Global search indexes page/section labels, not full-text content.
+- Agency Directory filters/search operate on the placeholder entries
+  currently in the page; they will scale to real entries as research
+  is added.
+- All personal data (My Notes) remains browser-local storage only.
+
+---
+
+## Phase 1 — Research Engine (earlier release)
 
 Phase 1 deliberately does not populate intelligence content. It builds
 the framework that will support thousands of intelligence pages over

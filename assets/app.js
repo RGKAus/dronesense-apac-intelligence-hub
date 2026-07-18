@@ -1,46 +1,127 @@
-// DroneSense APAC Intelligence Hub — shared shell + interactivity
-// Renders the topbar and sidebar from one data source so every page stays
-// in sync as markets/sections are added. Search and filters are structural
-// stubs — not yet wired to a live content index.
+// DroneSense — Australian Public Safety & RPAS Intelligence Platform
+// Shared shell + interactivity. v2.0: flat top-level navigation
+// (Overview / Intelligence / Agency Directory / Regulations / Reports),
+// a collapsible Research group, and a collapsible Countries group
+// scoped to Australia (primary) and New Zealand only — no other
+// countries, no placeholders.
 
-const AU_SECTIONS = [
-  { id: 'dashboard',            label: 'Dashboard',          href: 'index.html' },
-  { id: 'regulations',          label: 'Regulations',        href: 'regulations-hub.html' },
-  { id: 'public-safety',        label: 'Public Safety',      href: 'public-safety-hub.html' },
-  { id: 'critical-infra',       label: 'Critical Infrastructure', href: 'critical-infrastructure-hub.html' },
-  { id: 'agencies',             label: 'Agencies',           href: 'agencies-hub.html' },
-  { id: 'uas-ecosystem',        label: 'UAS Ecosystem',      href: 'uas-ecosystem-hub.html' },
-  { id: 'mission-profiles',     label: 'Mission Profiles',   href: 'mission-profiles-hub.html' },
-  { id: 'technology',           label: 'Technology',         href: 'technology-hub.html' },
-  { id: 'regulatory-updates',   label: 'Regulatory Updates', href: 'regulatory-updates-hub.html' },
+const TOP_SECTIONS = [
+  { id: 'overview',         label: 'Overview',          href: 'index.html' },
+  { id: 'intelligence',     label: 'Intelligence',      href: 'intelligence-hub.html' },
+  { id: 'agency-directory', label: 'Agency Directory',  href: 'agencies-hub.html' },
+  { id: 'regulations',      label: 'Regulations',       href: 'regulations-hub.html' },
+  { id: 'reports',          label: 'Reports',           href: 'reports-hub.html' },
 ];
 
-// Research Engine — cross-market tools (Phase 1). Rendered as its own
-// expandable sidebar section beneath Australia, using the same
-// collapsible nav logic as every country group.
-const RESEARCH_TOOLS_SECTIONS = [
+const RESEARCH_SECTIONS = [
   { id: 'research-toolkit', label: 'Research Toolkit', href: 'research-toolkit-hub.html' },
   { id: 'prompt-library',   label: 'Prompt Library',   href: 'prompt-library-hub.html' },
   { id: 'keyword-library',  label: 'Keyword Library',  href: 'keyword-library-hub.html' },
   { id: 'search-library',   label: 'Search Library',   href: 'search-library-hub.html' },
-  { id: 'my-notebook',      label: 'My Notebook',      href: 'my-notebook.html' },
+  { id: 'source-directory', label: 'Source Directory', href: 'research-toolkit-hub.html#official-sources' },
+  { id: 'my-notebook',      label: 'My Notebook',       href: 'my-notebook.html' },
+];
+
+const COUNTRY_SECTIONS = [
+  { id: 'country-au', label: '🇦🇺 Australia',    href: 'index.html' },
+  { id: 'country-nz', label: '🇳🇿 New Zealand', href: 'research-toolkit-hub.html#official-sources' },
 ];
 
 const NAV_TREE = [
-  { name: 'Australia', status: 'active', items: AU_SECTIONS },
-  { name: 'Research Tools', status: 'active', items: RESEARCH_TOOLS_SECTIONS },
-  { name: 'New Zealand', status: 'soon' },
-  { name: 'Singapore', status: 'soon' },
-  { name: 'Japan', status: 'soon' },
-  { name: 'South Korea', status: 'soon' },
-  { name: 'Malaysia', status: 'soon' },
-  { name: 'Indonesia', status: 'soon' },
-  { name: 'Thailand', status: 'soon' },
-  { name: 'Philippines', status: 'soon' },
-  { name: 'Taiwan', status: 'soon' },
-  { name: 'Hong Kong', status: 'soon' },
-  { name: 'Europe', status: 'soon' },
-  { name: 'United Kingdom', status: 'soon' },
+  { name: 'Platform',   status: 'flat',   items: TOP_SECTIONS },
+  { name: 'Research',   status: 'active', items: RESEARCH_SECTIONS },
+  { name: 'Countries',  status: 'active', items: COUNTRY_SECTIONS },
+];
+
+// Also-reachable secondary hubs — not in the primary nav, but preserved
+// and cross-linked from Overview / Intelligence / Agency Directory so
+// no existing content is lost. See index.html, intelligence-hub.html.
+// public-safety-hub.html · critical-infrastructure-hub.html ·
+// uas-ecosystem-hub.html · mission-profiles-hub.html · technology-hub.html ·
+// regulatory-updates-hub.html
+
+// ----------------------------------------------------------------
+// Global search index — client-side only (GitHub Pages compatible,
+// no backend). Covers agencies, regulations, intelligence, research
+// tools, reports and official sources per the v2.0 spec. This is a
+// navigational index of section labels, not a fabricated content
+// database — it points to real pages/anchors only.
+// ----------------------------------------------------------------
+const SEARCH_INDEX = [
+  // Agency Directory
+  { type: 'Agency', title: 'Federal law enforcement', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'State/Territory Police', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'Fire & Rescue Service', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'Rural Fire Service', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'Ambulance Service', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'State Emergency Service', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'Marine Rescue', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'Surf Life Saving', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'Parks & Wildlife Service', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'Critical infrastructure operators', href: 'critical-infrastructure-hub.html' },
+  { type: 'Agency', title: 'UAS ecosystem companies', href: 'uas-ecosystem-hub.html' },
+  // Regulations
+  { type: 'Regulation', title: 'CASA', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'CASR Part 101', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'Manual of Standards', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'RPA Operator\'s Certificate (ReOC)', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'Remote Pilot Licence (RePL)', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'Aircraft Radio Operator Certificate (AROC)', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'BVLOS', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'EVLOS', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'AusSORA', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'Excluded category operations', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'Airspace approvals', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'Airservices Australia', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'FIMS — Flight Information Management System', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'Remote ID', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'ADS-B', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'Advisory circulars', href: 'regulations-hub.html' },
+  { type: 'Regulation', title: 'Consultations', href: 'regulations-hub.html' },
+  // Intelligence
+  { type: 'Intelligence', title: 'Political Intelligence', href: 'intelligence-hub.html#political' },
+  { type: 'Intelligence', title: 'Budget Intelligence', href: 'intelligence-hub.html#budget' },
+  { type: 'Intelligence', title: 'Procurement Intelligence', href: 'intelligence-hub.html#procurement' },
+  { type: 'Intelligence', title: 'Regulatory Intelligence', href: 'intelligence-hub.html#regulatory' },
+  { type: 'Intelligence', title: 'Public Safety Intelligence', href: 'intelligence-hub.html#public-safety-intel' },
+  { type: 'Intelligence', title: 'Critical Infrastructure Intelligence', href: 'intelligence-hub.html#ci-intel' },
+  { type: 'Intelligence', title: 'Market Intelligence', href: 'intelligence-hub.html#market' },
+  { type: 'Intelligence', title: 'Current Watch List', href: 'intelligence-hub.html#watch-list' },
+  // Research
+  { type: 'Research', title: 'Research Toolkit', href: 'research-toolkit-hub.html' },
+  { type: 'Research', title: 'Prompt Library', href: 'prompt-library-hub.html' },
+  { type: 'Research', title: 'Keyword Library', href: 'keyword-library-hub.html' },
+  { type: 'Research', title: 'Search Library', href: 'search-library-hub.html' },
+  { type: 'Research', title: 'Source Directory', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Research', title: 'My Notebook', href: 'my-notebook.html' },
+  // Reports
+  { type: 'Report', title: 'Agency Intelligence Report', href: 'reports-hub.html#agency-report' },
+  { type: 'Report', title: 'Country Intelligence Report', href: 'reports-hub.html#country-report' },
+  { type: 'Report', title: 'Regulatory Report', href: 'reports-hub.html#regulatory-report' },
+  { type: 'Report', title: 'Public Safety Sector Report', href: 'reports-hub.html#public-safety-report' },
+  { type: 'Report', title: 'Critical Infrastructure Report', href: 'reports-hub.html#ci-report' },
+  { type: 'Report', title: 'Procurement Opportunity Report', href: 'reports-hub.html#procurement-report' },
+  { type: 'Report', title: 'Political and Budget Impact Report', href: 'reports-hub.html#political-report' },
+  { type: 'Report', title: 'Competitor Report', href: 'reports-hub.html#competitor-report' },
+  { type: 'Report', title: 'Customer Brief', href: 'reports-hub.html#customer-brief' },
+  { type: 'Report', title: 'Meeting Brief', href: 'reports-hub.html#meeting-brief' },
+  // Official sources
+  { type: 'Source', title: 'CASA — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'Airservices Australia — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'AFP — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'AFAC — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'NEMA — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'AMSA — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'CISC — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'AusTender', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'Federal Register of Legislation', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'CAA NZ — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'Airways New Zealand — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'New Zealand Police — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'FENZ — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'NEMA NZ — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'NZSAR Council — official site', href: 'research-toolkit-hub.html#official-sources' },
+  { type: 'Source', title: 'GETS — NZ government tenders', href: 'research-toolkit-hub.html#official-sources' },
 ];
 
 function renderShell(activePageId) {
@@ -51,28 +132,35 @@ function renderShell(activePageId) {
   topbar.innerHTML = `
     <a class="shell-brand" href="index.html">
       <span class="shell-mark">DS</span>
-      <span class="shell-brand-text"><b>DroneSense APAC Intelligence Hub</b><span>Internal &middot; DroneSense by Versaterm</span></span>
+      <span class="shell-brand-text"><b>DroneSense</b><span>Australian Public Safety &amp; RPAS Intelligence Platform</span></span>
     </a>
     <span class="shell-region-badge">AU · Live</span>
     <div class="shell-search">
       <div class="shell-search-wrap">
         <form data-search-form>
-          <input type="search" placeholder="Search regulations, agencies, companies, missions…">
+          <input type="search" placeholder="Search agencies, regulations, intelligence, reports…">
         </form>
         <span class="shell-kbd">/</span>
       </div>
     </div>
     <div class="shell-util">
       <a href="index.html#confidence-overview">Confidence overview</a>
-      <a href="regulatory-updates-hub.html">Regulatory alerts</a>
+      <a href="intelligence-hub.html#watch-list">Watch list</a>
       <a href="#">Admin</a>
     </div>
     <button class="shell-nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
   `;
 
-  sidebar.innerHTML = NAV_TREE.map(country => {
-    if (country.status === 'active') {
-      const items = country.items.map(item => `
+  sidebar.innerHTML = NAV_TREE.map(group => {
+    if (group.status === 'flat') {
+      const items = group.items.map(item => `
+        <a href="${item.href}" class="${item.id === activePageId ? 'active' : ''}">
+          <span class="dot"></span>${item.label}
+        </a>`).join('');
+      return `<div class="nav-country open nav-flat"><div class="nav-country-items">${items}</div></div>`;
+    }
+    if (group.status === 'active') {
+      const items = group.items.map(item => `
         <a href="${item.href}" class="${item.id === activePageId ? 'active' : ''}">
           <span class="dot"></span>${item.label}
         </a>`).join('');
@@ -80,7 +168,7 @@ function renderShell(activePageId) {
         <div class="nav-country open">
           <div class="nav-country-head" data-toggle>
             <span class="chev">▶</span>
-            <span class="country-name">${country.name}</span>
+            <span class="country-name">${group.name}</span>
           </div>
           <div class="nav-country-items">${items}</div>
         </div>`;
@@ -89,14 +177,15 @@ function renderShell(activePageId) {
       <div class="nav-country disabled">
         <div class="nav-country-head">
           <span class="chev">▶</span>
-          <span class="country-name">${country.name}</span>
+          <span class="country-name">${group.name}</span>
           <span class="soon-tag">Coming soon</span>
         </div>
       </div>`;
   }).join('');
 
-  // expand/collapse for the active (Australia) tree — coming-soon rows are inert
-  sidebar.querySelectorAll('.nav-country:not(.disabled) .nav-country-head[data-toggle]').forEach(head => {
+  // expand/collapse for collapsible groups (Research, Countries) — the
+  // flat top-level section and any disabled rows are inert
+  sidebar.querySelectorAll('.nav-country:not(.disabled):not(.nav-flat) .nav-country-head[data-toggle]').forEach(head => {
     head.addEventListener('click', () => {
       head.closest('.nav-country').classList.toggle('open');
     });
@@ -123,16 +212,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Search stub
+  // ----------------------------------------------------------------
+  // Global search — client-side only, no backend. Filters SEARCH_INDEX
+  // and shows a dropdown of {type, title} results under any input
+  // marked [data-search-form]. Works identically on the topbar search
+  // and the Overview page hero search.
+  // ----------------------------------------------------------------
   document.querySelectorAll('[data-search-form]').forEach(form => {
+    const input = form.querySelector('input[type="search"], input[type="text"]');
+    if (!input) return;
+    let results = form.querySelector('.gsearch-results');
+    if (!results) {
+      results = document.createElement('div');
+      results.className = 'gsearch-results';
+      form.appendChild(results);
+    }
+    const render = (q) => {
+      if (!q) { results.classList.remove('open'); results.innerHTML = ''; return; }
+      const needle = q.toLowerCase();
+      const matches = SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(needle)).slice(0, 8);
+      results.innerHTML = matches.length
+        ? matches.map(m => `<a class="gsr-item" href="${m.href}"><span class="gsr-type">${m.type}</span>${m.title}</a>`).join('')
+        : '<div class="gsr-empty">No matches</div>';
+      results.classList.add('open');
+    };
+    input.addEventListener('input', () => render(input.value.trim()));
+    input.addEventListener('focus', () => { if (input.value.trim()) render(input.value.trim()); });
+    document.addEventListener('click', (e) => {
+      if (!form.contains(e.target) && !results.contains(e.target)) results.classList.remove('open');
+    });
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const input = form.querySelector('input[type="search"], input[type="text"]');
+      const q = input.value.trim();
       const note = form.parentElement.querySelector('.search-note');
-      if (note && input) {
-        note.textContent = input.value
-          ? `Search index not yet connected — "${input.value}" will match against regulation, agency, mission and company records once content is populated.`
-          : '';
+      if (!q) return;
+      const needle = q.toLowerCase();
+      const matches = SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(needle));
+      if (matches.length) {
+        window.location.href = matches[0].href;
+      } else if (note) {
+        note.textContent = `No matches for "${q}".`;
       }
     });
   });
@@ -176,6 +295,48 @@ document.addEventListener('DOMContentLoaded', () => {
       if (status) status.textContent = 'Cleared.';
     });
   });
+
+  // ----------------------------------------------------------------
+  // Agency Directory — real search + jurisdiction/type filters,
+  // combined, with URL query param pre-selection (e.g.
+  // agencies-hub.html?type=Police from an Overview card).
+  // ----------------------------------------------------------------
+  const agencyGrid = document.getElementById('agency-card-grid');
+  if (agencyGrid) {
+    const search = document.getElementById('agency-search');
+    const jurisdictionSel = document.getElementById('af-jurisdiction');
+    const typeSel = document.getElementById('af-type');
+    const countEl = document.getElementById('agency-count');
+    const emptyEl = document.getElementById('agency-empty');
+    const cards = agencyGrid.querySelectorAll('.entity-card');
+
+    const params = new URLSearchParams(window.location.search);
+    const urlType = params.get('type');
+    const urlJurisdiction = params.get('jurisdiction');
+    if (urlType && typeSel) typeSel.value = urlType;
+    if (urlJurisdiction && jurisdictionSel) jurisdictionSel.value = urlJurisdiction;
+
+    const apply = () => {
+      const q = search ? search.value.trim().toLowerCase() : '';
+      const jf = jurisdictionSel ? jurisdictionSel.value : 'all';
+      const tf = typeSel ? typeSel.value : 'all';
+      let shown = 0;
+      cards.forEach(card => {
+        const matchesJ = jf === 'all' || card.dataset.jurisdiction === jf;
+        const matchesT = tf === 'all' || card.dataset.type === tf;
+        const matchesQ = !q || card.textContent.toLowerCase().includes(q);
+        const show = matchesJ && matchesT && matchesQ;
+        card.style.display = show ? '' : 'none';
+        if (show) shown++;
+      });
+      if (countEl) countEl.textContent = shown + ' agenc' + (shown === 1 ? 'y' : 'ies');
+      if (emptyEl) emptyEl.style.display = shown ? 'none' : '';
+    };
+    if (search) search.addEventListener('input', apply);
+    if (jurisdictionSel) jurisdictionSel.addEventListener('change', apply);
+    if (typeSel) typeSel.addEventListener('change', apply);
+    apply();
+  }
 
   // ----------------------------------------------------------------
   // Copy-to-clipboard — used across the Prompt Library and Search

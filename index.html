@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Operations Dashboard | DroneSense APAC Intelligence Hub</title>
-<meta name="description" content="Internal operational knowledge platform for DroneSense by Versaterm — RPAS regulation, public safety and UAS market intelligence across APAC. Research workspace currently covers Australia and New Zealand, with further APAC and European markets planned.">
+<title>Overview | DroneSense — Australian Public Safety &amp; RPAS Intelligence Platform</title>
+<meta name="description" content="Australian Public Safety & RPAS Intelligence Platform — agencies, regulations, intelligence and research. Australia primary; New Zealand included.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body data-page="dashboard">
+<body data-page="overview">
 
 <div id="shell-topbar"></div>
 <div id="shell-sidebar"></div>
@@ -19,30 +19,24 @@
 
   <div class="dash-hero">
     <div>
-      <span class="eyebrow">Operations Dashboard · Australia &amp; New Zealand</span>
-      <h1>DroneSense APAC Intelligence Hub</h1>
-      <p style="max-width:560px;">RPAS regulation, public safety, critical infrastructure and UAS ecosystem intelligence.</p>
+      <span class="eyebrow">Overview</span>
+      <h1>DroneSense — Australian Public Safety &amp; RPAS Intelligence Platform</h1>
+      <p style="max-width:560px;">Agencies, regulations, intelligence and research — fast.</p>
       <div class="tags" style="margin:10px 0 2px;">
         <span class="badge-scope">Current coverage</span>
         <span class="chip confirmed">🇦🇺 Australia</span>
         <span class="chip confirmed">🇳🇿 New Zealand</span>
       </div>
-      <div class="tags" style="margin:8px 0 14px;">
-        <span class="badge-scope">Future releases</span>
-        <span class="chip unverified">APAC</span>
-        <span class="chip unverified">Europe</span>
-        <span class="chip unverified">United Kingdom</span>
-      </div>
       <form class="dash-hero-search" data-search-form>
         <span class="prefix">⌕</span>
-        <input type="search" placeholder="Search e.g. “RePL”, “AusSORA ground risk”, “SES aviation unit”, “dock deployment”">
+        <input type="search" placeholder="Search agencies, regulations, intelligence, reports…">
         <button type="submit">Search</button>
       </form>
       <p class="search-note" style="font-size:.76rem;color:var(--text-faint);margin-top:8px;"></p>
     </div>
     <div class="confidence-overview" id="confidence-overview">
-      <span class="eyebrow">Confidence status overview</span>
-      <div class="confidence-bar" title="No content researched yet — illustrative only">
+      <span class="eyebrow">Confidence overview</span>
+      <div class="confidence-bar" title="Illustrative only">
         <span style="width:2%; background:var(--green);"></span>
         <span style="width:2%; background:var(--olive);"></span>
         <span style="width:4%; background:var(--amber);"></span>
@@ -54,156 +48,77 @@
         <span class="leg"><span class="sw" style="background:var(--amber);"></span>Partial</span>
         <span class="leg"><span class="sw" style="background:var(--text-faint);"></span>Unverified</span>
       </div>
-      <p style="font-size:.72rem;color:var(--text-faint);margin:10px 0 0;">Illustrative — content not yet researched. Updates as pages are verified.</p>
     </div>
   </div>
 
-  <div class="callout template-note">
-    Intelligence hubs below: Australia content, placeholder pending research. <a href="research-toolkit-hub.html">Research Toolkit</a>: real, verified AU &amp; NZ sources.
-  </div>
-
-  <div class="section-title" style="display:flex;justify-content:space-between;align-items:baseline;margin:30px 0 4px;">
-    <h2>Quick navigation</h2>
-  </div>
   <div class="grid-3">
-    <a class="gateway-card" href="regulations-hub.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">Regulations</span>
-      <h2>RPAS Regulation &amp; Operational Requirements</h2>
-      <p>CASA, CASR Part 101, MOS, licensing, airspace, AusSORA.</p>
-      <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
-    </a>
     <a class="gateway-card" href="public-safety-hub.html" style="text-decoration:none;display:block;">
       <span class="eyebrow">Public Safety</span>
-      <h2>Public Safety &amp; Emergency Services</h2>
-      <p>Police, fire, SES, ambulance, marine and search and rescue.</p>
+      <h2>Australian Public Safety</h2>
+      <p>Agencies, mission types, jurisdictions.</p>
+      <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
+    </a>
+    <a class="gateway-card" href="agencies-hub.html?type=Police" style="text-decoration:none;display:block;">
+      <span class="eyebrow">Police</span>
+      <h2>Police</h2>
+      <p>Federal &amp; state/territory police.</p>
+      <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
+    </a>
+    <a class="gateway-card" href="agencies-hub.html?type=Fire%20%26%20rescue" style="text-decoration:none;display:block;">
+      <span class="eyebrow">Fire &amp; Rescue</span>
+      <h2>Fire and Rescue</h2>
+      <p>Fire, rescue &amp; rural/bushfire agencies.</p>
+      <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
+    </a>
+    <a class="gateway-card" href="agencies-hub.html?type=SES" style="text-decoration:none;display:block;">
+      <span class="eyebrow">SES &amp; EM</span>
+      <h2>SES &amp; Emergency Management</h2>
+      <p>State Emergency Services, EM agencies.</p>
+      <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
+    </a>
+    <a class="gateway-card" href="agencies-hub.html?type=Search%20%26%20rescue" style="text-decoration:none;display:block;">
+      <span class="eyebrow">SAR</span>
+      <h2>Search and Rescue</h2>
+      <p>Marine rescue, land SAR, surf lifesaving.</p>
       <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
     </a>
     <a class="gateway-card" href="critical-infrastructure-hub.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">Critical Infrastructure</span>
-      <h2>Critical Infrastructure Sectors</h2>
-      <p>Electricity, water, ports, rail, telecommunications and more.</p>
+      <span class="eyebrow">CNI</span>
+      <h2>Critical National Infrastructure</h2>
+      <p>Energy, water, ports, rail, telecoms.</p>
       <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
     </a>
-    <a class="gateway-card" href="agencies-hub.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">Agencies</span>
-      <h2>Agency Directory</h2>
-      <p>Consistent profiles for every federal, state and local agency.</p>
+    <a class="gateway-card" href="regulations-hub.html" style="text-decoration:none;display:block;">
+      <span class="eyebrow">Regulations</span>
+      <h2>RPAS Regulations</h2>
+      <p>CASA, Part 101, ReOC, RePL, BVLOS, AusSORA.</p>
       <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
     </a>
-    <a class="gateway-card" href="uas-ecosystem-hub.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">UAS Ecosystem</span>
-      <h2>Ecosystem Directory</h2>
-      <p>Companies classified by actual role — not generic "drone company".</p>
+    <a class="gateway-card" href="intelligence-hub.html#political" style="text-decoration:none;display:block;">
+      <span class="eyebrow">Intelligence</span>
+      <h2>Political &amp; Budget Intelligence</h2>
+      <p>Elections, cabinet, budgets, funding.</p>
       <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
     </a>
-    <a class="gateway-card" href="mission-profiles-hub.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">Mission Profiles</span>
-      <h2>Operational Mission Profiles</h2>
-      <p>DFR, overwatch, search and rescue, disaster mapping and more.</p>
+    <a class="gateway-card" href="intelligence-hub.html#procurement" style="text-decoration:none;display:block;">
+      <span class="eyebrow">Intelligence</span>
+      <h2>Procurement Intelligence</h2>
+      <p>AusTender, panels, standing offers.</p>
       <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
     </a>
-  </div>
-
-  <div class="section-title" style="display:flex;justify-content:space-between;align-items:baseline;margin:30px 0 4px;">
-    <h2>Research Tools</h2>
-    <span class="eyebrow" style="margin:0;">Phase 1 — the research engine</span>
-  </div>
-  <div class="grid-3">
-    <a class="gateway-card" href="research-toolkit-hub.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">Research Toolkit</span>
-      <h2>Where to look, and how to rate it</h2>
-      <p>Official sources, search operators and checklists — AU &amp; NZ.</p>
+    <a class="gateway-card" href="intelligence-hub.html#watch-list" style="text-decoration:none;display:block;">
+      <span class="eyebrow">Watch List</span>
+      <h2>Current Watch List</h2>
+      <p>Open regulatory &amp; policy items to track.</p>
       <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
     </a>
-    <a class="gateway-card" href="prompt-library-hub.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">Prompt Library</span>
-      <h2>Ready-to-copy AI research prompts</h2>
-      <p>30 prompts across regulations, agencies, sales discovery, procurement and more.</p>
-      <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
-    </a>
-    <a class="gateway-card" href="keyword-library-hub.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">Keyword Library</span>
-      <h2>Searchable terms &amp; acronyms</h2>
-      <p>Every acronym linked to its related legislation, organisations and technology.</p>
-      <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
-    </a>
-    <a class="gateway-card" href="search-library-hub.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">Search Library</span>
-      <h2>Reusable search strings</h2>
-      <p>Google, site:, filetype:, procurement portals and academic search patterns.</p>
-      <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
-    </a>
-    <a class="gateway-card" href="my-notebook.html" style="text-decoration:none;display:block;">
-      <span class="eyebrow">My Notebook</span>
-      <h2>All your notes, in one place</h2>
-      <p>Every "My Notes" entry saved across the platform, gathered onto one page.</p>
-      <span class="card-link mono" style="color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;">Open →</span>
-    </a>
-  </div>
-
-  <div class="section-title" style="margin:12px 0 4px;"><h2>Browse the library</h2></div>
-  <div class="browse-tiles">
-    <a class="browse-tile" href="agencies-hub.html"><span class="t-label">Browse by</span><span class="t-value">State</span></a>
-    <a class="browse-tile" href="critical-infrastructure-hub.html"><span class="t-label">Browse by</span><span class="t-value">Industry</span></a>
-    <a class="browse-tile" href="mission-profiles-hub.html"><span class="t-label">Browse by</span><span class="t-value">Mission type</span></a>
-    <a class="browse-tile" href="uas-ecosystem-hub.html"><span class="t-label">Browse by</span><span class="t-value">Organisation</span></a>
-    <a class="browse-tile" href="regulations-hub.html"><span class="t-label">Browse by</span><span class="t-value">Regulation</span></a>
-    <a class="browse-tile" href="technology-hub.html"><span class="t-label">Browse by</span><span class="t-value">Technology</span></a>
-  </div>
-
-  <div class="section-title" style="margin:12px 0 4px;"><h2>Regulatory alerts</h2><a class="panel-link mono" href="regulatory-updates-hub.html">All updates →</a></div>
-  <div class="alert-card">
-    <span class="alert-icon">▲</span>
-    <div><span class="alert-title">[Placeholder] CASR Part 101 amendment tracker</span><span class="alert-meta">Status: to confirm · Not yet verified</span></div>
-  </div>
-  <div class="alert-card">
-    <span class="alert-icon">▲</span>
-    <div><span class="alert-title">[Placeholder] Manual of Standards — BVLOS provisions update</span><span class="alert-meta">Status: to confirm · Not yet verified</span></div>
-  </div>
-
-  <div class="grid-3" style="margin-top:26px;">
-    <div class="panel">
-      <h3>Recently updated</h3>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] Remote Pilot Licence — overview</span><span class="item-meta">Regulations · Unverified</span></div></div>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] AusSORA — ground risk buffers</span><span class="item-meta">Regulations · Unverified</span></div></div>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] SES — aviation capability profile</span><span class="item-meta">Agencies · Unverified</span></div></div>
-    </div>
-    <div class="panel">
-      <h3>Latest CASA regulatory updates</h3>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] CASA advisory circular — dock deployments</span><span class="item-meta">Status: to confirm</span></div></div>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] RPAS Operator's Certificate — process update</span><span class="item-meta">Status: to confirm</span></div></div>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] Standard 922 declaration changes</span><span class="item-meta">Status: to confirm</span></div></div>
-    </div>
-    <div class="panel">
-      <h3>Featured agencies</h3>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] State Emergency Service</span><span class="item-meta">Agencies · Unverified</span></div></div>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] State/Territory Police Aviation Unit</span><span class="item-meta">Agencies · Unverified</span></div></div>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] Rural Fire / Bushfire Agency</span><span class="item-meta">Agencies · Unverified</span></div></div>
-    </div>
-  </div>
-
-  <div class="grid-3">
-    <div class="panel">
-      <h3>Featured ecosystem companies</h3>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] Sphere Drones</span><span class="item-meta">UAS Ecosystem · Unverified</span></div></div>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] RocketDNA</span><span class="item-meta">UAS Ecosystem · Unverified</span></div></div>
-    </div>
-    <div class="panel">
-      <h3>Featured operational guidance</h3>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] DFR deployment considerations</span><span class="item-meta">Technology · Unverified</span></div></div>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">[Placeholder] AusSORA application checklist</span><span class="item-meta">Regulations · Unverified</span></div></div>
-    </div>
-    <div class="panel">
-      <h3>Recently verified pages</h3>
-      <div class="item-row"><span class="status-tab unverified"></span><div><span class="item-title">None yet — content research has not started</span><span class="item-meta">Verified pages will appear here</span></div></div>
-    </div>
   </div>
 
 </div>
 
 <footer class="site-footer">
   <div class="container" style="padding:0;">
-    <span>DroneSense APAC Intelligence Hub — Research Workspace: Australia &amp; New Zealand. Intelligence hubs: Australia (structural prototype).</span>
+    <span>DroneSense — Australian Public Safety &amp; RPAS Intelligence Platform. Primary: Australia. Included: New Zealand.</span>
     <span>Future releases: APAC, Europe, United Kingdom.</span>
   </div>
 </footer>
