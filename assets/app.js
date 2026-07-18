@@ -58,6 +58,20 @@ const SEARCH_INDEX = [
   { type: 'Agency', title: 'Marine Rescue', href: 'agencies-hub.html' },
   { type: 'Agency', title: 'Surf Life Saving', href: 'agencies-hub.html' },
   { type: 'Agency', title: 'Parks & Wildlife Service', href: 'agencies-hub.html' },
+  { type: 'Agency', title: 'Emergency Management agency', href: 'agencies-hub.html?type=Emergency%20Management' },
+  { type: 'Agency', title: 'Border Force', href: 'agencies-hub.html?type=Border%20Force' },
+  { type: 'Agency', title: 'Defence (domestic support)', href: 'agencies-hub.html?type=Defence' },
+  { type: 'Agency', title: 'CASA — Civil Aviation Safety Authority', href: 'agencies-hub.html?type=Civil%20Aviation' },
+  { type: 'Agency', title: 'Airservices Australia', href: 'agencies-hub.html?type=Air%20Navigation' },
+  { type: 'Agency', title: 'Local Government', href: 'agencies-hub.html?type=Local%20Government' },
+  { type: 'Agency', title: 'Energy operator', href: 'agencies-hub.html?type=Energy' },
+  { type: 'Agency', title: 'Utilities operator', href: 'agencies-hub.html?type=Utilities' },
+  { type: 'Agency', title: 'Mining operator', href: 'agencies-hub.html?type=Mining' },
+  { type: 'Agency', title: 'Oil & Gas operator', href: 'agencies-hub.html?type=Oil%20%26%20Gas' },
+  { type: 'Agency', title: 'Ports operator', href: 'agencies-hub.html?type=Ports' },
+  { type: 'Agency', title: 'Rail operator', href: 'agencies-hub.html?type=Rail' },
+  { type: 'Agency', title: 'Telecommunications operator', href: 'agencies-hub.html?type=Telecommunications' },
+  { type: 'Agency', title: 'Water utility', href: 'agencies-hub.html?type=Water' },
   { type: 'Agency', title: 'Critical infrastructure operators', href: 'critical-infrastructure-hub.html' },
   { type: 'Agency', title: 'UAS ecosystem companies', href: 'uas-ecosystem-hub.html' },
   // Regulations
@@ -297,44 +311,65 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ----------------------------------------------------------------
-  // Agency Directory — real search + jurisdiction/type filters,
-  // combined, with URL query param pre-selection (e.g.
-  // agencies-hub.html?type=Police from an Overview card).
+  // Agency Directory — search + State/Sector/Org type/RPAS filters,
+  // alphabetical sort toggle, and URL query param pre-selection
+  // (?type=Police from an Overview card maps to the Sector filter,
+  // case-insensitively, so existing deep links keep working).
   // ----------------------------------------------------------------
-  const agencyGrid = document.getElementById('agency-card-grid');
-  if (agencyGrid) {
+  const agencyBody = document.getElementById('agency-tbody');
+  if (agencyBody) {
+    const rows = Array.from(agencyBody.querySelectorAll('tr'));
     const search = document.getElementById('agency-search');
-    const jurisdictionSel = document.getElementById('af-jurisdiction');
-    const typeSel = document.getElementById('af-type');
+    const stateSel = document.getElementById('af-state');
+    const sectorSel = document.getElementById('af-sector');
+    const orgtypeSel = document.getElementById('af-orgtype');
+    const rpasSel = document.getElementById('af-rpas');
+    const sortBtn = document.getElementById('af-sort-name');
     const countEl = document.getElementById('agency-count');
     const emptyEl = document.getElementById('agency-empty');
-    const cards = agencyGrid.querySelectorAll('.entity-card');
 
     const params = new URLSearchParams(window.location.search);
     const urlType = params.get('type');
-    const urlJurisdiction = params.get('jurisdiction');
-    if (urlType && typeSel) typeSel.value = urlType;
-    if (urlJurisdiction && jurisdictionSel) jurisdictionSel.value = urlJurisdiction;
+    if (urlType && sectorSel) {
+      const needle = urlType.toLowerCase();
+      const match = Array.from(sectorSel.options).find(o => o.value.toLowerCase() === needle);
+      if (match) sectorSel.value = match.value;
+    }
 
     const apply = () => {
       const q = search ? search.value.trim().toLowerCase() : '';
-      const jf = jurisdictionSel ? jurisdictionSel.value : 'all';
-      const tf = typeSel ? typeSel.value : 'all';
+      const sf = stateSel ? stateSel.value : 'all';
+      const secf = sectorSel ? sectorSel.value : 'all';
+      const of = orgtypeSel ? orgtypeSel.value : 'all';
+      const rf = rpasSel ? rpasSel.value : 'all';
       let shown = 0;
-      cards.forEach(card => {
-        const matchesJ = jf === 'all' || card.dataset.jurisdiction === jf;
-        const matchesT = tf === 'all' || card.dataset.type === tf;
-        const matchesQ = !q || card.textContent.toLowerCase().includes(q);
-        const show = matchesJ && matchesT && matchesQ;
-        card.style.display = show ? '' : 'none';
+      rows.forEach(row => {
+        const matchesState = sf === 'all' || row.dataset.state === sf;
+        const matchesSector = secf === 'all' || row.dataset.sector === secf;
+        const matchesOrgtype = of === 'all' || row.dataset.orgtype === of;
+        const matchesRpas = rf === 'all' || row.dataset.rpas === rf;
+        const matchesQ = !q || row.textContent.toLowerCase().includes(q);
+        const show = matchesState && matchesSector && matchesOrgtype && matchesRpas && matchesQ;
+        row.style.display = show ? '' : 'none';
         if (show) shown++;
       });
       if (countEl) countEl.textContent = shown + ' agenc' + (shown === 1 ? 'y' : 'ies');
       if (emptyEl) emptyEl.style.display = shown ? 'none' : '';
     };
+
+    if (sortBtn) sortBtn.addEventListener('click', () => {
+      const dir = sortBtn.dataset.dir === 'asc' ? 'desc' : 'asc';
+      sortBtn.dataset.dir = dir;
+      const sorted = rows.slice().sort((a, b) => {
+        const an = a.children[0].textContent.trim().toLowerCase();
+        const bn = b.children[0].textContent.trim().toLowerCase();
+        return dir === 'asc' ? an.localeCompare(bn) : bn.localeCompare(an);
+      });
+      sorted.forEach(row => agencyBody.appendChild(row));
+    });
+
     if (search) search.addEventListener('input', apply);
-    if (jurisdictionSel) jurisdictionSel.addEventListener('change', apply);
-    if (typeSel) typeSel.addEventListener('change', apply);
+    [stateSel, sectorSel, orgtypeSel, rpasSel].forEach(sel => { if (sel) sel.addEventListener('change', apply); });
     apply();
   }
 

@@ -19,82 +19,123 @@
   <div class="page-head">
     <span class="eyebrow">Agency Directory · Australia</span>
     <h1>Agency Directory</h1>
-    <p>Search or filter by jurisdiction and agency type. Every profile: mandate, RPAS capability, contacts, sources — sourced and dated. See the <a href="agency-profile-template.html">agency profile template</a>.</p>
+    <p>Search, filter, sort. Full profile per agency: <a href="agency-profile-template.html">template ↗</a></p>
   </div>
 
   <div class="keyword-search-bar">
-    <input type="search" id="agency-search" placeholder="Search agency name or type…">
+    <input type="search" id="agency-search" placeholder="Search agency, sector, state, org type…">
   </div>
 
   <div class="filter-bar">
-    <div class="filter-group"><label>Jurisdiction</label>
-      <select id="af-jurisdiction">
-        <option value="all">All jurisdictions</option>
+    <div class="filter-group"><label>State / Territory</label>
+      <select id="af-state">
+        <option value="all">All</option>
         <option value="Federal">Federal</option>
-        <option value="State">State or Territory</option>
-        <option value="Local">Local government</option>
+        <option value="NSW">NSW</option>
+        <option value="VIC">VIC</option>
+        <option value="QLD">QLD</option>
+        <option value="WA">WA</option>
+        <option value="SA">SA</option>
+        <option value="TAS">TAS</option>
+        <option value="ACT">ACT</option>
+        <option value="NT">NT</option>
       </select>
     </div>
-    <div class="filter-group"><label>Agency type</label>
-      <select id="af-type">
+    <div class="filter-group"><label>Sector</label>
+      <select id="af-sector">
+        <option value="all">All sectors</option>
+        <option>Police</option>
+        <option>Fire &amp; Rescue</option>
+        <option>SES</option>
+        <option>Emergency Management</option>
+        <option>Ambulance</option>
+        <option>Search &amp; Rescue</option>
+        <option>Border Force</option>
+        <option>Defence</option>
+        <option>Civil Aviation</option>
+        <option>Air Navigation</option>
+        <option>Local Government</option>
+        <option>Critical Infrastructure</option>
+        <option>Energy</option>
+        <option>Utilities</option>
+        <option>Mining</option>
+        <option>Oil &amp; Gas</option>
+        <option>Ports</option>
+        <option>Rail</option>
+        <option>Telecommunications</option>
+        <option>Water</option>
+      </select>
+    </div>
+    <div class="filter-group"><label>Organisation type</label>
+      <select id="af-orgtype">
         <option value="all">All types</option>
-        <option value="Federal law enforcement">Federal law enforcement</option>
-        <option value="Police">Police</option>
-        <option value="Fire &amp; rescue">Fire &amp; rescue</option>
-        <option value="Rural / bushfire">Rural / bushfire</option>
-        <option value="Ambulance">Ambulance</option>
-        <option value="SES">SES</option>
-        <option value="Search &amp; rescue">Search &amp; rescue</option>
-        <option value="Marine rescue">Marine rescue</option>
-        <option value="Surf lifesaving">Surf lifesaving</option>
-        <option value="Border protection">Border protection</option>
-        <option value="Emergency management">Emergency management</option>
-        <option value="Parks &amp; wildlife">Parks &amp; wildlife</option>
-        <option value="Critical infrastructure operator">Critical infrastructure operator</option>
+        <option>Federal government agency</option>
+        <option>State government agency</option>
+        <option>Local government</option>
+        <option>Statutory authority</option>
+        <option>Regulator</option>
+        <option>Government business enterprise</option>
+        <option>Volunteer organisation</option>
+        <option>Private sector</option>
+      </select>
+    </div>
+    <div class="filter-group"><label>RPAS capability</label>
+      <select id="af-rpas">
+        <option value="all">Any</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="Unverified">Unverified</option>
       </select>
     </div>
     <span class="library-count" id="agency-count"></span>
   </div>
 
-  <h2>Police, Fire &amp; Emergency Services</h2>
-  <div class="card-grid" id="agency-card-grid">
-    <div class="entity-card unverified" data-jurisdiction="Federal" data-type="Federal law enforcement"><h3>[Placeholder] Federal law enforcement agency</h3><span class="entity-type">Federal · Law enforcement</span><p>Template entry pending research.</p><div class="entity-foot"><span class="chip unverified">Unverified</span><a href="agency-profile-template.html">Open profile →</a></div></div>
-    <div class="entity-card unverified" data-jurisdiction="State" data-type="Police"><h3>[Placeholder] State/Territory Police</h3><span class="entity-type">State · Police</span><p>Template entry pending research.</p><div class="entity-foot"><span class="chip unverified">Unverified</span><a href="agency-profile-template.html">Open profile →</a></div></div>
-    <div class="entity-card unverified" data-jurisdiction="State" data-type="Fire &amp; rescue"><h3>[Placeholder] Fire &amp; Rescue Service</h3><span class="entity-type">State · Fire &amp; rescue</span><p>Template entry pending research.</p><div class="entity-foot"><span class="chip unverified">Unverified</span><a href="agency-profile-template.html">Open profile →</a></div></div>
-    <div class="entity-card unverified" data-jurisdiction="State" data-type="Rural / bushfire"><h3>[Placeholder] Rural Fire Service</h3><span class="entity-type">State · Rural / bushfire</span><p>Template entry pending research.</p><div class="entity-foot"><span class="chip unverified">Unverified</span><a href="agency-profile-template.html">Open profile →</a></div></div>
-    <div class="entity-card unverified" data-jurisdiction="State" data-type="Ambulance"><h3>[Placeholder] Ambulance Service</h3><span class="entity-type">State · Ambulance</span><p>Template entry pending research.</p><div class="entity-foot"><span class="chip unverified">Unverified</span><a href="agency-profile-template.html">Open profile →</a></div></div>
-    <div class="entity-card unverified" data-jurisdiction="State" data-type="SES"><h3>[Placeholder] State Emergency Service</h3><span class="entity-type">State · SES</span><p>Template entry pending research.</p><div class="entity-foot"><span class="chip unverified">Unverified</span><a href="agency-profile-template.html">Open profile →</a></div></div>
-    <div class="entity-card unverified" data-jurisdiction="State" data-type="Marine rescue"><h3>[Placeholder] Marine Rescue organisation</h3><span class="entity-type">State · Marine rescue</span><p>Template entry pending research.</p><div class="entity-foot"><span class="chip unverified">Unverified</span><a href="agency-profile-template.html">Open profile →</a></div></div>
-    <div class="entity-card unverified" data-jurisdiction="State" data-type="Surf lifesaving"><h3>[Placeholder] Surf Life Saving organisation</h3><span class="entity-type">State · Surf lifesaving</span><p>Template entry pending research.</p><div class="entity-foot"><span class="chip unverified">Unverified</span><a href="agency-profile-template.html">Open profile →</a></div></div>
-    <div class="entity-card unverified" data-jurisdiction="State" data-type="Parks &amp; wildlife"><h3>[Placeholder] Parks &amp; Wildlife Service</h3><span class="entity-type">State · Environmental</span><p>Template entry pending research.</p><div class="entity-foot"><span class="chip unverified">Unverified</span><a href="agency-profile-template.html">Open profile →</a></div></div>
-  </div>
-  <p id="agency-empty" class="callout" style="display:none;">No agencies match this search/filter combination yet.</p>
-
-  <h2>Other sectors</h2>
-  <p style="font-size:.83rem;">Civil aviation, defence, and critical-infrastructure sub-sectors — reachable via their dedicated hubs.</p>
   <div class="table-scroll">
-    <table class="compare">
-      <thead><tr><th>Sector</th><th>Status</th><th></th></tr></thead>
-      <tbody>
-        <tr><td>Civil Aviation</td><td><span class="chip confirmed">Sources listed</span></td><td><a href="research-toolkit-hub.html#official-sources">Research Toolkit ↗</a></td></tr>
-        <tr><td>Air Navigation</td><td><span class="chip confirmed">Sources listed</span></td><td><a href="research-toolkit-hub.html#official-sources">Research Toolkit ↗</a></td></tr>
-        <tr><td>Border &amp; Federal Agencies</td><td><span class="chip unverified">Unverified</span></td><td>—</td></tr>
-        <tr><td>Defence</td><td><span class="chip unverified">Unverified</span></td><td>—</td></tr>
-        <tr><td>Energy</td><td><span class="chip unverified">Unverified</span></td><td><a href="critical-infrastructure-hub.html">Critical Infrastructure ↗</a></td></tr>
-        <tr><td>Utilities</td><td><span class="chip unverified">Unverified</span></td><td><a href="critical-infrastructure-hub.html">Critical Infrastructure ↗</a></td></tr>
-        <tr><td>Mining</td><td><span class="chip unverified">Unverified</span></td><td><a href="critical-infrastructure-hub.html">Critical Infrastructure ↗</a></td></tr>
-        <tr><td>Oil &amp; Gas</td><td><span class="chip unverified">Unverified</span></td><td><a href="critical-infrastructure-hub.html">Critical Infrastructure ↗</a></td></tr>
-        <tr><td>Ports</td><td><span class="chip unverified">Unverified</span></td><td><a href="critical-infrastructure-hub.html">Critical Infrastructure ↗</a></td></tr>
-        <tr><td>Rail</td><td><span class="chip unverified">Unverified</span></td><td><a href="critical-infrastructure-hub.html">Critical Infrastructure ↗</a></td></tr>
-        <tr><td>Telecommunications</td><td><span class="chip unverified">Unverified</span></td><td><a href="critical-infrastructure-hub.html">Critical Infrastructure ↗</a></td></tr>
-        <tr><td>Local Government</td><td><span class="chip unverified">Unverified</span></td><td>—</td></tr>
+    <table class="compare" id="agency-table">
+      <thead>
+        <tr>
+          <th><button class="mono" id="af-sort-name" data-dir="asc" type="button" style="background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0;">Agency ⇅</button></th>
+          <th>Sector</th>
+          <th>State/Territory</th>
+          <th>Org type</th>
+          <th>RPAS</th>
+          <th>Confidence</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="agency-tbody">
+        <tr data-sector="Police" data-state="Federal" data-orgtype="Federal government agency" data-rpas="Unverified"><td>[Placeholder] Federal law enforcement agency</td><td>Police</td><td>Federal</td><td>Federal government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Police" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] State/Territory Police</td><td>Police</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Fire &amp; Rescue" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] Fire &amp; Rescue Service</td><td>Fire &amp; Rescue</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Fire &amp; Rescue" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] Rural Fire Service</td><td>Fire &amp; Rescue</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Ambulance" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] Ambulance Service</td><td>Ambulance</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="SES" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] State Emergency Service</td><td>SES</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Search &amp; Rescue" data-state="" data-orgtype="Volunteer organisation" data-rpas="Unverified"><td>[Placeholder] Marine Rescue organisation</td><td>Search &amp; Rescue</td><td>—</td><td>Volunteer organisation</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Search &amp; Rescue" data-state="" data-orgtype="Volunteer organisation" data-rpas="Unverified"><td>[Placeholder] Surf Life Saving organisation</td><td>Search &amp; Rescue</td><td>—</td><td>Volunteer organisation</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] Parks &amp; Wildlife Service</td><td>—</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Emergency Management" data-state="Federal" data-orgtype="Federal government agency" data-rpas="Unverified"><td>[Placeholder] Emergency Management agency</td><td>Emergency Management</td><td>Federal</td><td>Federal government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Border Force" data-state="Federal" data-orgtype="Federal government agency" data-rpas="Unverified"><td>[Placeholder] Border Force</td><td>Border Force</td><td>Federal</td><td>Federal government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Defence" data-state="Federal" data-orgtype="Federal government agency" data-rpas="Unverified"><td>[Placeholder] Department of Defence (domestic support)</td><td>Defence</td><td>Federal</td><td>Federal government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Civil Aviation" data-state="Federal" data-orgtype="Regulator" data-rpas="Unverified"><td>CASA — Civil Aviation Safety Authority</td><td>Civil Aviation</td><td>Federal</td><td>Regulator</td><td><span class="chip unverified">N/A — regulator</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="research-toolkit-hub.html#official-sources">casa.gov.au ↗</a></td></tr>
+        <tr data-sector="Air Navigation" data-state="Federal" data-orgtype="Government business enterprise" data-rpas="Unverified"><td>Airservices Australia</td><td>Air Navigation</td><td>Federal</td><td>Government business enterprise</td><td><span class="chip unverified">N/A — ANSP</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="research-toolkit-hub.html#official-sources">airservicesaustralia.com ↗</a></td></tr>
+        <tr data-sector="Local Government" data-state="" data-orgtype="Local government" data-rpas="Unverified"><td>[Placeholder] Local government (generic)</td><td>Local Government</td><td>—</td><td>Local government</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Critical Infrastructure" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Critical infrastructure operator</td><td>Critical Infrastructure</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Energy" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Energy operator</td><td>Energy</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Utilities" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Utilities operator</td><td>Utilities</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Mining" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Mining operator</td><td>Mining</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Oil &amp; Gas" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Oil &amp; Gas operator</td><td>Oil &amp; Gas</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Ports" data-state="" data-orgtype="Government business enterprise" data-rpas="Unverified"><td>[Placeholder] Ports operator</td><td>Ports</td><td>—</td><td>Government business enterprise</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Rail" data-state="" data-orgtype="Government business enterprise" data-rpas="Unverified"><td>[Placeholder] Rail operator</td><td>Rail</td><td>—</td><td>Government business enterprise</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Telecommunications" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Telecommunications operator</td><td>Telecommunications</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
+        <tr data-sector="Water" data-state="" data-orgtype="Government business enterprise" data-rpas="Unverified"><td>[Placeholder] Water utility</td><td>Water</td><td>—</td><td>Government business enterprise</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
       </tbody>
     </table>
   </div>
+  <p id="agency-empty" class="callout" style="display:none;">No agencies match this search/filter combination.</p>
 
   <h2>Cross-references</h2>
   <div class="crosslinks">
     <a href="public-safety-hub.html">Agency categories &amp; mission types</a>
+    <a href="critical-infrastructure-hub.html">Critical Infrastructure Sectors</a>
     <a href="regulations-hub.html">RePL / ReOC requirements</a>
     <a href="uas-ecosystem-hub.html">Technology partners</a>
     <a href="prompt-library-hub.html">Agencies prompt category</a>
@@ -106,7 +147,7 @@
 
 <footer class="site-footer">
   <div class="container" style="padding:0;">
-    <span>DroneSense — Agency Directory, v2.0.</span>
+    <span>DroneSense — Agency Directory, v2.1. 24 entries across 20 sectors.</span>
     <span><a href="index.html">Back to Overview</a></span>
   </div>
 </footer>

@@ -1,5 +1,40 @@
 # DroneSense — Australian Public Safety & RPAS Intelligence Platform
 
+## Version 2.1 — Agency Directory Expansion
+
+The Agency Directory (`agencies-hub.html`) is now a single sortable,
+filterable, searchable table covering all 20 requested sectors —
+Police, Fire & Rescue, SES, Emergency Management, Ambulance, Search &
+Rescue, Border Force, Defence, Civil Aviation, Air Navigation, Local
+Government, Critical Infrastructure, Energy, Utilities, Mining, Oil &
+Gas, Ports, Rail, Telecommunications, Water — 24 rows total, replacing
+the previous 9-entry card grid.
+
+**What's real vs. what's not:** every row is an honest, generic
+placeholder (`[Placeholder] …`, "Unverified" chips, blank fields where
+unknown) — no specific named agency was invented for this pass. The two
+exceptions are CASA and Airservices Australia, marked "Confirmed"
+because they're already independently verified elsewhere on the
+platform (Research Toolkit → Official Sources), with real links.
+Individual agency research — actual names, RPAS capability, contacts —
+is the next milestone, using the `agency-profile-template.html` full
+record (now expanded to a 9-field Key Facts set + Notes, matching the
+directory's field list from the spec).
+
+**Search & filtering:** free-text search across every column, plus four
+combinable filters (State/Territory, Sector, Organisation Type, RPAS
+capability), plus an A→Z / Z→A sort toggle on the Agency column.
+Overview page's existing `?type=Police` style deep links still work —
+matching is now case-insensitive against the Sector filter.
+
+**Files changed:** `agencies-hub.html` (full rebuild), `assets/app.js`
+(filter/search/sort logic rebuilt for the table), `agency-profile-template.html`
+(Key Facts expanded to 9 fields + Notes). No other pages touched.
+
+---
+
+# Prior release notes
+
 ## Version 2.0 — Information Architecture Restructure
 
 The platform has moved from a country-library layout to a flat,
