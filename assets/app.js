@@ -1,0 +1,134 @@
+// DroneSense APAC Intelligence Hub — shared shell + interactivity
+// Renders the topbar and sidebar from one data source so every page stays
+// in sync as markets/sections are added. Search and filters are structural
+// stubs — not yet wired to a live content index.
+
+const AU_SECTIONS = [
+  { id: 'dashboard',            label: 'Dashboard',          href: 'index.html' },
+  { id: 'regulations',          label: 'Regulations',        href: 'regulations-hub.html' },
+  { id: 'public-safety',        label: 'Public Safety',      href: 'public-safety-hub.html' },
+  { id: 'critical-infra',       label: 'Critical Infrastructure', href: 'critical-infrastructure-hub.html' },
+  { id: 'agencies',             label: 'Agencies',           href: 'agencies-hub.html' },
+  { id: 'uas-ecosystem',        label: 'UAS Ecosystem',      href: 'uas-ecosystem-hub.html' },
+  { id: 'mission-profiles',     label: 'Mission Profiles',   href: 'mission-profiles-hub.html' },
+  { id: 'technology',           label: 'Technology',         href: 'technology-hub.html' },
+  { id: 'regulatory-updates',   label: 'Regulatory Updates', href: 'regulatory-updates-hub.html' },
+];
+
+const NAV_TREE = [
+  { name: 'Australia', status: 'active', items: AU_SECTIONS },
+  { name: 'New Zealand', status: 'soon' },
+  { name: 'Singapore', status: 'soon' },
+  { name: 'Japan', status: 'soon' },
+  { name: 'South Korea', status: 'soon' },
+  { name: 'Malaysia', status: 'soon' },
+  { name: 'Indonesia', status: 'soon' },
+  { name: 'Thailand', status: 'soon' },
+  { name: 'Philippines', status: 'soon' },
+  { name: 'Taiwan', status: 'soon' },
+  { name: 'Hong Kong', status: 'soon' },
+  { name: 'Europe', status: 'soon' },
+  { name: 'United Kingdom', status: 'soon' },
+];
+
+function renderShell(activePageId) {
+  const topbar = document.getElementById('shell-topbar');
+  const sidebar = document.getElementById('shell-sidebar');
+  if (!topbar || !sidebar) return;
+
+  topbar.innerHTML = `
+    <a class="shell-brand" href="index.html">
+      <span class="shell-mark">DS</span>
+      <span class="shell-brand-text"><b>DroneSense APAC Intelligence Hub</b><span>Internal &middot; DroneSense by Versaterm</span></span>
+    </a>
+    <span class="shell-region-badge">AU · Live</span>
+    <div class="shell-search">
+      <div class="shell-search-wrap">
+        <form data-search-form>
+          <input type="search" placeholder="Search regulations, agencies, companies, missions…">
+        </form>
+        <span class="shell-kbd">/</span>
+      </div>
+    </div>
+    <div class="shell-util">
+      <a href="index.html#confidence-overview">Confidence overview</a>
+      <a href="regulatory-updates-hub.html">Regulatory alerts</a>
+      <a href="#">Admin</a>
+    </div>
+    <button class="shell-nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+  `;
+
+  sidebar.innerHTML = NAV_TREE.map(country => {
+    if (country.status === 'active') {
+      const items = country.items.map(item => `
+        <a href="${item.href}" class="${item.id === activePageId ? 'active' : ''}">
+          <span class="dot"></span>${item.label}
+        </a>`).join('');
+      return `
+        <div class="nav-country open">
+          <div class="nav-country-head" data-toggle>
+            <span class="chev">▶</span>
+            <span class="country-name">${country.name}</span>
+          </div>
+          <div class="nav-country-items">${items}</div>
+        </div>`;
+    }
+    return `
+      <div class="nav-country disabled">
+        <div class="nav-country-head">
+          <span class="chev">▶</span>
+          <span class="country-name">${country.name}</span>
+          <span class="soon-tag">Coming soon</span>
+        </div>
+      </div>`;
+  }).join('');
+
+  // expand/collapse for the active (Australia) tree — coming-soon rows are inert
+  sidebar.querySelectorAll('.nav-country:not(.disabled) .nav-country-head[data-toggle]').forEach(head => {
+    head.addEventListener('click', () => {
+      head.closest('.nav-country').classList.toggle('open');
+    });
+  });
+
+  // mobile nav toggle
+  const toggle = document.querySelector('.shell-nav-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const open = sidebar.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderShell(document.body.dataset.page || '');
+
+  // Facet chip toggling (visual only until a live index exists)
+  document.querySelectorAll('.facet-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const pressed = chip.getAttribute('aria-pressed') === 'true';
+      chip.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+    });
+  });
+
+  // Search stub
+  document.querySelectorAll('[data-search-form]').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = form.querySelector('input[type="search"], input[type="text"]');
+      const note = form.parentElement.querySelector('.search-note');
+      if (note && input) {
+        note.textContent = input.value
+          ? `Search index not yet connected — "${input.value}" will match against regulation, agency, mission and company records once content is populated.`
+          : '';
+      }
+    });
+  });
+
+  // Filter selects — visual state only until data is populated
+  document.querySelectorAll('.filter-bar select').forEach(sel => {
+    sel.addEventListener('change', () => {
+      console.log(`Filter "${sel.closest('.filter-group')?.querySelector('label')?.textContent}" set to`, sel.value, '— not yet wired to live data.');
+    });
+  });
+});
