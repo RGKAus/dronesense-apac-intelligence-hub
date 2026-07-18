@@ -557,6 +557,29 @@ footer.site-footer a{ color: var(--text-faint); }
   .key-facts, .search-strings-grid{ grid-template-columns: 1fr; }
 }
 
+/* ============================================================
+   v1.4 — operational workspace refinements
+   ============================================================ */
+
+/* Checkbox-style checklists (reusable, e.g. Research Checklists) */
+.checklist{ list-style:none; margin:0; padding:0; }
+.checklist li{ display:flex; gap:9px; padding:7px 0; border-top:1px solid var(--border); font-size:.85rem; color: var(--text); }
+.checklist li:first-child{ border-top:0; }
+.checklist li::before{ content:"☐"; font-family: var(--font-mono); color: var(--text-faint); flex-shrink:0; }
+
+/* Expandable detail blocks — native <details>/<summary>, no JS required */
+.details-block{ border:1px solid var(--border); background: var(--surface); border-radius: var(--radius-md); padding:12px 16px; margin:14px 0; }
+.details-block summary{ cursor:pointer; color: var(--primary); font-family: var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; }
+.details-block[open] summary{ margin-bottom:10px; }
+
+/* Compact link cells inside reference tables */
+table.compare td a, table.compare td .mono{ font-size:.82rem; }
+table.compare td .copy-btn{ padding:4px 10px; }
+
+/* Horizontal scroll wrapper so wide reference tables stay responsive */
+.table-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.table-scroll table{ min-width:520px; }
+
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   *{ transition:none !important; animation:none !important; }

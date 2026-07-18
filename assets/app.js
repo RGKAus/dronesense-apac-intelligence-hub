@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-copy-btn]').forEach(btn => {
     btn.addEventListener('click', () => {
       const targetSel = btn.getAttribute('data-copy-btn');
-      const container = btn.closest('.prompt-card, .search-string-card');
+      const container = btn.closest('.prompt-card, .search-string-card, tr');
       const textEl = container ? container.querySelector(targetSel) : document.querySelector(targetSel);
       const text = textEl ? textEl.textContent.trim() : '';
       const done = () => {
