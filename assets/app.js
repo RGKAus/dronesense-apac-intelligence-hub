@@ -15,9 +15,9 @@ const AU_SECTIONS = [
   { id: 'regulatory-updates',   label: 'Regulatory Updates', href: 'regulatory-updates-hub.html' },
 ];
 
-// Research Engine — cross-market tools (Phase 1). These sit above the
-// per-country tree because they support research across every market,
-// not just Australia.
+// Research Engine — cross-market tools (Phase 1). Rendered as its own
+// expandable sidebar section beneath Australia, using the same
+// collapsible nav logic as every country group.
 const RESEARCH_TOOLS_SECTIONS = [
   { id: 'research-toolkit', label: 'Research Toolkit', href: 'research-toolkit-hub.html' },
   { id: 'prompt-library',   label: 'Prompt Library',   href: 'prompt-library-hub.html' },
@@ -27,8 +27,8 @@ const RESEARCH_TOOLS_SECTIONS = [
 ];
 
 const NAV_TREE = [
-  { name: 'Research Tools', status: 'tools', items: RESEARCH_TOOLS_SECTIONS },
   { name: 'Australia', status: 'active', items: AU_SECTIONS },
+  { name: 'Research Tools', status: 'active', items: RESEARCH_TOOLS_SECTIONS },
   { name: 'New Zealand', status: 'soon' },
   { name: 'Singapore', status: 'soon' },
   { name: 'Japan', status: 'soon' },
@@ -71,21 +71,6 @@ function renderShell(activePageId) {
   `;
 
   sidebar.innerHTML = NAV_TREE.map(country => {
-    if (country.status === 'tools') {
-      const items = country.items.map(item => `
-        <a href="${item.href}" class="${item.id === activePageId ? 'active' : ''}">
-          <span class="dot"></span>${item.label}
-        </a>`).join('');
-      return `
-        <div class="nav-country nav-tools-group open">
-          <div class="nav-country-head">
-            <span class="chev tools-icon">◆</span>
-            <span class="country-name">${country.name}</span>
-          </div>
-          <div class="nav-country-items">${items}</div>
-        </div>
-        <div class="nav-group-divider"></div>`;
-    }
     if (country.status === 'active') {
       const items = country.items.map(item => `
         <a href="${item.href}" class="${item.id === activePageId ? 'active' : ''}">

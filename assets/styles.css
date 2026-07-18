@@ -566,14 +566,6 @@ footer.site-footer a{ color: var(--text-faint); }
    PHASE 1 — Research Engine additions
    ============================================================ */
 
-/* Research Tools nav group (sits above the country tree) */
-.nav-tools-group{ margin-bottom: 4px; }
-.nav-tools-group .nav-country-head{ cursor:default; }
-.nav-tools-group .nav-country-head:hover{ background:none; }
-.nav-tools-group .tools-icon{ font-size:.5rem; color: var(--primary); }
-.nav-tools-group .country-name{ color: var(--primary); }
-.nav-group-divider{ height:1px; background: var(--border); margin: 8px 18px 10px; }
-
 /* Prompt Library / Search Library — copyable card */
 .prompt-card, .search-string-card{
   background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md);
