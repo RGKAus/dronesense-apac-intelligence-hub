@@ -1,0 +1,34 @@
+{
+  "version": "3.1",
+  "changes": [
+    "Geographically accurate Australia coastline and Tasmania",
+    "Clickable state and territory navigation",
+    "Compact overview title area",
+    "Corrected Versaterm DroneSense text lockup",
+    "Reduced homepage vertical space"
+  ],
+  "files": [
+    "INSTALL-V3.1.txt",
+    "INSTALL-V3.txt",
+    "assets/agency-directory-v3.json",
+    "assets/v3.css",
+    "assets/v3.js",
+    "index.html",
+    "jurisdiction-act.html",
+    "jurisdiction-federal.html",
+    "jurisdiction-nsw.html",
+    "jurisdiction-nt.html",
+    "jurisdiction-qld.html",
+    "jurisdiction-sa.html",
+    "jurisdiction-tas.html",
+    "jurisdiction-vic.html",
+    "jurisdiction-wa.html",
+    "release-manifest-v3.json",
+    "sector-critical-infrastructure.html",
+    "sector-emergency-management.html",
+    "sector-fire-rescue.html",
+    "sector-government-regulators.html",
+    "sector-police.html",
+    "sector-search-rescue.html"
+  ]
+}

@@ -1,0 +1,9 @@
+DRONESENSE APAC INTELLIGENCE HUB — VERSION 3.1
+
+1. Open this folder.
+2. Copy all contents into the root of the GitHub repository.
+3. When Finder asks about the assets folder, choose MERGE.
+4. In GitHub Desktop, commit with: Refine overview map, branding and compact header
+5. Push origin and wait for GitHub Pages deployment.
+
+Branding note: this release uses a clean text lockup for Versaterm DroneSense. The official logo image can be added later without changing the layout.
