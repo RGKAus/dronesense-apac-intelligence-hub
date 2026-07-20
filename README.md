@@ -1,5 +1,53 @@
 # DroneSense — Australian Public Safety & RPAS Intelligence Platform
 
+## Version 2.2 — Regulatory Core (Release 1 content)
+
+First real, sourced content published from the unified template. Five new
+pages, all built on `regulation-page-template.html`, all 17 sections
+populated, all sourced from casa.gov.au (primary) with dated verification:
+
+| Page | File | Confidence |
+|---|---|---|
+| CASA (regulator) | `regulation-casa.html` | Confirmed |
+| CASR Part 101 | `regulation-part-101.html` | Confirmed |
+| Remote Pilot Licence (RePL) | `regulation-repl.html` | Confirmed |
+| RPA Operator's Certificate (ReOC) | `regulation-reoc.html` | Confirmed |
+| BVLOS & AusSORA | `regulation-aussora.html` | Confirmed |
+
+**Why these five:** they're the regulatory spine every other page on the
+platform (agencies, missions, technology, critical infrastructure) already
+cross-links to. Populating them first means every future agency/mission
+profile page has somewhere real to point.
+
+**Notably current:** AusSORA (Advisory Circular 101-06) only took effect
+11 May 2026, replacing the previous TMI 2024-03 ground-risk rules — this is
+flagged as the platform's highest rate-of-change regulation page and has
+been added to both the Regulatory Alert Tracker and the Intelligence
+Watch List.
+
+**What's honest about this release:** every "Confirmed" rating reflects an
+actual primary-source citation with an access date (20 Jul 2026), not a
+default. Where a specific fact (fee schedules, active licence-holder
+counts, which agencies currently hold a ReOC) couldn't be pinned to a
+stable, dateable source in this pass, it's listed under "Research
+Questions" on the relevant page rather than stated as fact. No agency
+names, dates, or figures were invented.
+
+**Files changed:** `regulations-hub.html` (quick-reference table and
+relevant card grids now link to real pages), `assets/app.js` (search
+index updated), `regulatory-updates-hub.html` and `intelligence-hub.html`
+(AusSORA watch-list alert added). All other pages unchanged.
+
+**Not yet in this release:** the remaining 14 regulation topics (Manual
+of Standards, AROC, EVLOS, drone registration, airspace/NOTAM topics,
+etc.) and all 24 agency profiles remain structural placeholders — Agency
+Directory research is the recommended next release (Release 2), since
+CASA's public ReOC holder register (referenced from the ReOC page above)
+is the key primary source for confirming which agencies hold in-house
+RPAS capability.
+
+---
+
 ## Version 2.1 — Agency Directory Expansion
 
 The Agency Directory (`agencies-hub.html`) is now a single sortable,
