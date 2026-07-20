@@ -1,0 +1,15 @@
+{
+  "version": "5.0",
+  "release": "APAC Intelligence Platform",
+  "private_only": true,
+  "features": [
+    "Intelligence Centre",
+    "Technology Watch",
+    "Partners",
+    "RocketDNA private profile",
+    "Competitors",
+    "Procurement by jurisdiction",
+    "Political and Budget Watch",
+    "State overview integration"
+  ]
+}

@@ -1,0 +1,16 @@
+VERSION 5.0 — APAC INTELLIGENCE PLATFORM
+
+IMPORTANT: This package includes private partner contact information. Do not upload it to a public GitHub Pages site.
+
+Deploy only after setting the repository to private and protecting the Cloudflare Pages deployment with Cloudflare Access. See PRIVATE-DEPLOYMENT.md.
+
+Highlights:
+- Live Intelligence Centre framework
+- Working Technology Watch structure
+- Partner Centre and RocketDNA private profile
+- AU and NZ partner pipelines
+- Competitor Intelligence
+- Procurement Centre by jurisdiction
+- Political & Budget Watch
+- Procurement and budget links added to state overviews
+- Mobile navigation retained
