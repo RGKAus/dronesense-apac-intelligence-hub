@@ -1,0 +1,11 @@
+{
+  "version": "3.3",
+  "changes": [
+    "Unified left navigation across all included pages",
+    "Added mobile slide-out navigation",
+    "Responsive homepage, sector, jurisdiction and comparison layouts",
+    "Added modern replacement hub pages",
+    "Added local browser notebook"
+  ],
+  "file_count": 32
+}

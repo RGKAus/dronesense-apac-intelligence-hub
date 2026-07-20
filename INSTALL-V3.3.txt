@@ -1,0 +1,11 @@
+VERSATERM DRONESENSE INTELLIGENCE PLATFORM — VERSION 3.3
+
+This release standardises the left navigation across every included page and adds a responsive mobile layout with a slide-out menu.
+
+INSTALL
+1. Unzip this package.
+2. Copy all contents into the GitHub repository root.
+3. When Finder asks about the assets folder, choose MERGE.
+4. Replace files when prompted so the shared CSS and JavaScript are updated.
+5. Commit and push to main.
+6. Wait for GitHub Pages deployment, then hard refresh.
