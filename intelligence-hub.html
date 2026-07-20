@@ -1,144 +1,116 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Intelligence | DroneSense — Australian Public Safety &amp; RPAS Intelligence Platform</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intelligence Centre | DroneSense — Australian Public Safety &amp; RPAS Intelligence Platform</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<style>
+.dashboard-section{margin:28px 0 36px}
+.dashboard-section-header{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:14px}
+.dashboard-section-header h2{margin:0}
+.minimal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.minimal-tile{display:flex;min-height:116px;padding:20px;border:1px solid var(--border);border-radius:8px;background:var(--panel);text-decoration:none;align-items:flex-end;transition:.16s ease}
+.minimal-tile:hover{transform:translateY(-2px);border-color:var(--accent)}
+.minimal-tile span{font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--text)}
+.intel-entry{display:grid;grid-template-columns:1.5fr .5fr;gap:14px}
+.intel-entry .minimal-tile{min-height:145px}
+.intel-entry .minimal-tile:first-child span{font-size:1.25rem}
+.slim-links{display:flex;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.agency-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.agency-card{display:block;padding:17px;border:1px solid var(--border);background:var(--panel);border-radius:7px;text-decoration:none}
+.agency-card:hover{border-color:var(--accent)}
+.agency-card strong{display:block;color:var(--text);margin-bottom:7px}
+.agency-card small{color:var(--text-muted)}
+.intel-result{border:1px solid var(--border);background:var(--panel);border-radius:7px;padding:16px;margin-bottom:10px}
+.intel-result h3{font-size:.96rem;margin:0 0 8px}
+.intel-result p{margin:0 0 10px;font-size:.84rem}
+.intel-meta{display:flex;gap:8px;flex-wrap:wrap}
+.intel-controls{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:10px;margin-bottom:18px}
+.intel-controls input,.intel-controls select{width:100%}
+@media(max-width:900px){.minimal-grid,.agency-list{grid-template-columns:1fr 1fr}.intel-controls{grid-template-columns:1fr 1fr}.intel-entry{grid-template-columns:1fr}}
+@media(max-width:620px){.minimal-grid,.agency-list,.intel-controls{grid-template-columns:1fr}}
+</style>
 </head>
-<body data-page="intelligence">
-
-<div id="shell-topbar"></div>
-<div id="shell-sidebar"></div>
-
-<div id="shell-main">
-<div class="container">
-
-  <div class="page-head">
-    <span class="eyebrow">Intelligence · Australia</span>
-    <h1>Intelligence</h1>
-    <p>Political, budget, procurement, regulatory, public safety, critical infrastructure and market signals — one page, dated and sourced.</p>
-    <div class="tags">
-      <span class="chip unverified">Not yet researched — structure only</span>
-    </div>
-  </div>
-
-  <nav class="page-toc" aria-label="On this page">
-    <a href="#political">Political</a>
-    <a href="#budget">Budget</a>
-    <a href="#procurement">Procurement</a>
-    <a href="#regulatory">Regulatory</a>
-    <a href="#public-safety-intel">Public Safety</a>
-    <a href="#ci-intel">Critical Infrastructure</a>
-    <a href="#market">Market</a>
-    <a href="#watch-list">Watch List</a>
-  </nav>
-
-  <h2 id="political">Political Intelligence</h2>
-  <div class="table-scroll">
-    <table class="compare">
-      <thead><tr><th>Item</th><th>Status</th></tr></thead>
-      <tbody>
-        <tr><td>Federal elections</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>State &amp; territory elections</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Cabinet changes</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Relevant ministers</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Shadow ministers</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Parliamentary committees</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Major policy announcements</td><td><span class="chip unverified">Unverified</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 id="budget">Budget Intelligence</h2>
-  <div class="table-scroll">
-    <table class="compare">
-      <thead><tr><th>Item</th><th>Status</th></tr></thead>
-      <tbody>
-        <tr><td>Federal Budget</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>State &amp; territory budgets</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>MYEFO</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Portfolio budget statements</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Emergency services funding</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Infrastructure funding</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Grants</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Technology investment</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Disaster recovery funding</td><td><span class="chip unverified">Unverified</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 id="procurement">Procurement Intelligence</h2>
-  <div class="table-scroll">
-    <table class="compare">
-      <thead><tr><th>Item</th><th>Source</th></tr></thead>
-      <tbody>
-        <tr><td>AusTender</td><td><a href="research-toolkit-hub.html#official-sources">Official Sources ↗</a></td></tr>
-        <tr><td>State procurement portals</td><td><a href="research-toolkit-hub.html#official-sources">Official Sources ↗</a></td></tr>
-        <tr><td>Upcoming procurement activity</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Panels &amp; standing offers</td><td><span class="chip unverified">Unverified</span></td></tr>
-        <tr><td>Grants &amp; funding announcements</td><td><span class="chip unverified">Unverified</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p style="font-size:.82rem;">Search operators for tender monitoring: <a href="research-toolkit-hub.html#search-operators">Search Operators reference</a>. Ready-to-copy prompts: <a href="prompt-library-hub.html">Procurement prompt category</a>.</p>
-
-  <h2 id="regulatory">Regulatory Intelligence</h2>
-  <div class="crosslinks">
-    <a href="regulations-hub.html">Regulations quick reference</a>
-    <a href="regulatory-updates-hub.html">Regulatory Alert Tracker</a>
-  </div>
-
-  <h2 id="public-safety-intel">Public Safety Intelligence</h2>
-  <div class="crosslinks">
-    <a href="public-safety-hub.html">Public Safety &amp; Emergency Services hub</a>
-    <a href="agencies-hub.html">Agency Directory</a>
-  </div>
-
-  <h2 id="ci-intel">Critical Infrastructure Intelligence</h2>
-  <div class="crosslinks">
-    <a href="critical-infrastructure-hub.html">Critical Infrastructure Sectors hub</a>
-  </div>
-
-  <h2 id="market">Market Intelligence</h2>
-  <div class="crosslinks">
-    <a href="uas-ecosystem-hub.html">UAS Ecosystem Directory</a>
-    <a href="technology-hub.html">Technology &amp; Advanced Operations</a>
-    <a href="mission-profiles-hub.html">Mission Profiles</a>
-  </div>
-
-  <h2 id="watch-list">Current Watch List</h2>
-  <div class="alert-card">
-    <span class="alert-icon">▲</span>
-    <div><span class="alert-title">AusSORA (AC 101-06) now in effect — new BVLOS assessment method</span><span class="alert-meta">Status: Current, effective 11 May 2026 · Confirmed 20 Jul 2026 — see <a href="regulation-aussora.html">BVLOS &amp; AusSORA</a></span></div>
-  </div>
-  <div class="alert-card">
-    <span class="alert-icon">▲</span>
-    <div><span class="alert-title">[Placeholder] CASR Part 101 amendment tracker (PP 2107US consultation)</span><span class="alert-meta">Status: to confirm · See <a href="regulation-part-101.html">CASR Part 101</a> — Research Questions</span></div>
-  </div>
-  <p style="font-size:.82rem;">Full history: <a href="regulatory-updates-hub.html">Regulatory Alert Tracker →</a></p>
-
-  <h2>Cross-references</h2>
-  <div class="crosslinks">
-    <a href="agencies-hub.html">Agency Directory</a>
-    <a href="regulations-hub.html">Regulations</a>
-    <a href="reports-hub.html">Reports</a>
-    <a href="research-toolkit-hub.html">Research Toolkit</a>
-    <a href="index.html">Overview</a>
-  </div>
-
+<body data-page="overview">
+<div id="shell-topbar"></div><div id="shell-sidebar"></div><div id="shell-main"><div class="container">
+<div class="page-head"><span class="eyebrow">Intelligence Centre</span><h1>Search intelligence</h1><p>Search across agencies, sectors, regulations, capability, procurement, funding and operational use.</p></div>
+<div class="intel-controls">
+<input id="intel-search" type="search" placeholder="Search any intelligence record…">
+<select id="intel-sector"><option value="">All sectors</option><option value="Emergency Management">Emergency Management</option><option value="Fire &amp; Rescue">Fire &amp; Rescue</option><option value="Government &amp; Regulators">Government &amp; Regulators</option><option value="Police">Police</option><option value="Search &amp; Rescue">Search &amp; Rescue</option></select>
+<select id="intel-agency"><option value="">All agencies</option><option value="Airservices Australia">Airservices Australia</option><option value="Australian Border Force">Australian Border Force</option><option value="Australian Federal Police">Australian Federal Police</option><option value="Australian Maritime Safety Authority">Australian Maritime Safety Authority</option><option value="Civil Aviation Safety Authority">Civil Aviation Safety Authority</option><option value="Department of Fire and Emergency Services WA">Department of Fire and Emergency Services WA</option><option value="Fire &amp; Rescue NSW">Fire &amp; Rescue NSW</option><option value="Fire Rescue Victoria">Fire Rescue Victoria</option><option value="Fire and Rescue NSW">Fire and Rescue NSW</option><option value="NSW Police Force">NSW Police Force</option><option value="National Emergency Management Agency">National Emergency Management Agency</option><option value="Victoria Police">Victoria Police</option><option value="Western Australia Police Force">Western Australia Police Force</option></select>
+<select id="intel-type"><option value="">All datasets</option><option value="Agency role">Agency role</option><option value="Capability">Capability</option><option value="Funding">Funding</option><option value="Operational use">Operational use</option><option value="Procurement">Procurement</option><option value="Regulatory">Regulatory</option><option value="Technology">Technology</option></select>
+<select id="intel-confidence"><option value="">Any confidence</option><option>Confirmed</option><option>Partially verified</option></select>
 </div>
-
-<footer class="site-footer">
-  <div class="container" style="padding:0;">
-    <span>DroneSense — Intelligence, v2.0.</span>
-    <span><a href="index.html">Back to Overview</a></span>
-  </div>
-</footer>
-</div>
-
-<script src="assets/app.js"></script>
-</body>
-</html>
+<div id="intel-results"><article class="intel-result" data-intel-record data-agency="Fire &amp; Rescue NSW" data-sector="Fire &amp; Rescue" data-jur="NSW" data-type="Capability" data-confidence="Confirmed">
+<h3><a href="agency-frnsw.html">FRNSW statewide RPAS capability</a></h3><p>Official reporting documents distributed drone capability and more than 290 qualified RPAS pilots by October 2024.</p>
+<div class="intel-meta"><span class="badge-scope">Fire &amp; Rescue</span><span class="badge-scope">Fire &amp; Rescue NSW</span><span class="badge-scope">Capability</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Fire and Rescue NSW" data-sector="Fire &amp; Rescue" data-jur="NSW" data-type="Operational use" data-confidence="Confirmed">
+<h3><a href="agency-frnsw.html">FRNSW AI-assisted missing-person search</a></h3><p>Official reporting documents an RPAS team locating missing hikers using AI-assisted person detection.</p>
+<div class="intel-meta"><span class="badge-scope">Fire &amp; Rescue</span><span class="badge-scope">Fire and Rescue NSW</span><span class="badge-scope">Operational use</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Fire and Rescue NSW" data-sector="Fire &amp; Rescue" data-jur="NSW" data-type="Operational use" data-confidence="Confirmed">
+<h3><a href="agency-frnsw.html">FRNSW emergency delivery mission</a></h3><p>Official reporting documents medicine delivery to an isolated community during flood response.</p>
+<div class="intel-meta"><span class="badge-scope">Fire &amp; Rescue</span><span class="badge-scope">Fire and Rescue NSW</span><span class="badge-scope">Operational use</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Fire Rescue Victoria" data-sector="Fire &amp; Rescue" data-jur="VIC" data-type="Capability" data-confidence="Confirmed">
+<h3><a href="agency-frv.html">FRV operational RPAS program</a></h3><p>FRV documents operational drones for fire, flood, marine, rescue and HazMat incidents.</p>
+<div class="intel-meta"><span class="badge-scope">Fire &amp; Rescue</span><span class="badge-scope">Fire Rescue Victoria</span><span class="badge-scope">Capability</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Fire Rescue Victoria" data-sector="Fire &amp; Rescue" data-jur="VIC" data-type="Regulatory" data-confidence="Confirmed">
+<h3><a href="agency-frv.html">FRV BVLOS evaluation</a></h3><p>FRV published a structured evaluation of RPAS BVLOS operations for emergency services.</p>
+<div class="intel-meta"><span class="badge-scope">Fire &amp; Rescue</span><span class="badge-scope">Fire Rescue Victoria</span><span class="badge-scope">Regulatory</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Department of Fire and Emergency Services WA" data-sector="Fire &amp; Rescue" data-jur="WA" data-type="Funding" data-confidence="Confirmed">
+<h3><a href="agency-dfes-wa.html">DFES natural-hazard monitoring project</a></h3><p>Public grant information confirms funding to establish a remotely piloted natural-hazard monitoring capability.</p>
+<div class="intel-meta"><span class="badge-scope">Fire &amp; Rescue</span><span class="badge-scope">Department of Fire and Emergency Services WA</span><span class="badge-scope">Funding</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Department of Fire and Emergency Services WA" data-sector="Fire &amp; Rescue" data-jur="WA" data-type="Procurement" data-confidence="Confirmed">
+<h3><a href="agency-dfes-wa.html">DFES fixed-wing RPA procurement objective</a></h3><p>The funded project includes identifying and procuring a suitable fixed-wing RPA for defined use cases.</p>
+<div class="intel-meta"><span class="badge-scope">Fire &amp; Rescue</span><span class="badge-scope">Department of Fire and Emergency Services WA</span><span class="badge-scope">Procurement</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="NSW Police Force" data-sector="Police" data-jur="NSW" data-type="Capability" data-confidence="Confirmed">
+<h3><a href="agency-nsw-police.html">NSW Police RPA fleet</a></h3><p>NSW Police Aviation Command publicly states that it maintains the force’s remotely piloted aircraft fleet.</p>
+<div class="intel-meta"><span class="badge-scope">Police</span><span class="badge-scope">NSW Police Force</span><span class="badge-scope">Capability</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="NSW Police Force" data-sector="Police" data-jur="NSW" data-type="Regulatory" data-confidence="Partially verified">
+<h3><a href="agency-nsw-police.html">NSW Police BVLOS status</a></h3><p>A current public BVLOS approval or DFR deployment was not confirmed in the reviewed official material.</p>
+<div class="intel-meta"><span class="badge-scope">Police</span><span class="badge-scope">NSW Police Force</span><span class="badge-scope">Regulatory</span><span class="chip partial">Partially verified</span></div></article><article class="intel-result" data-intel-record data-agency="Australian Federal Police" data-sector="Police" data-jur="Federal" data-type="Capability" data-confidence="Partially verified">
+<h3><a href="agency-afp.html">AFP RPAS and counter-RPAS activity</a></h3><p>AFP reporting confirms RPAS and counter-RPAS activity, including airport-related operational environments.</p>
+<div class="intel-meta"><span class="badge-scope">Police</span><span class="badge-scope">Australian Federal Police</span><span class="badge-scope">Capability</span><span class="chip partial">Partially verified</span></div></article><article class="intel-result" data-intel-record data-agency="Australian Federal Police" data-sector="Police" data-jur="Federal" data-type="Capability" data-confidence="Partially verified">
+<h3><a href="agency-afp.html">AFP current fleet and BVLOS status</a></h3><p>Current fleet composition, ReOC structure, BVLOS approval and dock operations are not publicly confirmed.</p>
+<div class="intel-meta"><span class="badge-scope">Police</span><span class="badge-scope">Australian Federal Police</span><span class="badge-scope">Capability</span><span class="chip partial">Partially verified</span></div></article><article class="intel-result" data-intel-record data-agency="Australian Border Force" data-sector="Police" data-jur="Federal" data-type="Capability" data-confidence="Confirmed">
+<h3><a href="agency-abf.html">ABF northern Australia RPAS rollout</a></h3><p>ABF publicly confirmed broader RPAS operations supporting maritime-domain surveillance in northern Australia.</p>
+<div class="intel-meta"><span class="badge-scope">Police</span><span class="badge-scope">Australian Border Force</span><span class="badge-scope">Capability</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Australian Border Force" data-sector="Police" data-jur="Federal" data-type="Operational use" data-confidence="Confirmed">
+<h3><a href="agency-abf.html">ABF illegal fishing detection</a></h3><p>ABF documented drone support for detecting suspected illegal foreign fishing activity.</p>
+<div class="intel-meta"><span class="badge-scope">Police</span><span class="badge-scope">Australian Border Force</span><span class="badge-scope">Operational use</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Western Australia Police Force" data-sector="Police" data-jur="WA" data-type="Capability" data-confidence="Partially verified">
+<h3><a href="agency-wa-police.html">WA Police RPAS status</a></h3><p>A current in-house RPAS fleet, ReOC, BVLOS program, dock deployment or DFR capability was not confirmed from reviewed official sources.</p>
+<div class="intel-meta"><span class="badge-scope">Police</span><span class="badge-scope">Western Australia Police Force</span><span class="badge-scope">Capability</span><span class="chip partial">Partially verified</span></div></article><article class="intel-result" data-intel-record data-agency="Victoria Police" data-sector="Police" data-jur="VIC" data-type="Capability" data-confidence="Partially verified">
+<h3><a href="agency-victoria-police.html">Victoria Police RPAS status</a></h3><p>A sufficiently clear current official source confirming the scale or structure of an in-house RPAS program was not identified.</p>
+<div class="intel-meta"><span class="badge-scope">Police</span><span class="badge-scope">Victoria Police</span><span class="badge-scope">Capability</span><span class="chip partial">Partially verified</span></div></article><article class="intel-result" data-intel-record data-agency="Australian Maritime Safety Authority" data-sector="Search &amp; Rescue" data-jur="Federal" data-type="Agency role" data-confidence="Confirmed">
+<h3><a href="agency-amsa.html">AMSA national SAR coordination</a></h3><p>AMSA coordinates Australia’s national aviation and maritime search and rescue arrangements.</p>
+<div class="intel-meta"><span class="badge-scope">Search &amp; Rescue</span><span class="badge-scope">Australian Maritime Safety Authority</span><span class="badge-scope">Agency role</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Australian Maritime Safety Authority" data-sector="Search &amp; Rescue" data-jur="Federal" data-type="Capability" data-confidence="Partially verified">
+<h3><a href="agency-amsa.html">AMSA in-house RPAS status</a></h3><p>A current in-house RPAS program, ReOC or BVLOS capability was not publicly confirmed in reviewed official sources.</p>
+<div class="intel-meta"><span class="badge-scope">Search &amp; Rescue</span><span class="badge-scope">Australian Maritime Safety Authority</span><span class="badge-scope">Capability</span><span class="chip partial">Partially verified</span></div></article><article class="intel-result" data-intel-record data-agency="National Emergency Management Agency" data-sector="Emergency Management" data-jur="Federal" data-type="Agency role" data-confidence="Confirmed">
+<h3><a href="agency-nema.html">NEMA national disaster coordination</a></h3><p>NEMA supports national disaster preparedness, response, relief and recovery coordination.</p>
+<div class="intel-meta"><span class="badge-scope">Emergency Management</span><span class="badge-scope">National Emergency Management Agency</span><span class="badge-scope">Agency role</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="National Emergency Management Agency" data-sector="Emergency Management" data-jur="Federal" data-type="Capability" data-confidence="Partially verified">
+<h3><a href="agency-nema.html">NEMA in-house RPAS status</a></h3><p>A dedicated NEMA RPAS fleet or aviation unit is not publicly confirmed.</p>
+<div class="intel-meta"><span class="badge-scope">Emergency Management</span><span class="badge-scope">National Emergency Management Agency</span><span class="badge-scope">Capability</span><span class="chip partial">Partially verified</span></div></article><article class="intel-result" data-intel-record data-agency="Civil Aviation Safety Authority" data-sector="Government &amp; Regulators" data-jur="Federal" data-type="Regulatory" data-confidence="Confirmed">
+<h3><a href="agency-casa.html">CASA RPAS regulatory authority</a></h3><p>CASA is the primary authority for Australian civil RPAS rules, licensing, certification and complex-operation approvals.</p>
+<div class="intel-meta"><span class="badge-scope">Government &amp; Regulators</span><span class="badge-scope">Civil Aviation Safety Authority</span><span class="badge-scope">Regulatory</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Civil Aviation Safety Authority" data-sector="Government &amp; Regulators" data-jur="Federal" data-type="Regulatory" data-confidence="Confirmed">
+<h3><a href="regulation-aussora.html">AusSORA pathway</a></h3><p>Complex BVLOS operations may require a risk assessment and approval pathway under CASA’s Australian SORA framework.</p>
+<div class="intel-meta"><span class="badge-scope">Government &amp; Regulators</span><span class="badge-scope">Civil Aviation Safety Authority</span><span class="badge-scope">Regulatory</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Civil Aviation Safety Authority" data-sector="Government &amp; Regulators" data-jur="Federal" data-type="Regulatory" data-confidence="Confirmed">
+<h3><a href="regulation-reoc.html">ReOC requirement</a></h3><p>Commercial and excluded-category operations outside standard pathways commonly require operation under an RPA Operator’s Certificate.</p>
+<div class="intel-meta"><span class="badge-scope">Government &amp; Regulators</span><span class="badge-scope">Civil Aviation Safety Authority</span><span class="badge-scope">Regulatory</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Civil Aviation Safety Authority" data-sector="Government &amp; Regulators" data-jur="Federal" data-type="Regulatory" data-confidence="Confirmed">
+<h3><a href="regulation-repl.html">RePL qualification</a></h3><p>Remote pilots conducting relevant operations require qualifications appropriate to the aircraft and operation.</p>
+<div class="intel-meta"><span class="badge-scope">Government &amp; Regulators</span><span class="badge-scope">Civil Aviation Safety Authority</span><span class="badge-scope">Regulatory</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Airservices Australia" data-sector="Government &amp; Regulators" data-jur="Federal" data-type="Technology" data-confidence="Confirmed">
+<h3><a href="agency-airservices.html">Airservices FIMS role</a></h3><p>Airservices is developing the Flight Information Management System for information exchange between ATM and approved uncrewed-aircraft service suppliers.</p>
+<div class="intel-meta"><span class="badge-scope">Government &amp; Regulators</span><span class="badge-scope">Airservices Australia</span><span class="badge-scope">Technology</span><span class="chip confirmed">Confirmed</span></div></article><article class="intel-result" data-intel-record data-agency="Airservices Australia" data-sector="Government &amp; Regulators" data-jur="Federal" data-type="Technology" data-confidence="Confirmed">
+<h3><a href="agency-airservices.html">Automated controlled-airspace access</a></h3><p>Airservices has developed digital pathways supporting faster access and authorisation workflows in controlled airspace.</p>
+<div class="intel-meta"><span class="badge-scope">Government &amp; Regulators</span><span class="badge-scope">Airservices Australia</span><span class="badge-scope">Technology</span><span class="chip confirmed">Confirmed</span></div></article></div>
+<p id="intel-empty" style="display:none">No intelligence records match the selected filters.</p>
+<div class="slim-links"><a href="agencies-hub.html">Browse sectors</a><a href="reports-hub.html">Reports</a><a href="regulations-hub.html">Regulations</a></div>
+<script>
+(function(){
+var q=document.getElementById('intel-search'),s=document.getElementById('intel-sector'),a=document.getElementById('intel-agency'),t=document.getElementById('intel-type'),c=document.getElementById('intel-confidence'),rows=[].slice.call(document.querySelectorAll('[data-intel-record]')),empty=document.getElementById('intel-empty');
+function apply(){
+ var text=(q.value||'').toLowerCase(), shown=0;
+ rows.forEach(function(row){
+  var conf=row.dataset.confidence==='Partially verified'?'Partially verified':row.dataset.confidence;
+  var ok=(!text||row.textContent.toLowerCase().indexOf(text)>-1)&&(!s.value||row.dataset.sector===s.value)&&(!a.value||row.dataset.agency===a.value)&&(!t.value||row.dataset.type===t.value)&&(!c.value||conf===c.value);
+  row.style.display=ok?'':'none'; if(ok) shown++;
+ });
+ empty.style.display=shown?'none':'block';
+}
+[q,s,a,t,c].forEach(function(el){el.addEventListener(el.tagName==='INPUT'?'input':'change',apply);});
+var p=new URLSearchParams(location.search), ps=p.get('sector'),pa=p.get('agency');
+if(ps) s.value=ps;if(pa) a.value=pa;apply();
+})();
+</script>
+</div><footer class="site-footer"><div class="container" style="padding:0;"><span>DroneSense — Australian Public Safety &amp; RPAS Intelligence Platform.</span><span><a href="index.html">Overview</a></span></div></footer></div><script src="assets/app.js"></script></body></html>

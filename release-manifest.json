@@ -1,20 +1,28 @@
 {
-  "release": "v2.4 \u2014 Australian Agency Intelligence Core",
-  "verification_date": "2026-07-20",
+  "release": "v2.5 \u2014 Sector Dashboard & Intelligence Centre",
+  "commit": "v2.5: separate sector navigation and launch intelligence centre",
   "files": [
+    "INSTALL-NOTES.txt",
     "agencies-hub.html",
-    "agency-afp.html",
     "agency-abf.html",
+    "agency-afp.html",
+    "agency-airservices.html",
     "agency-amsa.html",
     "agency-casa.html",
-    "agency-airservices.html",
-    "agency-nema.html",
-    "agency-wa-police.html",
     "agency-dfes-wa.html",
-    "agency-nsw-police.html",
     "agency-frnsw.html",
-    "agency-victoria-police.html",
     "agency-frv.html",
-    "INSTALL-NOTES.txt"
+    "agency-nema.html",
+    "agency-nsw-police.html",
+    "agency-victoria-police.html",
+    "agency-wa-police.html",
+    "index.html",
+    "intelligence-hub.html",
+    "sector-critical-infrastructure.html",
+    "sector-emergency-management.html",
+    "sector-fire-rescue.html",
+    "sector-government-regulators.html",
+    "sector-police.html",
+    "sector-search-rescue.html"
   ]
 }

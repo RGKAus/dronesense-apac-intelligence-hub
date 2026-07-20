@@ -1,26 +1,45 @@
-DRONESENSE v2.4 — AUSTRALIAN AGENCY INTELLIGENCE CORE
+DRONESENSE v2.5 — DASHBOARD & INTELLIGENCE CENTRE
 
-FILES
-- Replace the existing agencies-hub.html with the new file.
-- Add the 12 agency-*.html files to the repository root.
-- No CSS or assets files are replaced.
-- The hub includes its own small filter script and still loads assets/app.js.
+WHAT THIS RELEASE CHANGES
+- Replaces the mixed-content home dashboard with a minimal sector-led dashboard.
+- Separates agency navigation from intelligence search.
+- Adds six sector landing pages.
+- Adds a searchable Intelligence Centre.
+- Updates the 12 v2.4 agency pages with direct links to agency and sector intelligence.
 
-RELEASE
-Name: v2.4 — Australian Agency Intelligence Core
-Commit: v2.4: populate Australian federal and public safety agency intelligence
+FILES TO REPLACE
+- index.html
+- agencies-hub.html
+- all 12 agency-*.html pages from v2.4
 
-IMPORTANT
-- Profiles are vendor-neutral.
-- Confirmed capability is based on public official sources.
-- ReOC, BVLOS, DFR, dock and technology-stack claims are explicitly marked not publicly confirmed where evidence was not available.
-- Verification date: 20 July 2026.
+FILES TO ADD
+- intelligence-hub.html
+- sector-police.html
+- sector-fire-rescue.html
+- sector-emergency-management.html
+- sector-search-rescue.html
+- sector-critical-infrastructure.html
+- sector-government-regulators.html
+
+NO ASSET REPLACEMENT
+This pack does not replace assets/styles.css or assets/app.js. It uses the existing site shell and adds page-local responsive styling.
+
+RELEASE NAME
+v2.5 — Sector Dashboard & Intelligence Centre
+
+GITHUB COMMIT
+v2.5: separate sector navigation and launch intelligence centre
 
 GITHUB DESKTOP
-1. Open the local dronesense-apac-intelligence-hub repository.
-2. Copy all files from this pack into the repository root.
-3. Allow agencies-hub.html to replace the current file.
-4. Review changes in GitHub Desktop.
-5. Commit using the message above.
+1. Unzip the pack.
+2. Copy every HTML file into the repository root.
+3. Approve replacement of files with the same name.
+4. Review the changes in GitHub Desktop.
+5. Commit with the message above.
 6. Push origin.
-7. After GitHub Pages deploys, test agencies-hub.html and several profile links.
+7. After Pages deploys, test:
+   - index.html
+   - agencies-hub.html
+   - sector-police.html
+   - intelligence-hub.html
+   - one agency page and its Intelligence links
