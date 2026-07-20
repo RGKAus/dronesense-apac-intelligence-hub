@@ -1,0 +1,18 @@
+VERSATERM DRONESENSE INTELLIGENCE PLATFORM - VERSION 4.0
+
+1. Copy all files and folders into the root of the GitHub repository.
+2. When Finder asks about the assets folder, choose MERGE.
+3. Replace existing files when prompted, including v3.css and any updated HTML pages.
+4. Commit and push the changes in GitHub Desktop.
+5. Wait for GitHub Pages deployment to finish, then hard-refresh the site.
+
+NEW IN V4.0
+- Report Builder added to the consistent desktop and mobile navigation.
+- Generates real PDF files in the browser.
+- Australian RPAS Regulatory Requirements template.
+- Australian Public Safety Agencies & UAS Uses template.
+- Sector filters and source/method notes.
+- Branded cover, tables, page numbers and review warning.
+
+TECHNICAL NOTE
+The report builder loads jsPDF and jsPDF-AutoTable from cdnjs. The browser needs internet access when the page first loads these libraries. Report data remains in the browser and is not uploaded to a report service.
