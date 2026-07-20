@@ -1,0 +1,12 @@
+DRONESENSE APAC INTELLIGENCE HUB — VERSION 4.1
+
+1. Unzip this package.
+2. Copy all files into the root of your GitHub Pages repository.
+3. When Finder asks about the assets folder, choose MERGE.
+4. Choose REPLACE for files with the same names.
+5. Commit and push through GitHub Desktop.
+
+Suggested commit message:
+Full site audit, standardise agency pages and simplify reports (v4.1)
+
+This release includes exact-name replacements for previously unformatted agency pages, so ensure those HTML files are replaced.
