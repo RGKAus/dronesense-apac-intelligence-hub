@@ -1,5 +1,84 @@
 # DroneSense — Australian Public Safety & RPAS Intelligence Platform
 
+## Version 2.3 — Australian Agency Intelligence Population (Release 2)
+
+15 real, sourced agency profiles published, replacing matching placeholder
+rows in the Agency Directory. Every profile uses the full 17-section
+`agency-profile-template.html` structure with real Key Facts, sourced
+Executive Summary/Operational Context prose, and dated Sources.
+
+**Federal (7 new profiles + CASA, already live from Release 1):**
+
+| Agency | File | RPAS capability | Confidence |
+|---|---|---|---|
+| Australian Federal Police | `agency-afp.html` | Not publicly confirmed | Partially verified |
+| Australian Border Force | `agency-abf.html` | Confirmed (maritime surveillance, NT/WA) | Confirmed |
+| Australian Maritime Safety Authority | `agency-amsa.html` | N/A — SAR coordinator, crewed jets | Confirmed |
+| National Emergency Management Agency | `agency-nema.html` | N/A — coordination agency | Confirmed |
+| Airservices Australia | `agency-airservices.html` | N/A — ANSP | Confirmed |
+| Australian Transport Safety Bureau | `agency-atsb.html` | N/A — investigator | Confirmed |
+| Department of Home Affairs | `agency-homeaffairs.html` | N/A — portfolio department | Confirmed |
+
+**State & territory police (8 of 8 jurisdictions):**
+
+| Force | File | RPAS capability | Confidence |
+|---|---|---|---|
+| NSW Police Force | `agency-police-nsw.html` | Confirmed (PolAir-Remote drone-in-a-box) | Confirmed |
+| Victoria Police | `agency-police-vic.html` | Confirmed (140+ pilots, 130+ drones) | Confirmed |
+| Queensland Police Service | `agency-police-qld.html` | Confirmed (Townsville/Cairns trial) | Confirmed |
+| WA Police Force | `agency-police-wa.html` | Confirmed (negotiated Dec 2025 national BVLOS exemption) | Confirmed |
+| SA Police (SAPOL) | `agency-police-sa.html` | Highly likely (best source dated 2013) | Highly likely |
+| Tasmania Police | `agency-police-tas.html` | Confirmed (road-policing use case) | Confirmed |
+| ACT Policing | `agency-police-act.html` | Not publicly confirmed | Unverified |
+| NT Police Force | `agency-police-nt.html` | Not publicly confirmed | Unverified |
+
+**Notable finding:** WA Police negotiated a CASA regulatory exemption in
+December 2025, on behalf of Australian law enforcement generally, allowing
+police drones to operate BVLOS and over populous areas — a nationally
+significant regulatory development directly relevant to every other state
+police force on this platform. Flagged for follow-up on the BVLOS &
+AusSORA regulation page and Regulatory Alert Tracker.
+
+**What's honest about this release:** ACT Policing and NT Police are
+published as genuinely "Unverified" — no dedicated RPAS source was found
+for either despite dedicated search passes, and this is stated plainly
+rather than inferred from other jurisdictions or from the (separately
+confirmed, but unrelated) ABF drone activity in the Northern Territory.
+SAPOL is rated "Highly likely" rather than "Confirmed" specifically
+because the only dateable primary source found was from 2013 — this is
+flagged as an open Research Question rather than presented as current.
+No agency names, RPAS platforms, fleet sizes, or capabilities were
+invented; every claim traces to a cited, dated source.
+
+**Directory changes:** `agencies-hub.html` grew from 24 to 34 rows (the
+single "State/Territory Police" and "Federal law enforcement" placeholder
+rows were expanded into 9 individually-linked real rows; AMSA, ATSB and
+Department of Home Affairs added as new rows). CASA and Airservices rows
+now link to their real profile pages instead of the Research Toolkit
+anchor. Search, sort and all four filters (State/Territory, Sector, Org
+type, RPAS capability) continue to work against the expanded table with
+no JS changes required to the filter logic itself — only `assets/app.js`'s
+`SEARCH_INDEX` (global search) and `PAGE_LABELS` (My Notebook) were
+updated to point at real pages.
+
+**Not yet in this release, still placeholder:** Fire & Rescue, Rural
+Fire, Ambulance, SES, Search & Rescue (Marine Rescue/Surf Life Saving —
+distinct from the now-populated AMSA), Local Government, Defence, and
+all Critical Infrastructure sector rows (Energy, Utilities, Mining, Oil
+& Gas, Ports, Rail, Telecommunications, Water) — 17 of 34 Agency
+Directory rows remain unresearched placeholders. Recommended next
+release: Fire & Rescue and SES across all 8 jurisdictions, since these
+are consistently the most bushfire/flood-relevant public safety agencies
+and were the most-requested category after police.
+
+**Files changed:** `agencies-hub.html` (rows replaced/added), 15 new
+agency profile files, `assets/app.js` (`SEARCH_INDEX` and `PAGE_LABELS`
+updated). No other files touched — `public-safety-hub.html`,
+`critical-infrastructure-hub.html` and all other hubs are unchanged in
+this release and still reference the placeholder template.
+
+---
+
 ## Version 2.2 — Regulatory Core (Release 1 content)
 
 First real, sourced content published from the unified template. Five new
