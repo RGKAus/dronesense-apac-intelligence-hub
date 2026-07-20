@@ -1,171 +1,44 @@
-<!doctype html>
-<html lang="en-AU">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agency Directory | DroneSense — Australian Public Safety &amp; RPAS Intelligence Platform</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
-</head>
-<body data-page="agency-directory">
-
-<div id="shell-topbar"></div>
-<div id="shell-sidebar"></div>
-
-<div id="shell-main">
-<div class="container">
-
-  <div class="page-head">
-    <span class="eyebrow">Agency Directory · Australia</span>
-    <h1>Agency Directory</h1>
-    <p>Search, filter, sort. Full profile per agency: <a href="agency-profile-template.html">template ↗</a></p>
-    <div class="tags">
-      <span class="badge-scope">17 of 34 rows researched — 8 federal, 8 state/territory police, plus CASA &amp; Airservices from Release 1</span>
-    </div>
-  </div>
-
-  <div class="keyword-search-bar">
-    <input type="search" id="agency-search" placeholder="Search agency, sector, state, org type…">
-  </div>
-
-  <div class="filter-bar">
-    <div class="filter-group"><label>State / Territory</label>
-      <select id="af-state">
-        <option value="all">All</option>
-        <option value="Federal">Federal</option>
-        <option value="NSW">NSW</option>
-        <option value="VIC">VIC</option>
-        <option value="QLD">QLD</option>
-        <option value="WA">WA</option>
-        <option value="SA">SA</option>
-        <option value="TAS">TAS</option>
-        <option value="ACT">ACT</option>
-        <option value="NT">NT</option>
-      </select>
-    </div>
-    <div class="filter-group"><label>Sector</label>
-      <select id="af-sector">
-        <option value="all">All sectors</option>
-        <option>Police</option>
-        <option>Fire &amp; Rescue</option>
-        <option>SES</option>
-        <option>Emergency Management</option>
-        <option>Ambulance</option>
-        <option>Search &amp; Rescue</option>
-        <option>Border Force</option>
-        <option>Defence</option>
-        <option>Civil Aviation</option>
-        <option>Air Navigation</option>
-        <option>Local Government</option>
-        <option>Critical Infrastructure</option>
-        <option>Energy</option>
-        <option>Utilities</option>
-        <option>Mining</option>
-        <option>Oil &amp; Gas</option>
-        <option>Ports</option>
-        <option>Rail</option>
-        <option>Telecommunications</option>
-        <option>Water</option>
-      </select>
-    </div>
-    <div class="filter-group"><label>Organisation type</label>
-      <select id="af-orgtype">
-        <option value="all">All types</option>
-        <option>Federal government agency</option>
-        <option>State government agency</option>
-        <option>Local government</option>
-        <option>Statutory authority</option>
-        <option>Regulator</option>
-        <option>Government business enterprise</option>
-        <option>Volunteer organisation</option>
-        <option>Private sector</option>
-      </select>
-    </div>
-    <div class="filter-group"><label>RPAS capability</label>
-      <select id="af-rpas">
-        <option value="all">Any</option>
-        <option value="Confirmed">Confirmed</option>
-        <option value="Unverified">Unverified</option>
-      </select>
-    </div>
-    <span class="library-count" id="agency-count"></span>
-  </div>
-
-  <div class="table-scroll">
-    <table class="compare" id="agency-table">
-      <thead>
-        <tr>
-          <th><button class="mono" id="af-sort-name" data-dir="asc" type="button" style="background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0;">Agency ⇅</button></th>
-          <th>Sector</th>
-          <th>State/Territory</th>
-          <th>Org type</th>
-          <th>RPAS</th>
-          <th>Confidence</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="agency-tbody">
-        <tr data-sector="Police" data-state="Federal" data-orgtype="Federal government agency" data-rpas="Unverified"><td>Australian Federal Police (AFP)</td><td>Police</td><td>Federal</td><td>Federal government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip partial">Partially verified</span></td><td><a href="agency-afp.html">Open →</a></td></tr>
-        <tr data-sector="Police" data-state="NSW" data-orgtype="State government agency" data-rpas="Confirmed"><td>NSW Police Force</td><td>Police</td><td>NSW</td><td>State government agency</td><td><span class="chip confirmed">Confirmed</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-police-nsw.html">Open →</a></td></tr>
-        <tr data-sector="Police" data-state="VIC" data-orgtype="State government agency" data-rpas="Confirmed"><td>Victoria Police</td><td>Police</td><td>VIC</td><td>State government agency</td><td><span class="chip confirmed">Confirmed</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-police-vic.html">Open →</a></td></tr>
-        <tr data-sector="Police" data-state="QLD" data-orgtype="State government agency" data-rpas="Confirmed"><td>Queensland Police Service (QPS)</td><td>Police</td><td>QLD</td><td>State government agency</td><td><span class="chip confirmed">Confirmed</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-police-qld.html">Open →</a></td></tr>
-        <tr data-sector="Police" data-state="WA" data-orgtype="State government agency" data-rpas="Confirmed"><td>Western Australia Police Force</td><td>Police</td><td>WA</td><td>State government agency</td><td><span class="chip confirmed">Confirmed</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-police-wa.html">Open →</a></td></tr>
-        <tr data-sector="Police" data-state="SA" data-orgtype="State government agency" data-rpas="Unverified"><td>South Australia Police (SAPOL)</td><td>Police</td><td>SA</td><td>State government agency</td><td><span class="chip highly-likely">Highly likely</span></td><td><span class="chip highly-likely">Highly likely</span></td><td><a href="agency-police-sa.html">Open →</a></td></tr>
-        <tr data-sector="Police" data-state="TAS" data-orgtype="State government agency" data-rpas="Confirmed"><td>Tasmania Police</td><td>Police</td><td>TAS</td><td>State government agency</td><td><span class="chip confirmed">Confirmed</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-police-tas.html">Open →</a></td></tr>
-        <tr data-sector="Police" data-state="ACT" data-orgtype="Federal government agency" data-rpas="Unverified"><td>ACT Policing</td><td>Police</td><td>ACT</td><td>Federal government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-police-act.html">Open →</a></td></tr>
-        <tr data-sector="Police" data-state="NT" data-orgtype="State government agency" data-rpas="Unverified"><td>Northern Territory Police Force</td><td>Police</td><td>NT</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-police-nt.html">Open →</a></td></tr>
-        <tr data-sector="Fire &amp; Rescue" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] Fire &amp; Rescue Service</td><td>Fire &amp; Rescue</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Fire &amp; Rescue" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] Rural Fire Service</td><td>Fire &amp; Rescue</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Ambulance" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] Ambulance Service</td><td>Ambulance</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="SES" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] State Emergency Service</td><td>SES</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Search &amp; Rescue" data-state="" data-orgtype="Volunteer organisation" data-rpas="Unverified"><td>[Placeholder] Marine Rescue organisation</td><td>Search &amp; Rescue</td><td>—</td><td>Volunteer organisation</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Search &amp; Rescue" data-state="" data-orgtype="Volunteer organisation" data-rpas="Unverified"><td>[Placeholder] Surf Life Saving organisation</td><td>Search &amp; Rescue</td><td>—</td><td>Volunteer organisation</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="" data-state="" data-orgtype="State government agency" data-rpas="Unverified"><td>[Placeholder] Parks &amp; Wildlife Service</td><td>—</td><td>—</td><td>State government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Emergency Management" data-state="Federal" data-orgtype="Federal government agency" data-rpas="Unverified"><td>National Emergency Management Agency (NEMA)</td><td>Emergency Management</td><td>Federal</td><td>Federal government agency</td><td><span class="chip unverified">N/A — coordination agency</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-nema.html">Open →</a></td></tr>
-        <tr data-sector="Border Force" data-state="Federal" data-orgtype="Federal government agency" data-rpas="Confirmed"><td>Australian Border Force (ABF)</td><td>Border Force</td><td>Federal</td><td>Federal government agency</td><td><span class="chip confirmed">Confirmed</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-abf.html">Open →</a></td></tr>
-        <tr data-sector="Search &amp; Rescue" data-state="Federal" data-orgtype="Statutory authority" data-rpas="Unverified"><td>Australian Maritime Safety Authority (AMSA)</td><td>Search &amp; Rescue</td><td>Federal</td><td>Statutory authority</td><td><span class="chip unverified">N/A — SAR coordinator, crewed jets</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-amsa.html">Open →</a></td></tr>
-        <tr data-sector="" data-state="Federal" data-orgtype="Statutory authority" data-rpas="Unverified"><td>Australian Transport Safety Bureau (ATSB)</td><td>—</td><td>Federal</td><td>Statutory authority</td><td><span class="chip unverified">N/A — investigator, not operator</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-atsb.html">Open →</a></td></tr>
-        <tr data-sector="" data-state="Federal" data-orgtype="Federal government agency" data-rpas="Unverified"><td>Department of Home Affairs</td><td>—</td><td>Federal</td><td>Federal government agency</td><td><span class="chip unverified">N/A — portfolio department</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-homeaffairs.html">Open →</a></td></tr>
-        <tr data-sector="Defence" data-state="Federal" data-orgtype="Federal government agency" data-rpas="Unverified"><td>[Placeholder] Department of Defence (domestic support)</td><td>Defence</td><td>Federal</td><td>Federal government agency</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Civil Aviation" data-state="Federal" data-orgtype="Regulator" data-rpas="Unverified"><td>CASA — Civil Aviation Safety Authority</td><td>Civil Aviation</td><td>Federal</td><td>Regulator</td><td><span class="chip unverified">N/A — regulator</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="regulation-casa.html">Open profile →</a></td></tr>
-        <tr data-sector="Air Navigation" data-state="Federal" data-orgtype="Government business enterprise" data-rpas="Unverified"><td>Airservices Australia</td><td>Air Navigation</td><td>Federal</td><td>Government business enterprise</td><td><span class="chip unverified">N/A — ANSP</span></td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-airservices.html">Open profile →</a></td></tr>
-        <tr data-sector="Local Government" data-state="" data-orgtype="Local government" data-rpas="Unverified"><td>[Placeholder] Local government (generic)</td><td>Local Government</td><td>—</td><td>Local government</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Critical Infrastructure" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Critical infrastructure operator</td><td>Critical Infrastructure</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Energy" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Energy operator</td><td>Energy</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Utilities" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Utilities operator</td><td>Utilities</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Mining" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Mining operator</td><td>Mining</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Oil &amp; Gas" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Oil &amp; Gas operator</td><td>Oil &amp; Gas</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Ports" data-state="" data-orgtype="Government business enterprise" data-rpas="Unverified"><td>[Placeholder] Ports operator</td><td>Ports</td><td>—</td><td>Government business enterprise</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Rail" data-state="" data-orgtype="Government business enterprise" data-rpas="Unverified"><td>[Placeholder] Rail operator</td><td>Rail</td><td>—</td><td>Government business enterprise</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Telecommunications" data-state="" data-orgtype="Private sector" data-rpas="Unverified"><td>[Placeholder] Telecommunications operator</td><td>Telecommunications</td><td>—</td><td>Private sector</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-        <tr data-sector="Water" data-state="" data-orgtype="Government business enterprise" data-rpas="Unverified"><td>[Placeholder] Water utility</td><td>Water</td><td>—</td><td>Government business enterprise</td><td><span class="chip unverified">Unverified</span></td><td><span class="chip unverified">Unverified</span></td><td><a href="agency-profile-template.html">Open →</a></td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p id="agency-empty" class="callout" style="display:none;">No agencies match this search/filter combination.</p>
-
-  <h2>Cross-references</h2>
-  <div class="crosslinks">
-    <a href="public-safety-hub.html">Agency categories &amp; mission types</a>
-    <a href="critical-infrastructure-hub.html">Critical Infrastructure Sectors</a>
-    <a href="regulations-hub.html">RePL / ReOC requirements</a>
-    <a href="uas-ecosystem-hub.html">Technology partners</a>
-    <a href="prompt-library-hub.html">Agencies prompt category</a>
-    <a href="research-toolkit-hub.html">Official Sources</a>
-    <a href="reports-hub.html#agency-report">Agency Intelligence Report</a>
-  </div>
-
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css"></head>
+<body data-page="agencies"><div id="shell-topbar"></div><div id="shell-sidebar"></div><div id="shell-main"><div class="container">
+<div class="page-head"><span class="eyebrow">Agency Directory · Australia</span><h1>Agency Directory</h1><p>Search, filter and open sourced Australian public-safety and aviation profiles. Capability is marked confirmed only where public evidence supports it.</p><div class="tags"><span class="badge-scope">12 researched anchor agencies</span><span class="chip partial">Release v2.4</span></div></div>
+<div class="callout">This release replaces the principal agency placeholders with named profiles. “Not publicly confirmed” means no sufficient official evidence was identified during this review; it does not prove the capability does not exist.</div>
+<div class="filter-bar">
+<div class="filter-group"><label>Search</label><input id="agency-search" type="search" placeholder="Agency, sector, jurisdiction…"></div>
+<div class="filter-group"><label>State / Territory</label><select id="agency-jur"><option value="">All</option><option>Federal</option><option>NSW</option><option>VIC</option><option>WA</option></select></div>
+<div class="filter-group"><label>Sector</label><select id="agency-sector"><option value="">All sectors</option><option>Police</option><option>Fire &amp; Rescue</option><option>Emergency Management</option><option>Search &amp; Rescue</option><option>Border Force</option><option>Civil Aviation</option><option>Air Navigation</option></select></div>
+<div class="filter-group"><label>RPAS capability</label><select id="agency-rpas"><option value="">Any</option><option>Confirmed</option><option>Not publicly confirmed</option><option>N/A</option></select></div>
 </div>
-
-<footer class="site-footer">
-  <div class="container" style="padding:0;">
-    <span>DroneSense — Agency Directory, v2.3. 34 entries across 22 sectors — 17 researched with sourced profiles, 17 still placeholder.</span>
-    <span><a href="index.html">Back to Overview</a></span>
-  </div>
-</footer>
-</div>
-
+<div class="table-scroll"><table class="compare" id="agency-table"><thead><tr><th>Agency</th><th>Sector</th><th>State/Territory</th><th>Org type</th><th>RPAS</th><th>Confidence</th><th></th></tr></thead><tbody><tr data-agency-row data-jurisdiction="Federal" data-sector="Police" data-org="Federal government agency" data-rpas="Confirmed">
+<td><a href="agency-afp.html">Australian Federal Police</a></td><td>Police</td><td>Federal</td><td>Federal government agency</td><td>Confirmed</td><td><span class="chip partial">Partially verified</span></td><td><a href="agency-afp.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="Federal" data-sector="Border Force" data-org="Federal government agency" data-rpas="Confirmed">
+<td><a href="agency-abf.html">Australian Border Force</a></td><td>Border Force</td><td>Federal</td><td>Federal government agency</td><td>Confirmed</td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-abf.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="Federal" data-sector="Search &amp; Rescue" data-org="Statutory authority" data-rpas="Not publicly confirmed">
+<td><a href="agency-amsa.html">Australian Maritime Safety Authority</a></td><td>Search &amp; Rescue</td><td>Federal</td><td>Statutory authority</td><td>Not publicly confirmed</td><td><span class="chip partial">Partially verified</span></td><td><a href="agency-amsa.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="Federal" data-sector="Civil Aviation" data-org="Regulator" data-rpas="N/A">
+<td><a href="agency-casa.html">Civil Aviation Safety Authority</a></td><td>Civil Aviation</td><td>Federal</td><td>Regulator</td><td>N/A</td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-casa.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="Federal" data-sector="Air Navigation" data-org="Government business enterprise" data-rpas="N/A">
+<td><a href="agency-airservices.html">Airservices Australia</a></td><td>Air Navigation</td><td>Federal</td><td>Government business enterprise</td><td>N/A</td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-airservices.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="Federal" data-sector="Emergency Management" data-org="Federal government agency" data-rpas="Not publicly confirmed">
+<td><a href="agency-nema.html">National Emergency Management Agency</a></td><td>Emergency Management</td><td>Federal</td><td>Federal government agency</td><td>Not publicly confirmed</td><td><span class="chip partial">Partially verified</span></td><td><a href="agency-nema.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="WA" data-sector="Police" data-org="State government agency" data-rpas="Not publicly confirmed">
+<td><a href="agency-wa-police.html">Western Australia Police Force</a></td><td>Police</td><td>WA</td><td>State government agency</td><td>Not publicly confirmed</td><td><span class="chip partial">Partially verified</span></td><td><a href="agency-wa-police.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="WA" data-sector="Fire &amp; Rescue" data-org="State government agency" data-rpas="Confirmed">
+<td><a href="agency-dfes-wa.html">Department of Fire and Emergency Services WA</a></td><td>Fire &amp; Rescue</td><td>WA</td><td>State government agency</td><td>Confirmed</td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-dfes-wa.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="NSW" data-sector="Police" data-org="State government agency" data-rpas="Confirmed">
+<td><a href="agency-nsw-police.html">NSW Police Force</a></td><td>Police</td><td>NSW</td><td>State government agency</td><td>Confirmed</td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-nsw-police.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="NSW" data-sector="Fire &amp; Rescue" data-org="State government agency" data-rpas="Confirmed">
+<td><a href="agency-frnsw.html">Fire and Rescue NSW</a></td><td>Fire &amp; Rescue</td><td>NSW</td><td>State government agency</td><td>Confirmed</td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-frnsw.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="VIC" data-sector="Police" data-org="State government agency" data-rpas="Not publicly confirmed">
+<td><a href="agency-victoria-police.html">Victoria Police</a></td><td>Police</td><td>VIC</td><td>State government agency</td><td>Not publicly confirmed</td><td><span class="chip partial">Partially verified</span></td><td><a href="agency-victoria-police.html">Open →</a></td></tr><tr data-agency-row data-jurisdiction="VIC" data-sector="Fire &amp; Rescue" data-org="Statutory authority" data-rpas="Confirmed">
+<td><a href="agency-frv.html">Fire Rescue Victoria</a></td><td>Fire &amp; Rescue</td><td>VIC</td><td>Statutory authority</td><td>Confirmed</td><td><span class="chip confirmed">Confirmed</span></td><td><a href="agency-frv.html">Open →</a></td></tr></tbody></table></div>
+<p id="agency-empty" style="display:none;font-size:.84rem;">No agencies match this search/filter combination.</p>
+<h2>Cross-references</h2><div class="crosslinks"><a href="public-safety-hub.html">Agency categories &amp; mission types</a><a href="regulations-hub.html">RePL / ReOC requirements</a><a href="technology-hub.html">Technology</a><a href="reports-hub.html#agency-report">Agency Intelligence Report</a><a href="research-toolkit-hub.html">Official Sources</a></div>
+</div><footer class="site-footer"><div class="container" style="padding:0;"><span>DroneSense — Agency Directory, v2.4. 12 researched anchor agencies.</span><span><a href="index.html">Back to Overview</a></span></div></footer></div>
 <script src="assets/app.js"></script>
-</body>
-</html>
+<script>
+(function(){
+var q=document.getElementById('agency-search'),j=document.getElementById('agency-jur'),s=document.getElementById('agency-sector'),r=document.getElementById('agency-rpas'),rows=[].slice.call(document.querySelectorAll('[data-agency-row]')),empty=document.getElementById('agency-empty');
+function apply(){
+ var text=(q.value||'').toLowerCase(), shown=0;
+ rows.forEach(function(row){
+  var ok=(!text||row.textContent.toLowerCase().indexOf(text)>-1)&&(!j.value||row.dataset.jurisdiction===j.value)&&(!s.value||row.dataset.sector===s.value)&&(!r.value||row.dataset.rpas===r.value);
+  row.style.display=ok?'':'none'; if(ok) shown++;
+ });
+ empty.style.display=shown?'none':'block';
+}
+[q,j,s,r].forEach(function(el){el.addEventListener(el.tagName==='INPUT'?'input':'change',apply);});
+var p=new URLSearchParams(location.search), sector=p.get('sector')||p.get('type'); if(sector){s.value=sector;apply();}
+})();
+</script></body></html>

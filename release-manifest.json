@@ -1,0 +1,20 @@
+{
+  "release": "v2.4 \u2014 Australian Agency Intelligence Core",
+  "verification_date": "2026-07-20",
+  "files": [
+    "agencies-hub.html",
+    "agency-afp.html",
+    "agency-abf.html",
+    "agency-amsa.html",
+    "agency-casa.html",
+    "agency-airservices.html",
+    "agency-nema.html",
+    "agency-wa-police.html",
+    "agency-dfes-wa.html",
+    "agency-nsw-police.html",
+    "agency-frnsw.html",
+    "agency-victoria-police.html",
+    "agency-frv.html",
+    "INSTALL-NOTES.txt"
+  ]
+}

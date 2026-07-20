@@ -1,0 +1,26 @@
+DRONESENSE v2.4 — AUSTRALIAN AGENCY INTELLIGENCE CORE
+
+FILES
+- Replace the existing agencies-hub.html with the new file.
+- Add the 12 agency-*.html files to the repository root.
+- No CSS or assets files are replaced.
+- The hub includes its own small filter script and still loads assets/app.js.
+
+RELEASE
+Name: v2.4 — Australian Agency Intelligence Core
+Commit: v2.4: populate Australian federal and public safety agency intelligence
+
+IMPORTANT
+- Profiles are vendor-neutral.
+- Confirmed capability is based on public official sources.
+- ReOC, BVLOS, DFR, dock and technology-stack claims are explicitly marked not publicly confirmed where evidence was not available.
+- Verification date: 20 July 2026.
+
+GITHUB DESKTOP
+1. Open the local dronesense-apac-intelligence-hub repository.
+2. Copy all files from this pack into the repository root.
+3. Allow agencies-hub.html to replace the current file.
+4. Review changes in GitHub Desktop.
+5. Commit using the message above.
+6. Push origin.
+7. After GitHub Pages deploys, test agencies-hub.html and several profile links.
