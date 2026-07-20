@@ -1,0 +1,10 @@
+DRONESENSE v3.0 — CLEAN DASHBOARD, COMPLETE POLICE DIRECTORY & AUSTRALIA MAP
+
+1. Unzip this package.
+2. Copy all files and the assets folder into the repository root.
+3. Approve replacement of index.html and the six sector-*.html files.
+4. Keep all existing detailed agency profile pages and other files.
+5. Commit and push to main.
+6. Wait for GitHub Pages deployment, then hard refresh.
+
+Includes a cleaner homepage, clickable Australia map, jurisdiction pages, all eight state/territory police services, AFP and ABF, expanded sector directories, and generated counts matching displayed records.

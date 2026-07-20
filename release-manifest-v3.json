@@ -1,0 +1,47 @@
+{
+  "release": "v3.0 \u2014 Clean Dashboard, Australia Map & Expanded Agency Directory",
+  "replace": [
+    "index.html",
+    "sector-police.html",
+    "sector-fire-rescue.html",
+    "sector-emergency-management.html",
+    "sector-search-rescue.html",
+    "sector-critical-infrastructure.html",
+    "sector-government-regulators.html"
+  ],
+  "add": [
+    "jurisdiction-federal.html",
+    "jurisdiction-wa.html",
+    "jurisdiction-nt.html",
+    "jurisdiction-sa.html",
+    "jurisdiction-qld.html",
+    "jurisdiction-nsw.html",
+    "jurisdiction-vic.html",
+    "jurisdiction-tas.html",
+    "jurisdiction-act.html",
+    "assets/v3.css",
+    "assets/v3.js",
+    "assets/agency-directory-v3.json",
+    "INSTALL-V3.txt"
+  ],
+  "sector_counts": {
+    "Police": 10,
+    "Fire & Rescue": 13,
+    "Emergency Management": 14,
+    "Search & Rescue": 11,
+    "Critical Infrastructure": 31,
+    "Government & Regulators": 7
+  },
+  "police_directory": [
+    "Australian Federal Police",
+    "Australian Border Force",
+    "NSW Police Force",
+    "Victoria Police",
+    "Queensland Police Service",
+    "Western Australia Police Force",
+    "South Australia Police",
+    "Tasmania Police",
+    "ACT Policing",
+    "Northern Territory Police Force"
+  ]
+}

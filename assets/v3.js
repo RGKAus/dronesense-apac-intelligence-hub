@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const s=document.querySelector('[data-site-search]');if(s)s.addEventListener('keydown',e=>{if(e.key==='Enter'&&s.value.trim())location.href='intelligence-hub.html?q='+encodeURIComponent(s.value.trim())})});
