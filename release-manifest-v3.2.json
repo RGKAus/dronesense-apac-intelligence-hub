@@ -1,0 +1,15 @@
+{
+  "release": "3.2",
+  "generated": "2026-07-20",
+  "summary": "Interactive RPAS regulatory comparison tool covering US, Canada, EU, Australia and New Zealand, including BVLOS pathways.",
+  "new_files": [
+    "regulatory-comparison.html",
+    "assets/regulatory-comparison.js"
+  ],
+  "updated_files": [
+    "index.html",
+    "assets/v3.css",
+    "all navigation-enabled HTML pages"
+  ],
+  "note": "Regulatory content is high-level and must be verified with official regulators."
+}
