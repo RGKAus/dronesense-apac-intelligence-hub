@@ -1,0 +1,11 @@
+{
+  "version": "5.1-public-safe",
+  "purpose": "Public-information repository package with personal contacts and contentious competitor wording removed",
+  "changes": [
+    "Removed all individual email addresses and mailto links",
+    "Removed internal relationship actions and commercial watch items from RocketDNA profile",
+    "Reframed competitor content as neutral public market monitoring",
+    "Removed private deployment guide from public upload package",
+    "Added public prototype safety note"
+  ]
+}

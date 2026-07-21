@@ -1,0 +1,9 @@
+DRONESENSE APAC INTELLIGENCE PLATFORM — VERSION 5.1 PUBLIC-SAFE
+
+1. Copy these files into the repository root.
+2. Merge the assets folder.
+3. Replace duplicate HTML, CSS and JavaScript files.
+4. Remove obsolete PRIVATE-DEPLOYMENT.md from the repository if it remains from an earlier upload.
+5. Commit with: Sanitize partner and competitor content for public prototype (v5.1)
+
+This package removes individual partner email addresses and internal/commercial assessment wording.
