@@ -1,0 +1,16 @@
+VERSION 6.1 INSTALLATION
+
+1. Create branch: v6.1-country-map-portals
+2. Back up the existing repository.
+3. Copy all files in this package into the repository root.
+4. Preserve and merge any existing sourced agency content where filenames overlap.
+5. Test:
+   - Australia state map and nationwide agencies
+   - Canada province/territory map and nationwide agencies
+   - EU member-state map and EU-wide agencies
+   - UK nation map and nationwide agencies
+   - South Africa province map and nationwide agencies
+   - Mobile map selectors
+6. Commit:
+   Version 6.1: add interactive country map portals, location profiles and nationwide agency directories
+7. Preview on GitHub Pages, then merge to main.
