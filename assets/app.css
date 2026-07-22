@@ -38,3 +38,9 @@ section{margin:28px 0}.section-title,.filters{display:flex;align-items:end;justi
 .map-marker:hover circle{r:15;fill:#fff}.map-marker:hover text{fill:#39d8e3}
 .map-credit{color:#7790a2;font-size:11px;margin-top:7px}
 @media(max-width:620px){.map{min-height:390px;padding:4px}.local-map-object{height:390px}.map-marker text{font-size:18px}}
+
+/* Version 7.2 defined interactive maps */
+.map{min-height:560px;background:#0d1823;padding:8px}
+.map svg.defined-map{display:block;width:100%;height:min(68vh,650px)}
+.region-grid{display:grid!important;margin-top:14px}
+@media(max-width:620px){.map{min-height:420px}.map svg.defined-map{height:410px}}

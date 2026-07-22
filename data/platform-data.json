@@ -241,7 +241,7 @@
       "name": "United Kingdom",
       "iso3": "GBR",
       "flag": "🇬🇧",
-      "adminLabel": "Nation",
+      "adminLabel": "County / Nation",
       "geojson": "https://www.geoboundaries.org/api/current/gbOpen/GBR/ADM1/",
       "mapCenter": [
         55,
@@ -250,8 +250,184 @@
       "zoom": 5,
       "regions": [
         {
-          "name": "England",
-          "slug": "england"
+          "name": "Northumberland",
+          "slug": "northumberland"
+        },
+        {
+          "name": "Tyne and Wear",
+          "slug": "tyne-and-wear"
+        },
+        {
+          "name": "County Durham",
+          "slug": "county-durham"
+        },
+        {
+          "name": "Cumbria",
+          "slug": "cumbria"
+        },
+        {
+          "name": "Lancashire",
+          "slug": "lancashire"
+        },
+        {
+          "name": "North Yorkshire",
+          "slug": "north-yorkshire"
+        },
+        {
+          "name": "West Yorkshire",
+          "slug": "west-yorkshire"
+        },
+        {
+          "name": "South Yorkshire",
+          "slug": "south-yorkshire"
+        },
+        {
+          "name": "Greater Manchester",
+          "slug": "greater-manchester"
+        },
+        {
+          "name": "Merseyside",
+          "slug": "merseyside"
+        },
+        {
+          "name": "Cheshire",
+          "slug": "cheshire"
+        },
+        {
+          "name": "Derbyshire",
+          "slug": "derbyshire"
+        },
+        {
+          "name": "Nottinghamshire",
+          "slug": "nottinghamshire"
+        },
+        {
+          "name": "Lincolnshire",
+          "slug": "lincolnshire"
+        },
+        {
+          "name": "Leicestershire",
+          "slug": "leicestershire"
+        },
+        {
+          "name": "Rutland",
+          "slug": "rutland"
+        },
+        {
+          "name": "Staffordshire",
+          "slug": "staffordshire"
+        },
+        {
+          "name": "West Midlands",
+          "slug": "west-midlands"
+        },
+        {
+          "name": "Warwickshire",
+          "slug": "warwickshire"
+        },
+        {
+          "name": "Worcestershire",
+          "slug": "worcestershire"
+        },
+        {
+          "name": "Shropshire",
+          "slug": "shropshire"
+        },
+        {
+          "name": "Herefordshire",
+          "slug": "herefordshire"
+        },
+        {
+          "name": "Norfolk",
+          "slug": "norfolk"
+        },
+        {
+          "name": "Suffolk",
+          "slug": "suffolk"
+        },
+        {
+          "name": "Cambridgeshire",
+          "slug": "cambridgeshire"
+        },
+        {
+          "name": "Essex",
+          "slug": "essex"
+        },
+        {
+          "name": "Hertfordshire",
+          "slug": "hertfordshire"
+        },
+        {
+          "name": "Bedfordshire",
+          "slug": "bedfordshire"
+        },
+        {
+          "name": "Buckinghamshire",
+          "slug": "buckinghamshire"
+        },
+        {
+          "name": "Oxfordshire",
+          "slug": "oxfordshire"
+        },
+        {
+          "name": "Gloucestershire",
+          "slug": "gloucestershire"
+        },
+        {
+          "name": "Somerset",
+          "slug": "somerset"
+        },
+        {
+          "name": "Wiltshire",
+          "slug": "wiltshire"
+        },
+        {
+          "name": "Bristol",
+          "slug": "bristol"
+        },
+        {
+          "name": "Dorset",
+          "slug": "dorset"
+        },
+        {
+          "name": "Devon",
+          "slug": "devon"
+        },
+        {
+          "name": "Cornwall",
+          "slug": "cornwall"
+        },
+        {
+          "name": "Hampshire",
+          "slug": "hampshire"
+        },
+        {
+          "name": "Berkshire",
+          "slug": "berkshire"
+        },
+        {
+          "name": "Surrey",
+          "slug": "surrey"
+        },
+        {
+          "name": "Kent",
+          "slug": "kent"
+        },
+        {
+          "name": "East Sussex",
+          "slug": "east-sussex"
+        },
+        {
+          "name": "West Sussex",
+          "slug": "west-sussex"
+        },
+        {
+          "name": "Greater London",
+          "slug": "greater-london"
+        },
+        {
+          "name": "Isle of Wight",
+          "slug": "isle-of-wight"
         },
         {
           "name": "Scotland",
@@ -1154,83 +1330,83 @@
     ],
     "united-kingdom|Scotland": [
       {
-        "name": "Police Scotland",
+        "name": "Scotland Policing Profile",
         "category": "Police",
-        "summary": "National police service for Scotland."
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Scotland."
       },
       {
-        "name": "Scottish Fire and Rescue Service",
+        "name": "Scotland Fire and Rescue Profile",
         "category": "Fire & Rescue",
-        "summary": "National fire and rescue service for Scotland."
+        "summary": "Fire and rescue coverage relevant to Scotland."
       },
       {
-        "name": "Scottish Ambulance Service",
+        "name": "Scotland Ambulance and Medical Response",
         "category": "Ambulance / Medical",
-        "summary": "National ambulance and emergency medical response."
+        "summary": "Ambulance and emergency-medical coverage relevant to Scotland."
       },
       {
-        "name": "Scottish Government Resilience",
+        "name": "Scotland Resilience and Emergency Management",
         "category": "Emergency Management",
-        "summary": "National resilience and emergency coordination."
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Scotland."
       },
       {
-        "name": "HM Coastguard / Scottish Mountain Rescue",
+        "name": "Scotland Search and Rescue",
         "category": "Search & Rescue",
-        "summary": "Maritime, coastal and mountain rescue capability."
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Scotland."
       }
     ],
     "united-kingdom|Wales": [
       {
-        "name": "Welsh Police Forces",
+        "name": "Wales Policing Profile",
         "category": "Police",
-        "summary": "Four territorial police forces operating in Wales."
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Wales."
       },
       {
-        "name": "Welsh Fire and Rescue Services",
+        "name": "Wales Fire and Rescue Profile",
         "category": "Fire & Rescue",
-        "summary": "Three regional fire and rescue services."
+        "summary": "Fire and rescue coverage relevant to Wales."
       },
       {
-        "name": "Welsh Ambulance Services NHS Trust",
+        "name": "Wales Ambulance and Medical Response",
         "category": "Ambulance / Medical",
-        "summary": "National ambulance and emergency medical response."
+        "summary": "Ambulance and emergency-medical coverage relevant to Wales."
       },
       {
-        "name": "Welsh Government Resilience",
+        "name": "Wales Resilience and Emergency Management",
         "category": "Emergency Management",
-        "summary": "National resilience and civil-contingencies coordination."
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Wales."
       },
       {
-        "name": "Mountain Rescue England and Wales / HM Coastguard",
+        "name": "Wales Search and Rescue",
         "category": "Search & Rescue",
-        "summary": "Mountain, inland, coastal and maritime rescue."
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Wales."
       }
     ],
     "united-kingdom|Northern Ireland": [
       {
-        "name": "Police Service of Northern Ireland",
+        "name": "Northern Ireland Policing Profile",
         "category": "Police",
-        "summary": "National territorial policing service."
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Northern Ireland."
       },
       {
-        "name": "Northern Ireland Fire and Rescue Service",
+        "name": "Northern Ireland Fire and Rescue Profile",
         "category": "Fire & Rescue",
-        "summary": "National fire and rescue service."
+        "summary": "Fire and rescue coverage relevant to Northern Ireland."
       },
       {
-        "name": "Northern Ireland Ambulance Service",
+        "name": "Northern Ireland Ambulance and Medical Response",
         "category": "Ambulance / Medical",
-        "summary": "National ambulance and emergency medical response."
+        "summary": "Ambulance and emergency-medical coverage relevant to Northern Ireland."
       },
       {
-        "name": "Civil Contingencies Policy Branch",
+        "name": "Northern Ireland Resilience and Emergency Management",
         "category": "Emergency Management",
-        "summary": "Regional civil-contingencies coordination."
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Northern Ireland."
       },
       {
-        "name": "HM Coastguard / Community Rescue Service",
+        "name": "Northern Ireland Search and Rescue",
         "category": "Search & Rescue",
-        "summary": "Maritime, coastal and inland search-and-rescue capability."
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Northern Ireland."
       }
     ],
     "south-africa|Eastern Cape": [
@@ -2203,6 +2379,1221 @@
         "name": "Sweden Civil Aviation Authority",
         "category": "Aviation Regulator",
         "summary": "National civil aviation and UAS oversight for Sweden."
+      }
+    ],
+    "united-kingdom|Northumberland": [
+      {
+        "name": "Northumberland Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Northumberland."
+      },
+      {
+        "name": "Northumberland Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Northumberland."
+      },
+      {
+        "name": "Northumberland Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Northumberland."
+      },
+      {
+        "name": "Northumberland Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Northumberland."
+      },
+      {
+        "name": "Northumberland Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Northumberland."
+      }
+    ],
+    "united-kingdom|Tyne and Wear": [
+      {
+        "name": "Tyne and Wear Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Tyne and Wear."
+      },
+      {
+        "name": "Tyne and Wear Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Tyne and Wear."
+      },
+      {
+        "name": "Tyne and Wear Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Tyne and Wear."
+      },
+      {
+        "name": "Tyne and Wear Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Tyne and Wear."
+      },
+      {
+        "name": "Tyne and Wear Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Tyne and Wear."
+      }
+    ],
+    "united-kingdom|County Durham": [
+      {
+        "name": "County Durham Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to County Durham."
+      },
+      {
+        "name": "County Durham Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to County Durham."
+      },
+      {
+        "name": "County Durham Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to County Durham."
+      },
+      {
+        "name": "County Durham Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to County Durham."
+      },
+      {
+        "name": "County Durham Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to County Durham."
+      }
+    ],
+    "united-kingdom|Cumbria": [
+      {
+        "name": "Cumbria Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Cumbria."
+      },
+      {
+        "name": "Cumbria Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Cumbria."
+      },
+      {
+        "name": "Cumbria Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Cumbria."
+      },
+      {
+        "name": "Cumbria Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Cumbria."
+      },
+      {
+        "name": "Cumbria Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Cumbria."
+      }
+    ],
+    "united-kingdom|Lancashire": [
+      {
+        "name": "Lancashire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Lancashire."
+      },
+      {
+        "name": "Lancashire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Lancashire."
+      },
+      {
+        "name": "Lancashire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Lancashire."
+      },
+      {
+        "name": "Lancashire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Lancashire."
+      },
+      {
+        "name": "Lancashire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Lancashire."
+      }
+    ],
+    "united-kingdom|North Yorkshire": [
+      {
+        "name": "North Yorkshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to North Yorkshire."
+      },
+      {
+        "name": "North Yorkshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to North Yorkshire."
+      },
+      {
+        "name": "North Yorkshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to North Yorkshire."
+      },
+      {
+        "name": "North Yorkshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to North Yorkshire."
+      },
+      {
+        "name": "North Yorkshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to North Yorkshire."
+      }
+    ],
+    "united-kingdom|West Yorkshire": [
+      {
+        "name": "West Yorkshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to West Yorkshire."
+      },
+      {
+        "name": "West Yorkshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to West Yorkshire."
+      },
+      {
+        "name": "West Yorkshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to West Yorkshire."
+      },
+      {
+        "name": "West Yorkshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to West Yorkshire."
+      },
+      {
+        "name": "West Yorkshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to West Yorkshire."
+      }
+    ],
+    "united-kingdom|South Yorkshire": [
+      {
+        "name": "South Yorkshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to South Yorkshire."
+      },
+      {
+        "name": "South Yorkshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to South Yorkshire."
+      },
+      {
+        "name": "South Yorkshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to South Yorkshire."
+      },
+      {
+        "name": "South Yorkshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to South Yorkshire."
+      },
+      {
+        "name": "South Yorkshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to South Yorkshire."
+      }
+    ],
+    "united-kingdom|Greater Manchester": [
+      {
+        "name": "Greater Manchester Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Greater Manchester."
+      },
+      {
+        "name": "Greater Manchester Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Greater Manchester."
+      },
+      {
+        "name": "Greater Manchester Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Greater Manchester."
+      },
+      {
+        "name": "Greater Manchester Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Greater Manchester."
+      },
+      {
+        "name": "Greater Manchester Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Greater Manchester."
+      }
+    ],
+    "united-kingdom|Merseyside": [
+      {
+        "name": "Merseyside Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Merseyside."
+      },
+      {
+        "name": "Merseyside Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Merseyside."
+      },
+      {
+        "name": "Merseyside Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Merseyside."
+      },
+      {
+        "name": "Merseyside Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Merseyside."
+      },
+      {
+        "name": "Merseyside Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Merseyside."
+      }
+    ],
+    "united-kingdom|Cheshire": [
+      {
+        "name": "Cheshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Cheshire."
+      },
+      {
+        "name": "Cheshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Cheshire."
+      },
+      {
+        "name": "Cheshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Cheshire."
+      },
+      {
+        "name": "Cheshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Cheshire."
+      },
+      {
+        "name": "Cheshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Cheshire."
+      }
+    ],
+    "united-kingdom|Derbyshire": [
+      {
+        "name": "Derbyshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Derbyshire."
+      },
+      {
+        "name": "Derbyshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Derbyshire."
+      },
+      {
+        "name": "Derbyshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Derbyshire."
+      },
+      {
+        "name": "Derbyshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Derbyshire."
+      },
+      {
+        "name": "Derbyshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Derbyshire."
+      }
+    ],
+    "united-kingdom|Nottinghamshire": [
+      {
+        "name": "Nottinghamshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Nottinghamshire."
+      },
+      {
+        "name": "Nottinghamshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Nottinghamshire."
+      },
+      {
+        "name": "Nottinghamshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Nottinghamshire."
+      },
+      {
+        "name": "Nottinghamshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Nottinghamshire."
+      },
+      {
+        "name": "Nottinghamshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Nottinghamshire."
+      }
+    ],
+    "united-kingdom|Lincolnshire": [
+      {
+        "name": "Lincolnshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Lincolnshire."
+      },
+      {
+        "name": "Lincolnshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Lincolnshire."
+      },
+      {
+        "name": "Lincolnshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Lincolnshire."
+      },
+      {
+        "name": "Lincolnshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Lincolnshire."
+      },
+      {
+        "name": "Lincolnshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Lincolnshire."
+      }
+    ],
+    "united-kingdom|Leicestershire": [
+      {
+        "name": "Leicestershire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Leicestershire."
+      },
+      {
+        "name": "Leicestershire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Leicestershire."
+      },
+      {
+        "name": "Leicestershire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Leicestershire."
+      },
+      {
+        "name": "Leicestershire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Leicestershire."
+      },
+      {
+        "name": "Leicestershire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Leicestershire."
+      }
+    ],
+    "united-kingdom|Rutland": [
+      {
+        "name": "Rutland Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Rutland."
+      },
+      {
+        "name": "Rutland Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Rutland."
+      },
+      {
+        "name": "Rutland Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Rutland."
+      },
+      {
+        "name": "Rutland Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Rutland."
+      },
+      {
+        "name": "Rutland Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Rutland."
+      }
+    ],
+    "united-kingdom|Staffordshire": [
+      {
+        "name": "Staffordshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Staffordshire."
+      },
+      {
+        "name": "Staffordshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Staffordshire."
+      },
+      {
+        "name": "Staffordshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Staffordshire."
+      },
+      {
+        "name": "Staffordshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Staffordshire."
+      },
+      {
+        "name": "Staffordshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Staffordshire."
+      }
+    ],
+    "united-kingdom|West Midlands": [
+      {
+        "name": "West Midlands Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to West Midlands."
+      },
+      {
+        "name": "West Midlands Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to West Midlands."
+      },
+      {
+        "name": "West Midlands Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to West Midlands."
+      },
+      {
+        "name": "West Midlands Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to West Midlands."
+      },
+      {
+        "name": "West Midlands Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to West Midlands."
+      }
+    ],
+    "united-kingdom|Warwickshire": [
+      {
+        "name": "Warwickshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Warwickshire."
+      },
+      {
+        "name": "Warwickshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Warwickshire."
+      },
+      {
+        "name": "Warwickshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Warwickshire."
+      },
+      {
+        "name": "Warwickshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Warwickshire."
+      },
+      {
+        "name": "Warwickshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Warwickshire."
+      }
+    ],
+    "united-kingdom|Worcestershire": [
+      {
+        "name": "Worcestershire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Worcestershire."
+      },
+      {
+        "name": "Worcestershire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Worcestershire."
+      },
+      {
+        "name": "Worcestershire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Worcestershire."
+      },
+      {
+        "name": "Worcestershire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Worcestershire."
+      },
+      {
+        "name": "Worcestershire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Worcestershire."
+      }
+    ],
+    "united-kingdom|Shropshire": [
+      {
+        "name": "Shropshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Shropshire."
+      },
+      {
+        "name": "Shropshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Shropshire."
+      },
+      {
+        "name": "Shropshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Shropshire."
+      },
+      {
+        "name": "Shropshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Shropshire."
+      },
+      {
+        "name": "Shropshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Shropshire."
+      }
+    ],
+    "united-kingdom|Herefordshire": [
+      {
+        "name": "Herefordshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Herefordshire."
+      },
+      {
+        "name": "Herefordshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Herefordshire."
+      },
+      {
+        "name": "Herefordshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Herefordshire."
+      },
+      {
+        "name": "Herefordshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Herefordshire."
+      },
+      {
+        "name": "Herefordshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Herefordshire."
+      }
+    ],
+    "united-kingdom|Norfolk": [
+      {
+        "name": "Norfolk Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Norfolk."
+      },
+      {
+        "name": "Norfolk Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Norfolk."
+      },
+      {
+        "name": "Norfolk Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Norfolk."
+      },
+      {
+        "name": "Norfolk Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Norfolk."
+      },
+      {
+        "name": "Norfolk Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Norfolk."
+      }
+    ],
+    "united-kingdom|Suffolk": [
+      {
+        "name": "Suffolk Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Suffolk."
+      },
+      {
+        "name": "Suffolk Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Suffolk."
+      },
+      {
+        "name": "Suffolk Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Suffolk."
+      },
+      {
+        "name": "Suffolk Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Suffolk."
+      },
+      {
+        "name": "Suffolk Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Suffolk."
+      }
+    ],
+    "united-kingdom|Cambridgeshire": [
+      {
+        "name": "Cambridgeshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Cambridgeshire."
+      },
+      {
+        "name": "Cambridgeshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Cambridgeshire."
+      },
+      {
+        "name": "Cambridgeshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Cambridgeshire."
+      },
+      {
+        "name": "Cambridgeshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Cambridgeshire."
+      },
+      {
+        "name": "Cambridgeshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Cambridgeshire."
+      }
+    ],
+    "united-kingdom|Essex": [
+      {
+        "name": "Essex Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Essex."
+      },
+      {
+        "name": "Essex Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Essex."
+      },
+      {
+        "name": "Essex Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Essex."
+      },
+      {
+        "name": "Essex Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Essex."
+      },
+      {
+        "name": "Essex Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Essex."
+      }
+    ],
+    "united-kingdom|Hertfordshire": [
+      {
+        "name": "Hertfordshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Hertfordshire."
+      },
+      {
+        "name": "Hertfordshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Hertfordshire."
+      },
+      {
+        "name": "Hertfordshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Hertfordshire."
+      },
+      {
+        "name": "Hertfordshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Hertfordshire."
+      },
+      {
+        "name": "Hertfordshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Hertfordshire."
+      }
+    ],
+    "united-kingdom|Bedfordshire": [
+      {
+        "name": "Bedfordshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Bedfordshire."
+      },
+      {
+        "name": "Bedfordshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Bedfordshire."
+      },
+      {
+        "name": "Bedfordshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Bedfordshire."
+      },
+      {
+        "name": "Bedfordshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Bedfordshire."
+      },
+      {
+        "name": "Bedfordshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Bedfordshire."
+      }
+    ],
+    "united-kingdom|Buckinghamshire": [
+      {
+        "name": "Buckinghamshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Buckinghamshire."
+      },
+      {
+        "name": "Buckinghamshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Buckinghamshire."
+      },
+      {
+        "name": "Buckinghamshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Buckinghamshire."
+      },
+      {
+        "name": "Buckinghamshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Buckinghamshire."
+      },
+      {
+        "name": "Buckinghamshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Buckinghamshire."
+      }
+    ],
+    "united-kingdom|Oxfordshire": [
+      {
+        "name": "Oxfordshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Oxfordshire."
+      },
+      {
+        "name": "Oxfordshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Oxfordshire."
+      },
+      {
+        "name": "Oxfordshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Oxfordshire."
+      },
+      {
+        "name": "Oxfordshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Oxfordshire."
+      },
+      {
+        "name": "Oxfordshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Oxfordshire."
+      }
+    ],
+    "united-kingdom|Gloucestershire": [
+      {
+        "name": "Gloucestershire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Gloucestershire."
+      },
+      {
+        "name": "Gloucestershire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Gloucestershire."
+      },
+      {
+        "name": "Gloucestershire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Gloucestershire."
+      },
+      {
+        "name": "Gloucestershire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Gloucestershire."
+      },
+      {
+        "name": "Gloucestershire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Gloucestershire."
+      }
+    ],
+    "united-kingdom|Somerset": [
+      {
+        "name": "Somerset Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Somerset."
+      },
+      {
+        "name": "Somerset Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Somerset."
+      },
+      {
+        "name": "Somerset Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Somerset."
+      },
+      {
+        "name": "Somerset Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Somerset."
+      },
+      {
+        "name": "Somerset Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Somerset."
+      }
+    ],
+    "united-kingdom|Wiltshire": [
+      {
+        "name": "Wiltshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Wiltshire."
+      },
+      {
+        "name": "Wiltshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Wiltshire."
+      },
+      {
+        "name": "Wiltshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Wiltshire."
+      },
+      {
+        "name": "Wiltshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Wiltshire."
+      },
+      {
+        "name": "Wiltshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Wiltshire."
+      }
+    ],
+    "united-kingdom|Bristol": [
+      {
+        "name": "Bristol Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Bristol."
+      },
+      {
+        "name": "Bristol Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Bristol."
+      },
+      {
+        "name": "Bristol Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Bristol."
+      },
+      {
+        "name": "Bristol Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Bristol."
+      },
+      {
+        "name": "Bristol Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Bristol."
+      }
+    ],
+    "united-kingdom|Dorset": [
+      {
+        "name": "Dorset Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Dorset."
+      },
+      {
+        "name": "Dorset Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Dorset."
+      },
+      {
+        "name": "Dorset Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Dorset."
+      },
+      {
+        "name": "Dorset Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Dorset."
+      },
+      {
+        "name": "Dorset Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Dorset."
+      }
+    ],
+    "united-kingdom|Devon": [
+      {
+        "name": "Devon Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Devon."
+      },
+      {
+        "name": "Devon Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Devon."
+      },
+      {
+        "name": "Devon Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Devon."
+      },
+      {
+        "name": "Devon Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Devon."
+      },
+      {
+        "name": "Devon Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Devon."
+      }
+    ],
+    "united-kingdom|Cornwall": [
+      {
+        "name": "Cornwall Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Cornwall."
+      },
+      {
+        "name": "Cornwall Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Cornwall."
+      },
+      {
+        "name": "Cornwall Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Cornwall."
+      },
+      {
+        "name": "Cornwall Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Cornwall."
+      },
+      {
+        "name": "Cornwall Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Cornwall."
+      }
+    ],
+    "united-kingdom|Hampshire": [
+      {
+        "name": "Hampshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Hampshire."
+      },
+      {
+        "name": "Hampshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Hampshire."
+      },
+      {
+        "name": "Hampshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Hampshire."
+      },
+      {
+        "name": "Hampshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Hampshire."
+      },
+      {
+        "name": "Hampshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Hampshire."
+      }
+    ],
+    "united-kingdom|Berkshire": [
+      {
+        "name": "Berkshire Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Berkshire."
+      },
+      {
+        "name": "Berkshire Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Berkshire."
+      },
+      {
+        "name": "Berkshire Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Berkshire."
+      },
+      {
+        "name": "Berkshire Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Berkshire."
+      },
+      {
+        "name": "Berkshire Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Berkshire."
+      }
+    ],
+    "united-kingdom|Surrey": [
+      {
+        "name": "Surrey Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Surrey."
+      },
+      {
+        "name": "Surrey Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Surrey."
+      },
+      {
+        "name": "Surrey Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Surrey."
+      },
+      {
+        "name": "Surrey Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Surrey."
+      },
+      {
+        "name": "Surrey Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Surrey."
+      }
+    ],
+    "united-kingdom|Kent": [
+      {
+        "name": "Kent Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Kent."
+      },
+      {
+        "name": "Kent Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Kent."
+      },
+      {
+        "name": "Kent Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Kent."
+      },
+      {
+        "name": "Kent Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Kent."
+      },
+      {
+        "name": "Kent Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Kent."
+      }
+    ],
+    "united-kingdom|East Sussex": [
+      {
+        "name": "East Sussex Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to East Sussex."
+      },
+      {
+        "name": "East Sussex Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to East Sussex."
+      },
+      {
+        "name": "East Sussex Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to East Sussex."
+      },
+      {
+        "name": "East Sussex Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to East Sussex."
+      },
+      {
+        "name": "East Sussex Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to East Sussex."
+      }
+    ],
+    "united-kingdom|West Sussex": [
+      {
+        "name": "West Sussex Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to West Sussex."
+      },
+      {
+        "name": "West Sussex Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to West Sussex."
+      },
+      {
+        "name": "West Sussex Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to West Sussex."
+      },
+      {
+        "name": "West Sussex Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to West Sussex."
+      },
+      {
+        "name": "West Sussex Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to West Sussex."
+      }
+    ],
+    "united-kingdom|Greater London": [
+      {
+        "name": "Greater London Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Greater London."
+      },
+      {
+        "name": "Greater London Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Greater London."
+      },
+      {
+        "name": "Greater London Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Greater London."
+      },
+      {
+        "name": "Greater London Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Greater London."
+      },
+      {
+        "name": "Greater London Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Greater London."
+      }
+    ],
+    "united-kingdom|Isle of Wight": [
+      {
+        "name": "Isle of Wight Policing Profile",
+        "category": "Police",
+        "summary": "Police-force coverage and specialist public-safety capability relevant to Isle of Wight."
+      },
+      {
+        "name": "Isle of Wight Fire and Rescue Profile",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue coverage relevant to Isle of Wight."
+      },
+      {
+        "name": "Isle of Wight Ambulance and Medical Response",
+        "category": "Ambulance / Medical",
+        "summary": "Ambulance and emergency-medical coverage relevant to Isle of Wight."
+      },
+      {
+        "name": "Isle of Wight Resilience and Emergency Management",
+        "category": "Emergency Management",
+        "summary": "Local resilience and civil-contingencies arrangements relevant to Isle of Wight."
+      },
+      {
+        "name": "Isle of Wight Search and Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, inland, mountain or volunteer rescue capability relevant to Isle of Wight."
       }
     ]
   }

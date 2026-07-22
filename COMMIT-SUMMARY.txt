@@ -1,1 +1,1 @@
-Version 7.1: replace unstable external maps with locally hosted interactive SVG geography
+Version 7.2: add fully outlined interactive state, province, EU member-state and UK county maps

@@ -55,8 +55,20 @@ async function renderCountry(){
   const fallback=$("#map-fallback");
   fallback.innerHTML=c.regions.map(r=>`<a class="region-tile" href="region.html?country=${key}&region=${encodeURIComponent(r.name)}"><h3>${r.name}</h3><span>Open public-safety directory →</span></a>`).join("");
   const mapEl=$("#country-map");
-  mapEl.innerHTML=`<object class="local-map-object" type="image/svg+xml" data="${c.localMap}" aria-label="${c.name} interactive geographic map"></object>`;
-  mapEl.insertAdjacentHTML("afterend",`<div class="map-credit">Map geometry is stored locally in this release. No runtime boundary API is required.</div>`);
+  try{
+    const svgText=await fetch(c.localMap).then(r=>{if(!r.ok) throw new Error("Map file missing"); return r.text()});
+    mapEl.innerHTML=svgText;
+    mapEl.querySelectorAll("a[data-region]").forEach(link=>{
+      link.addEventListener("click",ev=>{
+        ev.preventDefault();
+        location.href=`region.html?country=${key}&region=${encodeURIComponent(link.dataset.region)}`;
+      });
+    });
+    mapEl.insertAdjacentHTML("afterend",`<div class="map-credit">Administrative areas are embedded locally, individually outlined and clickable.</div>`);
+  }catch(err){
+    mapEl.style.display="none";
+    fallback.insertAdjacentHTML("beforebegin",`<div class="notice">The embedded map could not load. Use the complete regional directory below.</div>`);
+  }
   fallback.style.display="grid";
   $("#region-search").addEventListener("input",e=>{const s=e.target.value.toLowerCase();[...fallback.children].forEach(x=>x.style.display=x.textContent.toLowerCase().includes(s)?"":"none")});
 }
