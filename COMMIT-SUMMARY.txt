@@ -1,1 +1,1 @@
-Version 7: launch real geographic maps, agency intelligence profiles, report generator and country-specific live intelligence modules
+Version 7.1: replace unstable external maps with locally hosted interactive SVG geography

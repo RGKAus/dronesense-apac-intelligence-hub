@@ -115,7 +115,9 @@
           "Communications Regulator",
           "Radiofrequency spectrum and communications regulation."
         ]
-      ]
+      ],
+      "localMap": "assets/maps/australia.svg",
+      "mapMode": "local-svg"
     },
     "canada": {
       "name": "Canada",
@@ -231,7 +233,9 @@
           "Air Navigation",
           "Civil air-navigation services and airspace coordination."
         ]
-      ]
+      ],
+      "localMap": "assets/maps/canada.svg",
+      "mapMode": "local-svg"
     },
     "united-kingdom": {
       "name": "United Kingdom",
@@ -298,7 +302,9 @@
           "Government & Coordination",
           "National resilience and civil-contingencies coordination."
         ]
-      ]
+      ],
+      "localMap": "assets/maps/united-kingdom.svg",
+      "mapMode": "local-svg"
     },
     "south-africa": {
       "name": "South Africa",
@@ -385,7 +391,9 @@
           "Weather & Intelligence",
           "National meteorological and aviation-weather services."
         ]
-      ]
+      ],
+      "localMap": "assets/maps/south-africa.svg",
+      "mapMode": "local-svg"
     },
     "european-union": {
       "name": "European Union",
@@ -539,7 +547,9 @@
           "Space & Navigation",
           "EU space services, including Galileo and Copernicus programme support."
         ]
-      ]
+      ],
+      "localMap": "assets/maps/european-union.svg",
+      "mapMode": "local-svg"
     }
   },
   "regionalAgencies": {

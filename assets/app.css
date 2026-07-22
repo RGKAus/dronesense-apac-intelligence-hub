@@ -25,3 +25,16 @@ section{margin:28px 0}.section-title,.filters{display:flex;align-items:end;justi
 @media(max-width:900px){#sidebar{display:none}.main{margin-left:0;padding:86px 16px}.map{height:520px}.profile-grid{grid-template-columns:1fr}}
 @media(max-width:620px){h1{font-size:29px}.hero{padding:22px}.map{height:430px}.metrics{grid-template-columns:1fr}.form-panel{grid-template-columns:1fr}.update{grid-template-columns:1fr}.section-title,.filters{align-items:stretch;flex-direction:column}.search,select{width:100%;min-width:0}}
 @media print{#topbar,#sidebar,.tabs,.dashboard-grid,.filters,.form-panel{display:none!important}.main{margin:0;padding:0}.report{display:block!important;padding:0}.hero{border:0;padding:0;background:none}}
+
+/* Version 7.1 stable local SVG maps */
+.map{height:auto;min-height:520px;padding:14px;display:flex;align-items:center;justify-content:center}
+.local-map-object{width:100%;height:min(68vh,650px);border:0;display:block}
+.local-country-map{width:100%;height:100%;background:#0d1823}
+.country-shape{fill:#15374a;stroke:#39d8e3;stroke-width:1.6;vector-effect:non-scaling-stroke}
+.eu-state{fill:#15374a;stroke:#39d8e3;stroke-width:1.2;vector-effect:non-scaling-stroke;transition:.15s}
+.eu-state:hover{fill:#25869a;stroke:#9af7ff;stroke-width:2}
+.map-marker circle{fill:#39d8e3;stroke:#071016;stroke-width:3;transition:.15s}
+.map-marker text{fill:#eef5fa;font:600 13px "IBM Plex Sans",sans-serif;paint-order:stroke;stroke:#071016;stroke-width:4px;stroke-linejoin:round}
+.map-marker:hover circle{r:15;fill:#fff}.map-marker:hover text{fill:#39d8e3}
+.map-credit{color:#7790a2;font-size:11px;margin-top:7px}
+@media(max-width:620px){.map{min-height:390px;padding:4px}.local-map-object{height:390px}.map-marker text{font-size:18px}}

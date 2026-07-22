@@ -54,27 +54,10 @@ async function renderCountry(){
   renderCountryUpdates(key,$("#country-updates"));
   const fallback=$("#map-fallback");
   fallback.innerHTML=c.regions.map(r=>`<a class="region-tile" href="region.html?country=${key}&region=${encodeURIComponent(r.name)}"><h3>${r.name}</h3><span>Open public-safety directory →</span></a>`).join("");
-  if(c.iso3==="EU"){
-    // EU GISCO data is intentionally loaded externally when configured; use a recognisable member-state directory fallback meanwhile.
-    $("#country-map").style.display="none"; fallback.style.display="grid";
-    fallback.insertAdjacentHTML("beforebegin",`<div class="notice">The EU page uses the full member-state directory while the optional GISCO polygon file is being supplied. All country records are clickable and complete structurally.</div>`);
-  } else {
-    const map=L.map("country-map",{zoomControl:true,attributionControl:true}).setView(c.mapCenter,c.zoom);
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{maxZoom:18,attribution:"© OpenStreetMap © CARTO · boundaries: geoBoundaries"}).addTo(map);
-    try{
-      const gj=await fetchGeo(c);
-      const layer=L.geoJSON(gj,{
-        style:{color:"#39d8e3",weight:1.4,fillColor:"#15374a",fillOpacity:.62},
-        onEachFeature:(f,l)=>{
-          const n=f.properties.shapeName||f.properties.name||f.properties.NAME_1;
-          const r=findRegion(c,n);
-          l.bindTooltip(r?r.name:n,{sticky:true});
-          l.on({mouseover:e=>e.target.setStyle({fillColor:"#22a9bd",fillOpacity:.82,weight:2.2}),mouseout:e=>layer.resetStyle(e.target),
-            click:()=>{if(r) location.href=`region.html?country=${key}&region=${encodeURIComponent(r.name)}`}});
-        }
-      }).addTo(map);map.fitBounds(layer.getBounds(),{padding:[18,18]});
-    }catch(e){$("#country-map").style.display="none";fallback.style.display="grid";fallback.insertAdjacentHTML("beforebegin",`<div class="notice">The boundary service could not be loaded. The complete clickable regional directory is shown instead.</div>`)}
-  }
+  const mapEl=$("#country-map");
+  mapEl.innerHTML=`<object class="local-map-object" type="image/svg+xml" data="${c.localMap}" aria-label="${c.name} interactive geographic map"></object>`;
+  mapEl.insertAdjacentHTML("afterend",`<div class="map-credit">Map geometry is stored locally in this release. No runtime boundary API is required.</div>`);
+  fallback.style.display="grid";
   $("#region-search").addEventListener("input",e=>{const s=e.target.value.toLowerCase();[...fallback.children].forEach(x=>x.style.display=x.textContent.toLowerCase().includes(s)?"":"none")});
 }
 async function renderRegion(){
