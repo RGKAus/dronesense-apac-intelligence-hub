@@ -1,0 +1,17 @@
+VERSION 6 INSTALLATION
+
+1. Create a new Git branch named v6-global-architecture.
+2. Back up the current repository.
+3. Copy this package into the repository root.
+4. For overlapping researched files (for example agency-afp.html, agency-frv.html, agency-nsw-police.html and agency-wa-police.html), MERGE the existing sourced intelligence into the Version 6 page rather than discarding it.
+5. Keep assets/v6.css and assets/v6.js.
+6. Test:
+   - index.html
+   - country-australia.html
+   - australia-states.html
+   - NT, SA, QLD and TAS state pages
+   - every agency link
+   - critical-infrastructure-hub.html
+   - mobile navigation/layout
+7. Commit: v6: global market architecture and complete Australia agency routing
+8. Push and preview GitHub Pages.
