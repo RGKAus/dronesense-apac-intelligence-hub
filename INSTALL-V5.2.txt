@@ -1,0 +1,23 @@
+DRONESENSE APAC + CANADA INTELLIGENCE PLATFORM v5.2
+
+UPLOAD
+1. Extract this ZIP.
+2. Upload all files and folders to the repository root.
+3. Replace duplicate files when prompted.
+4. Keep the assets folder structure intact.
+5. Commit with: Add Canada DFR and BVLOS regulatory knowledge base and report generator (v5.2)
+
+NEW FILES
+- regulations-canada-dfr-bvlos.html
+- assets/canada-dfr-bvlos.json
+
+UPDATED
+- regulations-hub.html
+- report-builder.html
+- assets/report-builder.js
+
+OUTPUT
+Open Report Builder and choose “Canada DFR & BVLOS — One Pager”. The PDF is generated locally in the browser.
+
+REVIEW NOTE
+Regulations are reviewed to 22 July 2026 using official Transport Canada and Justice Canada sources. Verify current rules and any certificate conditions before operational reliance.

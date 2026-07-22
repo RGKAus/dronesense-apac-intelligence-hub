@@ -1,0 +1,22 @@
+{
+  "version": "5.2",
+  "date": "2026-07-22",
+  "title": "Canada DFR and BVLOS regulatory knowledge base",
+  "new": [
+    "regulations-canada-dfr-bvlos.html",
+    "assets/canada-dfr-bvlos.json",
+    "INSTALL-V5.2.txt"
+  ],
+  "updated": [
+    "regulations-hub.html",
+    "report-builder.html",
+    "assets/report-builder.js"
+  ],
+  "capabilities": [
+    "Canada DFR/BVLOS knowledge page",
+    "SFOC decision matrix",
+    "RPOC and pilot requirements",
+    "source-linked Canadian regulatory data",
+    "one-page PDF generator"
+  ]
+}

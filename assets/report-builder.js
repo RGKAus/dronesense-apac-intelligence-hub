@@ -27,6 +27,23 @@
     'Government & Regulators':['Compliance and environmental monitoring','Mapping and survey','Emergency coordination','Airspace and aviation safety support','Border and maritime surveillance support','Scientific and geospatial data collection']
   };
 
+  const canadaDfrDecision = [
+    ['Lower-risk BVLOS in uncontrolled airspace, <=400 ft AGL, >5 NM from listed aerodromes and >=1 km from a populated area','No, when all Level 1 Complex conditions are met'],
+    ['Small RPA over a sparsely populated area or <1 km from a populated area','No, with Level 1 Complex, RPOC and the applicable pre-validated declaration'],
+    ['Urban or populated-area BVLOS outside the Level 1 Complex envelope','Normally yes — high-complexity SFOC-RPAS'],
+    ['BVLOS in controlled airspace or an aerodrome environment','Yes — high-complexity SFOC-RPAS'],
+    ['More than one RPA operated BVLOS at the same time','Yes — medium-complexity SFOC-RPAS'],
+    ['Above 400 ft AGL','Yes — medium-complexity SFOC-RPAS']
+  ];
+  const canadaAgencyNeeds = [
+    ['Operator authority','RPOC for Level 1 Complex operations, or an SFOC-RPAS outside that category'],
+    ['Pilot','Pilot Certificate — Level 1 Complex Operations for lower-risk BVLOS'],
+    ['Governance','Accountable executive, maintenance responsibility, training program, SOPs and safety-risk management'],
+    ['Equipment','Registered RPA and supporting systems with the applicable safety-assurance declarations'],
+    ['Operating environment','Airspace, aerodrome distance, altitude, population density, weather and site constraints must fit the chosen category'],
+    ['Higher-complexity case','SFOC application supported by required documentation and a SORA/operational risk assessment']
+  ];
+
   const sourceNotes = [
     'CASA - Part 101 remotely piloted aircraft and model aircraft framework',
     'CASA - ReOC, RePL, AROC and BVLOS guidance',
@@ -72,6 +89,31 @@
     if(options.includeSources){doc.addPage();header(doc,'Australian RPAS Regulatory Requirements',doc.internal.getNumberOfPages());doc.setFont('helvetica','bold');doc.setFontSize(18);doc.setTextColor(20,35,43);doc.text('Source framework',14,31);doc.setFont('helvetica','normal');doc.setFontSize(10);sourceNotes.forEach((s,i)=>doc.text(`${i+1}. ${s}`,18,48+i*12));}
   }
 
+  function addCanadaDfrReport(doc, options) {
+    doc.setFillColor(3,16,25); doc.rect(0,0,210,297,'F');
+    doc.setTextColor(33,225,223); doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.text('VERSATERM',14,14);
+    doc.setTextColor(255,255,255); doc.setFontSize(14); doc.text('DroneSense',14,22);
+    doc.setFontSize(22); doc.text('Canada DFR & BVLOS',14,42);
+    doc.setFontSize(11); doc.setTextColor(175,196,204); doc.text('Public-safety regulatory one-pager',14,51);
+    doc.setFillColor(8,37,48); doc.roundedRect(14,59,182,32,3,3,'F');
+    doc.setTextColor(105,243,239); doc.setFontSize(9); doc.text('EXECUTIVE ANSWER',20,69);
+    doc.setTextColor(235,244,247); doc.setFont('helvetica','normal'); doc.setFontSize(8.3);
+    const summary='Canada permits defined lower-risk BVLOS operations without an SFOC-RPAS. The agency must operate under an RPAS Operator Certificate (RPOC), use appropriately declared equipment and assign Level 1 Complex pilots. Urban, controlled-airspace, aerodrome-environment or other higher-complexity DFR operations generally require an SFOC-RPAS.';
+    doc.text(doc.splitTextToSize(summary,170),20,77);
+    doc.setTextColor(20,35,43); doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.text('Does the agency need an SFOC?',14,104);
+    doc.autoTable({startY:109,head:[['Scenario','Answer']],body:canadaDfrDecision,theme:'grid',styles:{fontSize:6.8,cellPadding:2.1,textColor:[45,61,69],lineColor:[205,216,221]},headStyles:{fillColor:[8,37,48],textColor:[105,243,239]},columnStyles:{0:{cellWidth:122},1:{cellWidth:60,fontStyle:'bold'}},margin:{left:14,right:14}});
+    let y=doc.lastAutoTable.finalY+7;
+    doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(20,35,43); doc.text('What public safety needs',14,y);
+    doc.autoTable({startY:y+4,head:[['Requirement','Position']],body:canadaAgencyNeeds,theme:'grid',styles:{fontSize:6.8,cellPadding:2.0,textColor:[45,61,69],lineColor:[205,216,221]},headStyles:{fillColor:[8,37,48],textColor:[105,243,239]},columnStyles:{0:{cellWidth:42,fontStyle:'bold'},1:{cellWidth:140}},margin:{left:14,right:14}});
+    y=doc.lastAutoTable.finalY+6;
+    doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(190,75,45); doc.text('DFR reality check',14,y);
+    doc.setFont('helvetica','normal'); doc.setFontSize(7.3); doc.setTextColor(55,70,78);
+    doc.text(doc.splitTextToSize('A station or dock can support the operating model, but it does not create an exemption. Many city-wide DFR concepts fall outside lower-risk BVLOS because of population exposure, controlled airspace, aerodrome proximity or simultaneous aircraft. Emergency-response organizations remain subject to the operating-authority rules, although government emergency-response applicants are exempt from SFOC fees.',182),14,y+5);
+    doc.setDrawColor(30,60,72); doc.line(14,279,196,279); doc.setFontSize(6.5); doc.setTextColor(90,112,120);
+    doc.text('Primary sources: Transport Canada Level 1 Complex, RPOC and SFOC guidance; Canadian Aviation Regulations Part IX.',14,284);
+    doc.text(`Reviewed 22 July 2026 | Generated ${today()} | Verify before operational reliance`,14,289);
+  }
+
   async function addAgencyReport(doc, options) {
     cover(doc,'Australian Public Safety Agencies & UAS Uses','National directory of public-safety and critical-operations organisations, grouped by sector and jurisdiction, with current and established UAS mission types.');
     let agencies=[];
@@ -100,8 +142,8 @@
       const doc=new jsPDF({unit:'mm',format:'a4',orientation:'portrait'});
       const template=document.querySelector('[name="report-template"]:checked')?.value || 'requirements';
       const options={includeSources:el('include-sources')?.checked};
-      if(template==='requirements') addRequirementsReport(doc,options); else await addAgencyReport(doc,options);
-      const filename=template==='requirements'?'Australian-RPAS-Regulatory-Requirements.pdf':'Australian-Public-Safety-Agencies-and-UAS-Uses.pdf';
+      if(template==='requirements') addRequirementsReport(doc,options); else if(template==='canada-dfr') addCanadaDfrReport(doc,options); else await addAgencyReport(doc,options);
+      const filename=template==='requirements'?'Australian-RPAS-Regulatory-Requirements.pdf':template==='canada-dfr'?'Canada-DFR-BVLOS-One-Pager.pdf':'Australian-Public-Safety-Agencies-and-UAS-Uses.pdf';
       doc.save(filename);
       el('report-status').textContent=`Created ${filename}`;
     }catch(err){console.error(err);alert('The report could not be created. Please reload and try again.');}
@@ -109,6 +151,8 @@
   }
 
   document.addEventListener('DOMContentLoaded',()=>{
+    const requested=new URLSearchParams(location.search).get('template');
+    if(requested){const radio=document.querySelector(`[name="report-template"][value="${requested}"]`);if(radio){radio.checked=true;}}
     el('generate-report')?.addEventListener('click',generate);
     document.querySelectorAll('[name="report-template"]').forEach(r=>r.addEventListener('change',()=>{
       el('agency-options').hidden=r.value!=='agencies' || !r.checked;
