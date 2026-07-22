@@ -1,0 +1,1 @@
+Version 7: launch real geographic maps, agency intelligence profiles, report generator and country-specific live intelligence modules

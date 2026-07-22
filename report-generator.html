@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/app.css"><title>Report Generator | DroneSense Intelligence Hub</title></head>
+<body><header id="topbar"></header><aside id="sidebar"></aside><main class="main">
+<section class="hero compact"><div class="eyebrow">Report Generator</div><h1>Generate an intelligence briefing</h1>
+<p>Select a country, region and optional agency. The report can be printed or saved as PDF directly from the browser.</p></section>
+<div class="panel form-panel">
+<label>Country<select id="report-country"></select></label>
+<label>Region<select id="report-region"></select></label>
+<label>Agency<select id="report-agency"></select></label>
+<label>Report type<select id="report-type"><option>Executive Briefing</option><option>Agency Intelligence Profile</option><option>Regulatory & DFR Briefing</option><option>Market Opportunity Briefing</option><option>Competitor Comparison</option></select></label>
+<button id="generate-report">Generate report</button>
+</div>
+<article id="report-output" class="report"></article>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/app.js"></script><script>DS.renderReportGenerator()</script></body></html>

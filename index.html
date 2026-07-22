@@ -1,17 +1,23 @@
-<!doctype html>
-<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Global Home | DroneSense Intelligence Hub</title>
-<meta name="description" content="Global public safety and RPAS intelligence">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/v6.css"></head><body>
-<header class="topbar" id="v6-topbar"></header><aside class="sidebar" id="v6-sidebar"></aside>
-<main class="main"><div class="container"><div class="eyebrow">Version 6</div>
-<section class="hero"><h1>Global Public Safety &amp; RPAS Intelligence Platform</h1>
-<p class="lead">Select a market to open its interactive geographic map. Click a state, province, territory, nation or member country to access its public safety agency profile; nationwide agencies appear below each map.</p></section>
-<h2>Select a market</h2><div class="grid grid-5"><a class="card" href="country-australia.html"><div class="flag">🇦🇺</div><h3>Australia</h3><p>States, territories, federal agencies, CNI and RPAS regulation.</p><div class="meta"><span class="status live">Live foundation</span></div></a><a class="card" href="country-canada.html"><div class="flag">🇨🇦</div><h3>Canada</h3><p>Provinces, territories, public safety agencies and Level 1 Complex/SFOC intelligence.</p><div class="meta"><span class="status build">Framework</span></div></a><a class="card" href="region-european-union.html"><div class="flag">🇪🇺</div><h3>European Union</h3><p>EU-wide EASA rules with member-state public safety and competent-authority intelligence.</p><div class="meta"><span class="status build">Framework</span></div></a><a class="card" href="country-united-kingdom.html"><div class="flag">🇬🇧</div><h3>United Kingdom</h3><p>UK CAA rules and public safety structure tracked separately from the EU.</p><div class="meta"><span class="status build">Separate regime</span></div></a><a class="card" href="country-south-africa.html"><div class="flag">🇿🇦</div><h3>South Africa</h3><p>Provincial public safety landscape and SACAA RPAS regulatory intelligence.</p><div class="meta"><span class="status build">Framework</span></div></a></div>
-<h2>Platform structure</h2><div class="grid grid-3">
-<div class="panel"><h3>Geography first</h3><p>Move from country or region to state, province, territory or nation, then into a complete agency directory.</p></div>
-<div class="panel"><h3>Agency profiles</h3><p>Every listed public safety, emergency service, regulator and CNI organisation links to an individual overview profile.</p></div>
-<div class="panel"><h3>Regulatory separation</h3><p>The EU and UK are tracked independently because the UK CAA framework is no longer governed by EASA.</p></div></div></div>
-<div class="footer">Version 6 structural release · Public-source intelligence only · Verify before operational reliance</div></main>
-<script src="assets/v6.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/app.css"><title>Global Home | DroneSense Intelligence Hub</title></head>
+<body><header id="topbar"></header><aside id="sidebar"></aside><main class="main">
+<section class="hero">
+<div class="eyebrow">Version 7 · International Solutions Engineering</div>
+<h1>Global Public Safety RPAS Intelligence Platform</h1>
+<p>Geographic public-safety directories, agency intelligence, regulations, technology, competitors, political cycles, reports and live market updates.</p>
+</section>
+<div id="country-grid" class="grid country-grid"></div>
+<section class="dashboard-grid">
+<a class="panel action" href="updates.html"><b>Live Updates</b><span>Regulations, drone news, budgets and public-safety announcements</span></a>
+<a class="panel action" href="report-generator.html"><b>Report Generator</b><span>Create country, region and agency intelligence reports</span></a>
+<a class="panel action" href="competitors.html"><b>Competitor Platform</b><span>Market-by-market competitor intelligence</span></a>
+<a class="panel action" href="technology-watch.html"><b>Technology Watch</b><span>Track docks, DAA, autonomy, C2 and integrations</span></a>
+<a class="panel action" href="politics.html"><b>Political & Election Tracker</b><span>Election dates, budget cycles and policy implications by country</span></a>
+<a class="panel action" href="regulations.html"><b>Regulatory Intelligence</b><span>Country frameworks, BVLOS, DFR and approval pathways</span></a>
+</section>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/app.js"></script><script>DS.renderHome()</script></body></html>

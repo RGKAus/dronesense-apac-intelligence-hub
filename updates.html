@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/app.css"><title>Live Updates | DroneSense Intelligence Hub</title></head>
+<body><header id="topbar"></header><aside id="sidebar"></aside><main class="main">
+<section class="hero compact"><div class="eyebrow">Live Intelligence</div><h1>Regulations, drone news, budgets and public-safety announcements</h1>
+<p>Country-filtered updates generated from the configured news-ingestion workflow.</p></section>
+<div class="filters"><select id="updates-country"></select><select id="updates-type"><option value="">All update types</option><option>Regulation</option><option>Drone News</option><option>Budget</option><option>Public Safety</option></select><input id="updates-search" class="search" placeholder="Search updates"></div>
+<div id="updates-list"></div>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/app.js"></script><script>DS.renderUpdates()</script></body></html>

@@ -1,0 +1,38 @@
+{
+  "version": "7.0",
+  "fileCount": 24,
+  "features": [
+    "real interactive maps",
+    "agency profiles",
+    "report generator",
+    "competitor platform",
+    "technology watch",
+    "political tracker",
+    "country-specific live updates"
+  ],
+  "files": [
+    "index.html",
+    "COMMIT-SUMMARY.txt",
+    "technology-watch.html",
+    "report-generator.html",
+    "updates.html",
+    "country.html",
+    "regulations.html",
+    "competitors.html",
+    "region.html",
+    "README-V7.md",
+    "politics.html",
+    "agency.html",
+    "data/updates.json",
+    "data/platform-data.json",
+    "data/politics.json",
+    "data/feed-sources.json",
+    "data/technology.json",
+    "data/competitors.json",
+    "assets/app.js",
+    "assets/eu-member-states.geojson",
+    "assets/app.css",
+    "scripts/update_feeds.py",
+    ".github/workflows/update-intelligence.yml"
+  ]
+}

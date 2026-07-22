@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/app.css"><title>Country | DroneSense Intelligence Hub</title></head>
+<body><header id="topbar"></header><aside id="sidebar"></aside><main class="main">
+<div id="country-app">
+<section class="hero compact"><div class="eyebrow">Country Intelligence Portal</div><h1 id="country-title">Loading…</h1><p id="country-lead"></p></section>
+<div class="tabs">
+<a href="#map">Geographic Map</a><a href="#national">Nationwide Agencies</a><a href="#updates">Live Updates</a>
+<a href="#politics">Politics</a><a href="#regulations">Regulations</a><a href="#technology">Technology</a><a href="#competitors">Competitors</a>
+</div>
+<section id="map"><div class="section-title"><div><span class="eyebrow">Geographic intelligence</span><h2 id="map-title">Interactive map</h2></div><input id="region-search" class="search" placeholder="Search a region"></div>
+<div id="country-map" class="map"></div><div id="map-fallback" class="grid region-grid"></div></section>
+<section id="national"><span class="eyebrow">Nationwide coverage</span><h2>National agencies</h2><div id="national-agencies" class="grid agency-grid"></div></section>
+<section id="updates"><span class="eyebrow">Current intelligence</span><h2>Live updates</h2><div id="country-updates"></div></section>
+<section class="dashboard-grid">
+<a id="country-politics-link" class="panel action"><b>Political & Election Tracker</b><span>Election and budget-cycle intelligence</span></a>
+<a id="country-reg-link" class="panel action"><b>Regulatory Intelligence</b><span>BVLOS, DFR and operating approvals</span></a>
+<a id="country-tech-link" class="panel action"><b>Technology Watch</b><span>Technology developments for this market</span></a>
+<a id="country-comp-link" class="panel action"><b>Competitor Platform</b><span>Competitors active in this market</span></a>
+</section></div>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/app.js"></script><script>DS.renderCountry()</script></body></html>

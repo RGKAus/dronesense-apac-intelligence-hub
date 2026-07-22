@@ -1,0 +1,80 @@
+{
+  "lastVerified": "Verification required before operational reliance",
+  "countries": {
+    "australia": {
+      "country": "Australia",
+      "headline": "Election and government-cycle tracker",
+      "nextElection": "To be verified from the relevant official electoral authority",
+      "fields": [
+        "Election type",
+        "Earliest date",
+        "Latest permissible date",
+        "Confirmed polling date",
+        "Government term",
+        "Budget cycle",
+        "Policy impact on public safety and RPAS"
+      ],
+      "status": "Live-research field"
+    },
+    "canada": {
+      "country": "Canada",
+      "headline": "Election and government-cycle tracker",
+      "nextElection": "To be verified from the relevant official electoral authority",
+      "fields": [
+        "Election type",
+        "Earliest date",
+        "Latest permissible date",
+        "Confirmed polling date",
+        "Government term",
+        "Budget cycle",
+        "Policy impact on public safety and RPAS"
+      ],
+      "status": "Live-research field"
+    },
+    "united-kingdom": {
+      "country": "United Kingdom",
+      "headline": "Election and government-cycle tracker",
+      "nextElection": "To be verified from the relevant official electoral authority",
+      "fields": [
+        "Election type",
+        "Earliest date",
+        "Latest permissible date",
+        "Confirmed polling date",
+        "Government term",
+        "Budget cycle",
+        "Policy impact on public safety and RPAS"
+      ],
+      "status": "Live-research field"
+    },
+    "south-africa": {
+      "country": "South Africa",
+      "headline": "Election and government-cycle tracker",
+      "nextElection": "To be verified from the relevant official electoral authority",
+      "fields": [
+        "Election type",
+        "Earliest date",
+        "Latest permissible date",
+        "Confirmed polling date",
+        "Government term",
+        "Budget cycle",
+        "Policy impact on public safety and RPAS"
+      ],
+      "status": "Live-research field"
+    },
+    "european-union": {
+      "country": "European Union",
+      "headline": "Election and government-cycle tracker",
+      "nextElection": "To be verified from the relevant official electoral authority",
+      "fields": [
+        "Election type",
+        "Earliest date",
+        "Latest permissible date",
+        "Confirmed polling date",
+        "Government term",
+        "Budget cycle",
+        "Policy impact on public safety and RPAS"
+      ],
+      "status": "Live-research field"
+    }
+  }
+}

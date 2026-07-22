@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/app.css"><title>Region | DroneSense Intelligence Hub</title></head>
+<body><header id="topbar"></header><aside id="sidebar"></aside><main class="main">
+<section class="hero compact"><div class="eyebrow" id="region-breadcrumb">Region</div><h1 id="region-title">Loading…</h1>
+<p>Public-safety structure, agency directory and RPAS intelligence for this jurisdiction.</p></section>
+<div class="metrics"><div><b id="agency-count">0</b><span>Principal agencies</span></div><div><b>5+</b><span>Public-safety sectors</span></div><div><b>Live</b><span>Research status</span></div></div>
+<div class="section-title"><div><span class="eyebrow">Agency directory</span><h2>Public safety agencies</h2></div><input id="agency-search" class="search" placeholder="Search agencies"></div>
+<div id="region-agencies" class="grid agency-grid"></div>
+<section><span class="eyebrow">Regional intelligence</span><h2>Intelligence dashboard</h2>
+<div class="dashboard-grid">
+<a class="panel action" href="updates.html"><b>Live Updates</b><span>Drone, regulation, budget and public-safety announcements</span></a>
+<a class="panel action" href="report-generator.html"><b>Generate Regional Report</b><span>Create a print-ready intelligence briefing</span></a>
+<a class="panel action" href="technology-watch.html"><b>Technology Watch</b><span>Known and emerging RPAS capability</span></a>
+<a class="panel action" href="competitors.html"><b>Competitor Activity</b><span>Supplier and platform presence</span></a>
+</div></section>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/app.js"></script><script>DS.renderRegion()</script></body></html>

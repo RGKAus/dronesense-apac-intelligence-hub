@@ -1,0 +1,65 @@
+[
+  {
+    "topic": "Drone-in-a-box",
+    "status": "Track",
+    "signals": [
+      "Dock approvals",
+      "Remote operations",
+      "Weather limits",
+      "Automated charging",
+      "Cybersecurity"
+    ]
+  },
+  {
+    "topic": "Detect and Avoid",
+    "status": "Track",
+    "signals": [
+      "Ground-based DAA",
+      "Onboard DAA",
+      "Standards",
+      "Regulator acceptance"
+    ]
+  },
+  {
+    "topic": "Command and Control",
+    "status": "Track",
+    "signals": [
+      "LTE/5G",
+      "Satellite",
+      "Private networks",
+      "Link assurance"
+    ]
+  },
+  {
+    "topic": "Airspace Integration",
+    "status": "Track",
+    "signals": [
+      "UTM/USS",
+      "FIMS",
+      "Remote ID",
+      "ADS-B",
+      "Strategic deconfliction"
+    ]
+  },
+  {
+    "topic": "AI and Autonomy",
+    "status": "Track",
+    "signals": [
+      "Object detection",
+      "Automated dispatch",
+      "Route planning",
+      "Human oversight"
+    ]
+  },
+  {
+    "topic": "Public-safety integrations",
+    "status": "Track",
+    "signals": [
+      "CAD",
+      "Evidence management",
+      "GIS",
+      "Video management",
+      "Common operating picture"
+    ]
+  }
+]

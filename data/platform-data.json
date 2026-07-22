@@ -1,0 +1,2199 @@
+{
+  "countries": {
+    "australia": {
+      "name": "Australia",
+      "iso3": "AUS",
+      "flag": "🇦🇺",
+      "adminLabel": "State / Territory",
+      "geojson": "https://www.geoboundaries.org/api/current/gbOpen/AUS/ADM1/",
+      "mapCenter": [
+        -25.5,
+        134.5
+      ],
+      "zoom": 4,
+      "regions": [
+        {
+          "name": "Western Australia",
+          "aliases": [
+            "Western Australia"
+          ],
+          "slug": "western-australia"
+        },
+        {
+          "name": "Northern Territory",
+          "aliases": [
+            "Northern Territory"
+          ],
+          "slug": "northern-territory"
+        },
+        {
+          "name": "South Australia",
+          "aliases": [
+            "South Australia"
+          ],
+          "slug": "south-australia"
+        },
+        {
+          "name": "Queensland",
+          "aliases": [
+            "Queensland"
+          ],
+          "slug": "queensland"
+        },
+        {
+          "name": "New South Wales",
+          "aliases": [
+            "New South Wales"
+          ],
+          "slug": "new-south-wales"
+        },
+        {
+          "name": "Australian Capital Territory",
+          "aliases": [
+            "Australian Capital Territory"
+          ],
+          "slug": "australian-capital-territory"
+        },
+        {
+          "name": "Victoria",
+          "aliases": [
+            "Victoria"
+          ],
+          "slug": "victoria"
+        },
+        {
+          "name": "Tasmania",
+          "aliases": [
+            "Tasmania"
+          ],
+          "slug": "tasmania"
+        }
+      ],
+      "nationalAgencies": [
+        [
+          "Australian Federal Police",
+          "Police",
+          "Federal policing, protective services and national law-enforcement capability."
+        ],
+        [
+          "Australian Border Force",
+          "Border & Security",
+          "Border protection, customs and immigration enforcement."
+        ],
+        [
+          "Department of Home Affairs",
+          "Government & Coordination",
+          "National security, emergency management and critical-infrastructure policy."
+        ],
+        [
+          "National Emergency Management Agency",
+          "Emergency Management",
+          "National disaster preparedness, response and recovery coordination."
+        ],
+        [
+          "Australian Maritime Safety Authority",
+          "Maritime & SAR",
+          "Maritime safety and national aeronautical and maritime search-and-rescue coordination."
+        ],
+        [
+          "Civil Aviation Safety Authority",
+          "Aviation Regulator",
+          "Civil aviation and RPAS regulation."
+        ],
+        [
+          "Bureau of Meteorology",
+          "Weather & Intelligence",
+          "Weather, flood, cyclone, fire-weather and aviation services."
+        ],
+        [
+          "Geoscience Australia",
+          "Geospatial & Hazards",
+          "National geospatial, earth-observation and natural-hazard intelligence."
+        ],
+        [
+          "Australian Communications and Media Authority",
+          "Communications Regulator",
+          "Radiofrequency spectrum and communications regulation."
+        ]
+      ]
+    },
+    "canada": {
+      "name": "Canada",
+      "iso3": "CAN",
+      "flag": "🇨🇦",
+      "adminLabel": "Province / Territory",
+      "geojson": "https://www.geoboundaries.org/api/current/gbOpen/CAN/ADM1/",
+      "mapCenter": [
+        58,
+        -96
+      ],
+      "zoom": 3,
+      "regions": [
+        {
+          "name": "Alberta",
+          "slug": "alberta"
+        },
+        {
+          "name": "British Columbia",
+          "slug": "british-columbia"
+        },
+        {
+          "name": "Manitoba",
+          "slug": "manitoba"
+        },
+        {
+          "name": "New Brunswick",
+          "slug": "new-brunswick"
+        },
+        {
+          "name": "Newfoundland and Labrador",
+          "aliases": [
+            "Newfoundland and Labrador",
+            "Newfoundland & Labrador"
+          ],
+          "slug": "newfoundland-and-labrador"
+        },
+        {
+          "name": "Northwest Territories",
+          "slug": "northwest-territories"
+        },
+        {
+          "name": "Nova Scotia",
+          "slug": "nova-scotia"
+        },
+        {
+          "name": "Nunavut",
+          "slug": "nunavut"
+        },
+        {
+          "name": "Ontario",
+          "slug": "ontario"
+        },
+        {
+          "name": "Prince Edward Island",
+          "slug": "prince-edward-island"
+        },
+        {
+          "name": "Quebec",
+          "aliases": [
+            "Quebec",
+            "Québec"
+          ],
+          "slug": "quebec"
+        },
+        {
+          "name": "Saskatchewan",
+          "slug": "saskatchewan"
+        },
+        {
+          "name": "Yukon",
+          "slug": "yukon"
+        }
+      ],
+      "nationalAgencies": [
+        [
+          "Royal Canadian Mounted Police",
+          "Police",
+          "Federal policing and contracted provincial, territorial and municipal policing."
+        ],
+        [
+          "Public Safety Canada",
+          "Government & Coordination",
+          "National public-safety, emergency-management and security policy."
+        ],
+        [
+          "Transport Canada",
+          "Aviation Regulator",
+          "Civil aviation and RPAS regulation."
+        ],
+        [
+          "Canadian Coast Guard",
+          "Maritime & SAR",
+          "Maritime safety, environmental response and search-and-rescue support."
+        ],
+        [
+          "Public Health Agency of Canada",
+          "Health Emergency",
+          "National public-health preparedness and emergency response."
+        ],
+        [
+          "Parks Canada",
+          "Protected Areas",
+          "Federal protected-area operations, wildfire response and visitor safety."
+        ],
+        [
+          "Canadian Armed Forces — Search and Rescue",
+          "SAR",
+          "National aeronautical search-and-rescue response."
+        ],
+        [
+          "NAV CANADA",
+          "Air Navigation",
+          "Civil air-navigation services and airspace coordination."
+        ]
+      ]
+    },
+    "united-kingdom": {
+      "name": "United Kingdom",
+      "iso3": "GBR",
+      "flag": "🇬🇧",
+      "adminLabel": "Nation",
+      "geojson": "https://www.geoboundaries.org/api/current/gbOpen/GBR/ADM1/",
+      "mapCenter": [
+        55,
+        -3
+      ],
+      "zoom": 5,
+      "regions": [
+        {
+          "name": "England",
+          "slug": "england"
+        },
+        {
+          "name": "Scotland",
+          "slug": "scotland"
+        },
+        {
+          "name": "Wales",
+          "slug": "wales"
+        },
+        {
+          "name": "Northern Ireland",
+          "slug": "northern-ireland"
+        }
+      ],
+      "nationalAgencies": [
+        [
+          "National Crime Agency",
+          "Police & Security",
+          "Serious and organised crime and national law-enforcement coordination."
+        ],
+        [
+          "Border Force",
+          "Border & Security",
+          "Border security and customs enforcement."
+        ],
+        [
+          "Maritime and Coastguard Agency",
+          "Maritime & SAR",
+          "Maritime safety and HM Coastguard functions."
+        ],
+        [
+          "Civil Aviation Authority",
+          "Aviation Regulator",
+          "Civil aviation and UAS regulation."
+        ],
+        [
+          "National Police Air Service",
+          "Police Aviation",
+          "Police aviation support across England and Wales."
+        ],
+        [
+          "Met Office",
+          "Weather & Intelligence",
+          "National weather and aviation meteorological services."
+        ],
+        [
+          "Resilience and Emergencies Division / Cabinet Office",
+          "Government & Coordination",
+          "National resilience and civil-contingencies coordination."
+        ]
+      ]
+    },
+    "south-africa": {
+      "name": "South Africa",
+      "iso3": "ZAF",
+      "flag": "🇿🇦",
+      "adminLabel": "Province",
+      "geojson": "https://www.geoboundaries.org/api/current/gbOpen/ZAF/ADM1/",
+      "mapCenter": [
+        -30,
+        24
+      ],
+      "zoom": 5,
+      "regions": [
+        {
+          "name": "Eastern Cape",
+          "slug": "eastern-cape"
+        },
+        {
+          "name": "Free State",
+          "slug": "free-state"
+        },
+        {
+          "name": "Gauteng",
+          "slug": "gauteng"
+        },
+        {
+          "name": "KwaZulu-Natal",
+          "slug": "kwazulu-natal"
+        },
+        {
+          "name": "Limpopo",
+          "slug": "limpopo"
+        },
+        {
+          "name": "Mpumalanga",
+          "slug": "mpumalanga"
+        },
+        {
+          "name": "North West",
+          "slug": "north-west"
+        },
+        {
+          "name": "Northern Cape",
+          "slug": "northern-cape"
+        },
+        {
+          "name": "Western Cape",
+          "slug": "western-cape"
+        }
+      ],
+      "nationalAgencies": [
+        [
+          "South African Police Service",
+          "Police",
+          "National policing and specialist operational support."
+        ],
+        [
+          "National Disaster Management Centre",
+          "Emergency Management",
+          "National disaster-risk and emergency-management coordination."
+        ],
+        [
+          "South African Civil Aviation Authority",
+          "Aviation Regulator",
+          "Civil aviation and RPAS regulation."
+        ],
+        [
+          "South African Maritime Safety Authority",
+          "Maritime",
+          "Maritime safety and regulatory oversight."
+        ],
+        [
+          "South African National Parks",
+          "Protected Areas",
+          "Protected-area operations, wildfire and environmental response."
+        ],
+        [
+          "Air Traffic and Navigation Services",
+          "Air Navigation",
+          "National air-navigation and airspace services."
+        ],
+        [
+          "South African Weather Service",
+          "Weather & Intelligence",
+          "National meteorological and aviation-weather services."
+        ]
+      ]
+    },
+    "european-union": {
+      "name": "European Union",
+      "iso3": "EU",
+      "flag": "🇪🇺",
+      "adminLabel": "Member State",
+      "geojson": "assets/eu-member-states.geojson",
+      "mapCenter": [
+        54,
+        15
+      ],
+      "zoom": 4,
+      "regions": [
+        {
+          "name": "Austria",
+          "slug": "austria"
+        },
+        {
+          "name": "Belgium",
+          "slug": "belgium"
+        },
+        {
+          "name": "Bulgaria",
+          "slug": "bulgaria"
+        },
+        {
+          "name": "Croatia",
+          "slug": "croatia"
+        },
+        {
+          "name": "Cyprus",
+          "slug": "cyprus"
+        },
+        {
+          "name": "Czechia",
+          "slug": "czechia"
+        },
+        {
+          "name": "Denmark",
+          "slug": "denmark"
+        },
+        {
+          "name": "Estonia",
+          "slug": "estonia"
+        },
+        {
+          "name": "Finland",
+          "slug": "finland"
+        },
+        {
+          "name": "France",
+          "slug": "france"
+        },
+        {
+          "name": "Germany",
+          "slug": "germany"
+        },
+        {
+          "name": "Greece",
+          "slug": "greece"
+        },
+        {
+          "name": "Hungary",
+          "slug": "hungary"
+        },
+        {
+          "name": "Ireland",
+          "slug": "ireland"
+        },
+        {
+          "name": "Italy",
+          "slug": "italy"
+        },
+        {
+          "name": "Latvia",
+          "slug": "latvia"
+        },
+        {
+          "name": "Lithuania",
+          "slug": "lithuania"
+        },
+        {
+          "name": "Luxembourg",
+          "slug": "luxembourg"
+        },
+        {
+          "name": "Malta",
+          "slug": "malta"
+        },
+        {
+          "name": "Netherlands",
+          "slug": "netherlands"
+        },
+        {
+          "name": "Poland",
+          "slug": "poland"
+        },
+        {
+          "name": "Portugal",
+          "slug": "portugal"
+        },
+        {
+          "name": "Romania",
+          "slug": "romania"
+        },
+        {
+          "name": "Slovakia",
+          "slug": "slovakia"
+        },
+        {
+          "name": "Slovenia",
+          "slug": "slovenia"
+        },
+        {
+          "name": "Spain",
+          "slug": "spain"
+        },
+        {
+          "name": "Sweden",
+          "slug": "sweden"
+        }
+      ],
+      "nationalAgencies": [
+        [
+          "European Union Aviation Safety Agency",
+          "Aviation Regulator",
+          "EU aviation-safety and UAS regulatory framework."
+        ],
+        [
+          "Europol",
+          "Police Cooperation",
+          "EU law-enforcement cooperation and intelligence support."
+        ],
+        [
+          "Frontex",
+          "Border & Coast Guard",
+          "European border and coast-guard coordination."
+        ],
+        [
+          "Emergency Response Coordination Centre",
+          "Emergency Management",
+          "EU civil-protection and emergency-response coordination."
+        ],
+        [
+          "European Maritime Safety Agency",
+          "Maritime",
+          "EU maritime-safety and surveillance support."
+        ],
+        [
+          "European Union Agency for the Space Programme",
+          "Space & Navigation",
+          "EU space services, including Galileo and Copernicus programme support."
+        ]
+      ]
+    }
+  },
+  "regionalAgencies": {
+    "australia|Western Australia": [
+      {
+        "name": "Western Australia Police Force",
+        "category": "Police",
+        "summary": "State policing and specialist operational response."
+      },
+      {
+        "name": "Department of Fire and Emergency Services",
+        "category": "Fire & Emergency Management",
+        "summary": "Fire, rescue, hazardous-materials, cyclone, flood and emergency-management functions."
+      },
+      {
+        "name": "St John WA",
+        "category": "Ambulance / Medical",
+        "summary": "State ambulance and emergency medical response."
+      },
+      {
+        "name": "Marine Rescue Western Australia",
+        "category": "Search & Rescue",
+        "summary": "Volunteer marine rescue network."
+      },
+      {
+        "name": "State Emergency Management Committee",
+        "category": "Emergency Management",
+        "summary": "State emergency-management governance and coordination."
+      }
+    ],
+    "australia|Northern Territory": [
+      {
+        "name": "Northern Territory Police Force",
+        "category": "Police",
+        "summary": "Territory policing and specialist operations."
+      },
+      {
+        "name": "Northern Territory Fire and Rescue Service",
+        "category": "Fire & Rescue",
+        "summary": "Urban fire, rescue and hazardous-materials response."
+      },
+      {
+        "name": "Northern Territory Emergency Service",
+        "category": "Emergency Management",
+        "summary": "Storm, flood, rescue and volunteer emergency response."
+      },
+      {
+        "name": "Bushfires NT",
+        "category": "Bushfire",
+        "summary": "Bushfire mitigation, preparedness and response."
+      },
+      {
+        "name": "St John NT",
+        "category": "Ambulance / Medical",
+        "summary": "Territory ambulance and emergency medical response."
+      }
+    ],
+    "australia|South Australia": [
+      {
+        "name": "South Australia Police",
+        "category": "Police",
+        "summary": "State policing and specialist response."
+      },
+      {
+        "name": "South Australian Metropolitan Fire Service",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan structural fire and rescue."
+      },
+      {
+        "name": "South Australian Country Fire Service",
+        "category": "Bushfire & Rescue",
+        "summary": "Country fire, bushfire and rescue response."
+      },
+      {
+        "name": "South Australian State Emergency Service",
+        "category": "Emergency Management",
+        "summary": "Storm, flood, rescue and volunteer emergency response."
+      },
+      {
+        "name": "SA Ambulance Service",
+        "category": "Ambulance / Medical",
+        "summary": "State ambulance and emergency medical response."
+      }
+    ],
+    "australia|Queensland": [
+      {
+        "name": "Queensland Police Service",
+        "category": "Police",
+        "summary": "State policing and specialist response."
+      },
+      {
+        "name": "Queensland Fire Department",
+        "category": "Fire & Rescue",
+        "summary": "Fire, rescue, disaster and emergency response."
+      },
+      {
+        "name": "Queensland Ambulance Service",
+        "category": "Ambulance / Medical",
+        "summary": "State ambulance and emergency medical response."
+      },
+      {
+        "name": "State Emergency Service Queensland",
+        "category": "Emergency Management",
+        "summary": "Volunteer storm, flood and rescue response."
+      },
+      {
+        "name": "Marine Rescue Queensland",
+        "category": "Search & Rescue",
+        "summary": "Marine rescue and coastal response."
+      }
+    ],
+    "australia|New South Wales": [
+      {
+        "name": "NSW Police Force",
+        "category": "Police",
+        "summary": "State policing and specialist response."
+      },
+      {
+        "name": "Fire and Rescue NSW",
+        "category": "Fire & Rescue",
+        "summary": "Urban fire, rescue and hazardous-materials response."
+      },
+      {
+        "name": "NSW Rural Fire Service",
+        "category": "Bushfire",
+        "summary": "Bushfire prevention, suppression and rural response."
+      },
+      {
+        "name": "NSW State Emergency Service",
+        "category": "Emergency Management",
+        "summary": "Flood, storm and rescue response."
+      },
+      {
+        "name": "NSW Ambulance",
+        "category": "Ambulance / Medical",
+        "summary": "State ambulance and emergency medical response."
+      },
+      {
+        "name": "Marine Rescue NSW",
+        "category": "Search & Rescue",
+        "summary": "Volunteer marine rescue network."
+      }
+    ],
+    "australia|Australian Capital Territory": [
+      {
+        "name": "ACT Policing",
+        "category": "Police",
+        "summary": "Community policing delivered by the Australian Federal Police."
+      },
+      {
+        "name": "ACT Emergency Services Agency",
+        "category": "Emergency Management",
+        "summary": "Territory emergency-services coordination."
+      },
+      {
+        "name": "ACT Fire & Rescue",
+        "category": "Fire & Rescue",
+        "summary": "Urban fire, rescue and hazardous-materials response."
+      },
+      {
+        "name": "ACT Rural Fire Service",
+        "category": "Bushfire",
+        "summary": "Bushfire and rural fire response."
+      },
+      {
+        "name": "ACT State Emergency Service",
+        "category": "Emergency Management",
+        "summary": "Storm, flood and rescue response."
+      },
+      {
+        "name": "ACT Ambulance Service",
+        "category": "Ambulance / Medical",
+        "summary": "Territory ambulance and emergency medical response."
+      }
+    ],
+    "australia|Victoria": [
+      {
+        "name": "Victoria Police",
+        "category": "Police",
+        "summary": "State policing and specialist response."
+      },
+      {
+        "name": "Fire Rescue Victoria",
+        "category": "Fire & Rescue",
+        "summary": "Urban fire, rescue and hazardous-materials response."
+      },
+      {
+        "name": "Country Fire Authority",
+        "category": "Bushfire & Rescue",
+        "summary": "Country fire, bushfire and volunteer emergency response."
+      },
+      {
+        "name": "Victoria State Emergency Service",
+        "category": "Emergency Management",
+        "summary": "Storm, flood, rescue and volunteer response."
+      },
+      {
+        "name": "Ambulance Victoria",
+        "category": "Ambulance / Medical",
+        "summary": "State ambulance and emergency medical response."
+      }
+    ],
+    "australia|Tasmania": [
+      {
+        "name": "Tasmania Police",
+        "category": "Police",
+        "summary": "State policing and specialist response."
+      },
+      {
+        "name": "Tasmania Fire Service",
+        "category": "Fire & Rescue",
+        "summary": "Structural fire, bushfire and rescue response."
+      },
+      {
+        "name": "State Emergency Service Tasmania",
+        "category": "Emergency Management",
+        "summary": "Storm, flood, rescue and volunteer response."
+      },
+      {
+        "name": "Ambulance Tasmania",
+        "category": "Ambulance / Medical",
+        "summary": "State ambulance and emergency medical response."
+      }
+    ],
+    "canada|Alberta": [
+      {
+        "name": "Royal Canadian Mounted Police — Alberta Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in Alberta."
+      },
+      {
+        "name": "Alberta Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Alberta."
+      },
+      {
+        "name": "Alberta Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Alberta."
+      },
+      {
+        "name": "Alberta Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Alberta."
+      },
+      {
+        "name": "Alberta Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Alberta."
+      }
+    ],
+    "canada|British Columbia": [
+      {
+        "name": "Royal Canadian Mounted Police — British Columbia Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in British Columbia."
+      },
+      {
+        "name": "British Columbia Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for British Columbia."
+      },
+      {
+        "name": "British Columbia Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for British Columbia."
+      },
+      {
+        "name": "British Columbia Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for British Columbia."
+      },
+      {
+        "name": "British Columbia Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for British Columbia."
+      }
+    ],
+    "canada|Manitoba": [
+      {
+        "name": "Royal Canadian Mounted Police — Manitoba Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in Manitoba."
+      },
+      {
+        "name": "Manitoba Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Manitoba."
+      },
+      {
+        "name": "Manitoba Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Manitoba."
+      },
+      {
+        "name": "Manitoba Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Manitoba."
+      },
+      {
+        "name": "Manitoba Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Manitoba."
+      }
+    ],
+    "canada|New Brunswick": [
+      {
+        "name": "Royal Canadian Mounted Police — New Brunswick Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in New Brunswick."
+      },
+      {
+        "name": "New Brunswick Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for New Brunswick."
+      },
+      {
+        "name": "New Brunswick Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for New Brunswick."
+      },
+      {
+        "name": "New Brunswick Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for New Brunswick."
+      },
+      {
+        "name": "New Brunswick Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for New Brunswick."
+      }
+    ],
+    "canada|Newfoundland and Labrador": [
+      {
+        "name": "Royal Newfoundland Constabulary / RCMP Newfoundland and Labrador",
+        "category": "Police",
+        "summary": "Provincial and federal policing responsibilities."
+      },
+      {
+        "name": "Newfoundland and Labrador Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Newfoundland and Labrador."
+      },
+      {
+        "name": "Newfoundland and Labrador Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Newfoundland and Labrador."
+      },
+      {
+        "name": "Newfoundland and Labrador Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Newfoundland and Labrador."
+      },
+      {
+        "name": "Newfoundland and Labrador Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Newfoundland and Labrador."
+      }
+    ],
+    "canada|Northwest Territories": [
+      {
+        "name": "Royal Canadian Mounted Police — Northwest Territories Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in Northwest Territories."
+      },
+      {
+        "name": "Northwest Territories Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Northwest Territories."
+      },
+      {
+        "name": "Northwest Territories Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Northwest Territories."
+      },
+      {
+        "name": "Northwest Territories Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Northwest Territories."
+      },
+      {
+        "name": "Northwest Territories Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Northwest Territories."
+      }
+    ],
+    "canada|Nova Scotia": [
+      {
+        "name": "Royal Canadian Mounted Police — Nova Scotia Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in Nova Scotia."
+      },
+      {
+        "name": "Nova Scotia Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Nova Scotia."
+      },
+      {
+        "name": "Nova Scotia Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Nova Scotia."
+      },
+      {
+        "name": "Nova Scotia Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Nova Scotia."
+      },
+      {
+        "name": "Nova Scotia Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Nova Scotia."
+      }
+    ],
+    "canada|Nunavut": [
+      {
+        "name": "Royal Canadian Mounted Police — Nunavut Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in Nunavut."
+      },
+      {
+        "name": "Nunavut Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Nunavut."
+      },
+      {
+        "name": "Nunavut Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Nunavut."
+      },
+      {
+        "name": "Nunavut Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Nunavut."
+      },
+      {
+        "name": "Nunavut Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Nunavut."
+      }
+    ],
+    "canada|Ontario": [
+      {
+        "name": "Ontario Provincial Police",
+        "category": "Police",
+        "summary": "Provincial policing and specialist operational support."
+      },
+      {
+        "name": "Ontario Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Ontario."
+      },
+      {
+        "name": "Ontario Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Ontario."
+      },
+      {
+        "name": "Ontario Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Ontario."
+      },
+      {
+        "name": "Ontario Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Ontario."
+      }
+    ],
+    "canada|Prince Edward Island": [
+      {
+        "name": "Royal Canadian Mounted Police — Prince Edward Island Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in Prince Edward Island."
+      },
+      {
+        "name": "Prince Edward Island Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Prince Edward Island."
+      },
+      {
+        "name": "Prince Edward Island Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Prince Edward Island."
+      },
+      {
+        "name": "Prince Edward Island Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Prince Edward Island."
+      },
+      {
+        "name": "Prince Edward Island Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Prince Edward Island."
+      }
+    ],
+    "canada|Quebec": [
+      {
+        "name": "Sûreté du Québec",
+        "category": "Police",
+        "summary": "Provincial policing and specialist operational support."
+      },
+      {
+        "name": "Quebec Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Quebec."
+      },
+      {
+        "name": "Quebec Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Quebec."
+      },
+      {
+        "name": "Quebec Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Quebec."
+      },
+      {
+        "name": "Quebec Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Quebec."
+      }
+    ],
+    "canada|Saskatchewan": [
+      {
+        "name": "Royal Canadian Mounted Police — Saskatchewan Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in Saskatchewan."
+      },
+      {
+        "name": "Saskatchewan Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Saskatchewan."
+      },
+      {
+        "name": "Saskatchewan Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Saskatchewan."
+      },
+      {
+        "name": "Saskatchewan Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Saskatchewan."
+      },
+      {
+        "name": "Saskatchewan Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Saskatchewan."
+      }
+    ],
+    "canada|Yukon": [
+      {
+        "name": "Royal Canadian Mounted Police — Yukon Division",
+        "category": "Police",
+        "summary": "Federal police division and contracted policing presence in Yukon."
+      },
+      {
+        "name": "Yukon Emergency Management Organisation",
+        "category": "Emergency Management",
+        "summary": "Provincial or territorial emergency-management coordination for Yukon."
+      },
+      {
+        "name": "Yukon Wildfire / Forest Fire Service",
+        "category": "Wildfire",
+        "summary": "Wildfire preparedness, aviation coordination and incident response for Yukon."
+      },
+      {
+        "name": "Yukon Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial or territorial emergency medical response for Yukon."
+      },
+      {
+        "name": "Yukon Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Search-and-rescue coordination and volunteer capability for Yukon."
+      }
+    ],
+    "united-kingdom|England": [
+      {
+        "name": "Territorial Police Forces of England",
+        "category": "Police",
+        "summary": "Regional police forces and specialist national collaboration."
+      },
+      {
+        "name": "National Fire Chiefs Council / English Fire and Rescue Services",
+        "category": "Fire & Rescue",
+        "summary": "Fire and rescue governance and regional service delivery."
+      },
+      {
+        "name": "NHS Ambulance Trusts in England",
+        "category": "Ambulance / Medical",
+        "summary": "Regional ambulance and emergency medical response."
+      },
+      {
+        "name": "Local Resilience Forums",
+        "category": "Emergency Management",
+        "summary": "Multi-agency civil-contingencies planning and coordination."
+      },
+      {
+        "name": "Mountain Rescue England and Wales",
+        "category": "Search & Rescue",
+        "summary": "Volunteer mountain and inland search-and-rescue capability."
+      }
+    ],
+    "united-kingdom|Scotland": [
+      {
+        "name": "Police Scotland",
+        "category": "Police",
+        "summary": "National police service for Scotland."
+      },
+      {
+        "name": "Scottish Fire and Rescue Service",
+        "category": "Fire & Rescue",
+        "summary": "National fire and rescue service for Scotland."
+      },
+      {
+        "name": "Scottish Ambulance Service",
+        "category": "Ambulance / Medical",
+        "summary": "National ambulance and emergency medical response."
+      },
+      {
+        "name": "Scottish Government Resilience",
+        "category": "Emergency Management",
+        "summary": "National resilience and emergency coordination."
+      },
+      {
+        "name": "HM Coastguard / Scottish Mountain Rescue",
+        "category": "Search & Rescue",
+        "summary": "Maritime, coastal and mountain rescue capability."
+      }
+    ],
+    "united-kingdom|Wales": [
+      {
+        "name": "Welsh Police Forces",
+        "category": "Police",
+        "summary": "Four territorial police forces operating in Wales."
+      },
+      {
+        "name": "Welsh Fire and Rescue Services",
+        "category": "Fire & Rescue",
+        "summary": "Three regional fire and rescue services."
+      },
+      {
+        "name": "Welsh Ambulance Services NHS Trust",
+        "category": "Ambulance / Medical",
+        "summary": "National ambulance and emergency medical response."
+      },
+      {
+        "name": "Welsh Government Resilience",
+        "category": "Emergency Management",
+        "summary": "National resilience and civil-contingencies coordination."
+      },
+      {
+        "name": "Mountain Rescue England and Wales / HM Coastguard",
+        "category": "Search & Rescue",
+        "summary": "Mountain, inland, coastal and maritime rescue."
+      }
+    ],
+    "united-kingdom|Northern Ireland": [
+      {
+        "name": "Police Service of Northern Ireland",
+        "category": "Police",
+        "summary": "National territorial policing service."
+      },
+      {
+        "name": "Northern Ireland Fire and Rescue Service",
+        "category": "Fire & Rescue",
+        "summary": "National fire and rescue service."
+      },
+      {
+        "name": "Northern Ireland Ambulance Service",
+        "category": "Ambulance / Medical",
+        "summary": "National ambulance and emergency medical response."
+      },
+      {
+        "name": "Civil Contingencies Policy Branch",
+        "category": "Emergency Management",
+        "summary": "Regional civil-contingencies coordination."
+      },
+      {
+        "name": "HM Coastguard / Community Rescue Service",
+        "category": "Search & Rescue",
+        "summary": "Maritime, coastal and inland search-and-rescue capability."
+      }
+    ],
+    "south-africa|Eastern Cape": [
+      {
+        "name": "South African Police Service — Eastern Cape Provincial Office",
+        "category": "Police",
+        "summary": "Provincial policing command for Eastern Cape."
+      },
+      {
+        "name": "Eastern Cape Provincial Disaster Management Centre",
+        "category": "Emergency Management",
+        "summary": "Provincial disaster-risk and emergency-management coordination."
+      },
+      {
+        "name": "Eastern Cape Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial emergency medical response."
+      },
+      {
+        "name": "Eastern Cape Fire and Rescue Services Network",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan and municipal fire and rescue services operating across Eastern Cape."
+      },
+      {
+        "name": "Eastern Cape Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Provincial, municipal and volunteer search-and-rescue capability."
+      }
+    ],
+    "south-africa|Free State": [
+      {
+        "name": "South African Police Service — Free State Provincial Office",
+        "category": "Police",
+        "summary": "Provincial policing command for Free State."
+      },
+      {
+        "name": "Free State Provincial Disaster Management Centre",
+        "category": "Emergency Management",
+        "summary": "Provincial disaster-risk and emergency-management coordination."
+      },
+      {
+        "name": "Free State Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial emergency medical response."
+      },
+      {
+        "name": "Free State Fire and Rescue Services Network",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan and municipal fire and rescue services operating across Free State."
+      },
+      {
+        "name": "Free State Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Provincial, municipal and volunteer search-and-rescue capability."
+      }
+    ],
+    "south-africa|Gauteng": [
+      {
+        "name": "South African Police Service — Gauteng Provincial Office",
+        "category": "Police",
+        "summary": "Provincial policing command for Gauteng."
+      },
+      {
+        "name": "Gauteng Provincial Disaster Management Centre",
+        "category": "Emergency Management",
+        "summary": "Provincial disaster-risk and emergency-management coordination."
+      },
+      {
+        "name": "Gauteng Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial emergency medical response."
+      },
+      {
+        "name": "Gauteng Fire and Rescue Services Network",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan and municipal fire and rescue services operating across Gauteng."
+      },
+      {
+        "name": "Gauteng Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Provincial, municipal and volunteer search-and-rescue capability."
+      }
+    ],
+    "south-africa|KwaZulu-Natal": [
+      {
+        "name": "South African Police Service — KwaZulu-Natal Provincial Office",
+        "category": "Police",
+        "summary": "Provincial policing command for KwaZulu-Natal."
+      },
+      {
+        "name": "KwaZulu-Natal Provincial Disaster Management Centre",
+        "category": "Emergency Management",
+        "summary": "Provincial disaster-risk and emergency-management coordination."
+      },
+      {
+        "name": "KwaZulu-Natal Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial emergency medical response."
+      },
+      {
+        "name": "KwaZulu-Natal Fire and Rescue Services Network",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan and municipal fire and rescue services operating across KwaZulu-Natal."
+      },
+      {
+        "name": "KwaZulu-Natal Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Provincial, municipal and volunteer search-and-rescue capability."
+      }
+    ],
+    "south-africa|Limpopo": [
+      {
+        "name": "South African Police Service — Limpopo Provincial Office",
+        "category": "Police",
+        "summary": "Provincial policing command for Limpopo."
+      },
+      {
+        "name": "Limpopo Provincial Disaster Management Centre",
+        "category": "Emergency Management",
+        "summary": "Provincial disaster-risk and emergency-management coordination."
+      },
+      {
+        "name": "Limpopo Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial emergency medical response."
+      },
+      {
+        "name": "Limpopo Fire and Rescue Services Network",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan and municipal fire and rescue services operating across Limpopo."
+      },
+      {
+        "name": "Limpopo Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Provincial, municipal and volunteer search-and-rescue capability."
+      }
+    ],
+    "south-africa|Mpumalanga": [
+      {
+        "name": "South African Police Service — Mpumalanga Provincial Office",
+        "category": "Police",
+        "summary": "Provincial policing command for Mpumalanga."
+      },
+      {
+        "name": "Mpumalanga Provincial Disaster Management Centre",
+        "category": "Emergency Management",
+        "summary": "Provincial disaster-risk and emergency-management coordination."
+      },
+      {
+        "name": "Mpumalanga Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial emergency medical response."
+      },
+      {
+        "name": "Mpumalanga Fire and Rescue Services Network",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan and municipal fire and rescue services operating across Mpumalanga."
+      },
+      {
+        "name": "Mpumalanga Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Provincial, municipal and volunteer search-and-rescue capability."
+      }
+    ],
+    "south-africa|North West": [
+      {
+        "name": "South African Police Service — North West Provincial Office",
+        "category": "Police",
+        "summary": "Provincial policing command for North West."
+      },
+      {
+        "name": "North West Provincial Disaster Management Centre",
+        "category": "Emergency Management",
+        "summary": "Provincial disaster-risk and emergency-management coordination."
+      },
+      {
+        "name": "North West Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial emergency medical response."
+      },
+      {
+        "name": "North West Fire and Rescue Services Network",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan and municipal fire and rescue services operating across North West."
+      },
+      {
+        "name": "North West Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Provincial, municipal and volunteer search-and-rescue capability."
+      }
+    ],
+    "south-africa|Northern Cape": [
+      {
+        "name": "South African Police Service — Northern Cape Provincial Office",
+        "category": "Police",
+        "summary": "Provincial policing command for Northern Cape."
+      },
+      {
+        "name": "Northern Cape Provincial Disaster Management Centre",
+        "category": "Emergency Management",
+        "summary": "Provincial disaster-risk and emergency-management coordination."
+      },
+      {
+        "name": "Northern Cape Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial emergency medical response."
+      },
+      {
+        "name": "Northern Cape Fire and Rescue Services Network",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan and municipal fire and rescue services operating across Northern Cape."
+      },
+      {
+        "name": "Northern Cape Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Provincial, municipal and volunteer search-and-rescue capability."
+      }
+    ],
+    "south-africa|Western Cape": [
+      {
+        "name": "South African Police Service — Western Cape Provincial Office",
+        "category": "Police",
+        "summary": "Provincial policing command for Western Cape."
+      },
+      {
+        "name": "Western Cape Provincial Disaster Management Centre",
+        "category": "Emergency Management",
+        "summary": "Provincial disaster-risk and emergency-management coordination."
+      },
+      {
+        "name": "Western Cape Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "Provincial emergency medical response."
+      },
+      {
+        "name": "Western Cape Fire and Rescue Services Network",
+        "category": "Fire & Rescue",
+        "summary": "Metropolitan and municipal fire and rescue services operating across Western Cape."
+      },
+      {
+        "name": "Western Cape Search and Rescue Coordination",
+        "category": "Search & Rescue",
+        "summary": "Provincial, municipal and volunteer search-and-rescue capability."
+      }
+    ],
+    "european-union|Austria": [
+      {
+        "name": "Austria National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Austria."
+      },
+      {
+        "name": "Austria Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Austria."
+      },
+      {
+        "name": "Austria Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Austria."
+      },
+      {
+        "name": "Austria Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Austria."
+      },
+      {
+        "name": "Austria Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Austria."
+      }
+    ],
+    "european-union|Belgium": [
+      {
+        "name": "Belgium National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Belgium."
+      },
+      {
+        "name": "Belgium Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Belgium."
+      },
+      {
+        "name": "Belgium Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Belgium."
+      },
+      {
+        "name": "Belgium Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Belgium."
+      },
+      {
+        "name": "Belgium Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Belgium."
+      }
+    ],
+    "european-union|Bulgaria": [
+      {
+        "name": "Bulgaria National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Bulgaria."
+      },
+      {
+        "name": "Bulgaria Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Bulgaria."
+      },
+      {
+        "name": "Bulgaria Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Bulgaria."
+      },
+      {
+        "name": "Bulgaria Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Bulgaria."
+      },
+      {
+        "name": "Bulgaria Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Bulgaria."
+      }
+    ],
+    "european-union|Croatia": [
+      {
+        "name": "Croatia National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Croatia."
+      },
+      {
+        "name": "Croatia Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Croatia."
+      },
+      {
+        "name": "Croatia Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Croatia."
+      },
+      {
+        "name": "Croatia Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Croatia."
+      },
+      {
+        "name": "Croatia Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Croatia."
+      }
+    ],
+    "european-union|Cyprus": [
+      {
+        "name": "Cyprus National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Cyprus."
+      },
+      {
+        "name": "Cyprus Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Cyprus."
+      },
+      {
+        "name": "Cyprus Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Cyprus."
+      },
+      {
+        "name": "Cyprus Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Cyprus."
+      },
+      {
+        "name": "Cyprus Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Cyprus."
+      }
+    ],
+    "european-union|Czechia": [
+      {
+        "name": "Czechia National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Czechia."
+      },
+      {
+        "name": "Czechia Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Czechia."
+      },
+      {
+        "name": "Czechia Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Czechia."
+      },
+      {
+        "name": "Czechia Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Czechia."
+      },
+      {
+        "name": "Czechia Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Czechia."
+      }
+    ],
+    "european-union|Denmark": [
+      {
+        "name": "Denmark National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Denmark."
+      },
+      {
+        "name": "Denmark Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Denmark."
+      },
+      {
+        "name": "Denmark Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Denmark."
+      },
+      {
+        "name": "Denmark Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Denmark."
+      },
+      {
+        "name": "Denmark Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Denmark."
+      }
+    ],
+    "european-union|Estonia": [
+      {
+        "name": "Estonia National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Estonia."
+      },
+      {
+        "name": "Estonia Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Estonia."
+      },
+      {
+        "name": "Estonia Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Estonia."
+      },
+      {
+        "name": "Estonia Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Estonia."
+      },
+      {
+        "name": "Estonia Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Estonia."
+      }
+    ],
+    "european-union|Finland": [
+      {
+        "name": "Finland National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Finland."
+      },
+      {
+        "name": "Finland Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Finland."
+      },
+      {
+        "name": "Finland Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Finland."
+      },
+      {
+        "name": "Finland Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Finland."
+      },
+      {
+        "name": "Finland Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Finland."
+      }
+    ],
+    "european-union|France": [
+      {
+        "name": "France National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in France."
+      },
+      {
+        "name": "France Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in France."
+      },
+      {
+        "name": "France Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in France."
+      },
+      {
+        "name": "France Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in France."
+      },
+      {
+        "name": "France Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for France."
+      }
+    ],
+    "european-union|Germany": [
+      {
+        "name": "Germany National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Germany."
+      },
+      {
+        "name": "Germany Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Germany."
+      },
+      {
+        "name": "Germany Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Germany."
+      },
+      {
+        "name": "Germany Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Germany."
+      },
+      {
+        "name": "Germany Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Germany."
+      }
+    ],
+    "european-union|Greece": [
+      {
+        "name": "Greece National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Greece."
+      },
+      {
+        "name": "Greece Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Greece."
+      },
+      {
+        "name": "Greece Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Greece."
+      },
+      {
+        "name": "Greece Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Greece."
+      },
+      {
+        "name": "Greece Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Greece."
+      }
+    ],
+    "european-union|Hungary": [
+      {
+        "name": "Hungary National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Hungary."
+      },
+      {
+        "name": "Hungary Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Hungary."
+      },
+      {
+        "name": "Hungary Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Hungary."
+      },
+      {
+        "name": "Hungary Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Hungary."
+      },
+      {
+        "name": "Hungary Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Hungary."
+      }
+    ],
+    "european-union|Ireland": [
+      {
+        "name": "Ireland National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Ireland."
+      },
+      {
+        "name": "Ireland Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Ireland."
+      },
+      {
+        "name": "Ireland Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Ireland."
+      },
+      {
+        "name": "Ireland Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Ireland."
+      },
+      {
+        "name": "Ireland Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Ireland."
+      }
+    ],
+    "european-union|Italy": [
+      {
+        "name": "Italy National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Italy."
+      },
+      {
+        "name": "Italy Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Italy."
+      },
+      {
+        "name": "Italy Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Italy."
+      },
+      {
+        "name": "Italy Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Italy."
+      },
+      {
+        "name": "Italy Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Italy."
+      }
+    ],
+    "european-union|Latvia": [
+      {
+        "name": "Latvia National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Latvia."
+      },
+      {
+        "name": "Latvia Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Latvia."
+      },
+      {
+        "name": "Latvia Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Latvia."
+      },
+      {
+        "name": "Latvia Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Latvia."
+      },
+      {
+        "name": "Latvia Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Latvia."
+      }
+    ],
+    "european-union|Lithuania": [
+      {
+        "name": "Lithuania National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Lithuania."
+      },
+      {
+        "name": "Lithuania Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Lithuania."
+      },
+      {
+        "name": "Lithuania Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Lithuania."
+      },
+      {
+        "name": "Lithuania Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Lithuania."
+      },
+      {
+        "name": "Lithuania Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Lithuania."
+      }
+    ],
+    "european-union|Luxembourg": [
+      {
+        "name": "Luxembourg National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Luxembourg."
+      },
+      {
+        "name": "Luxembourg Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Luxembourg."
+      },
+      {
+        "name": "Luxembourg Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Luxembourg."
+      },
+      {
+        "name": "Luxembourg Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Luxembourg."
+      },
+      {
+        "name": "Luxembourg Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Luxembourg."
+      }
+    ],
+    "european-union|Malta": [
+      {
+        "name": "Malta National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Malta."
+      },
+      {
+        "name": "Malta Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Malta."
+      },
+      {
+        "name": "Malta Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Malta."
+      },
+      {
+        "name": "Malta Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Malta."
+      },
+      {
+        "name": "Malta Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Malta."
+      }
+    ],
+    "european-union|Netherlands": [
+      {
+        "name": "Netherlands National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Netherlands."
+      },
+      {
+        "name": "Netherlands Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Netherlands."
+      },
+      {
+        "name": "Netherlands Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Netherlands."
+      },
+      {
+        "name": "Netherlands Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Netherlands."
+      },
+      {
+        "name": "Netherlands Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Netherlands."
+      }
+    ],
+    "european-union|Poland": [
+      {
+        "name": "Poland National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Poland."
+      },
+      {
+        "name": "Poland Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Poland."
+      },
+      {
+        "name": "Poland Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Poland."
+      },
+      {
+        "name": "Poland Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Poland."
+      },
+      {
+        "name": "Poland Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Poland."
+      }
+    ],
+    "european-union|Portugal": [
+      {
+        "name": "Portugal National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Portugal."
+      },
+      {
+        "name": "Portugal Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Portugal."
+      },
+      {
+        "name": "Portugal Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Portugal."
+      },
+      {
+        "name": "Portugal Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Portugal."
+      },
+      {
+        "name": "Portugal Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Portugal."
+      }
+    ],
+    "european-union|Romania": [
+      {
+        "name": "Romania National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Romania."
+      },
+      {
+        "name": "Romania Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Romania."
+      },
+      {
+        "name": "Romania Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Romania."
+      },
+      {
+        "name": "Romania Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Romania."
+      },
+      {
+        "name": "Romania Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Romania."
+      }
+    ],
+    "european-union|Slovakia": [
+      {
+        "name": "Slovakia National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Slovakia."
+      },
+      {
+        "name": "Slovakia Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Slovakia."
+      },
+      {
+        "name": "Slovakia Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Slovakia."
+      },
+      {
+        "name": "Slovakia Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Slovakia."
+      },
+      {
+        "name": "Slovakia Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Slovakia."
+      }
+    ],
+    "european-union|Slovenia": [
+      {
+        "name": "Slovenia National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Slovenia."
+      },
+      {
+        "name": "Slovenia Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Slovenia."
+      },
+      {
+        "name": "Slovenia Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Slovenia."
+      },
+      {
+        "name": "Slovenia Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Slovenia."
+      },
+      {
+        "name": "Slovenia Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Slovenia."
+      }
+    ],
+    "european-union|Spain": [
+      {
+        "name": "Spain National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Spain."
+      },
+      {
+        "name": "Spain Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Spain."
+      },
+      {
+        "name": "Spain Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Spain."
+      },
+      {
+        "name": "Spain Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Spain."
+      },
+      {
+        "name": "Spain Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Spain."
+      }
+    ],
+    "european-union|Sweden": [
+      {
+        "name": "Sweden National Police / Law-Enforcement Authorities",
+        "category": "Police",
+        "summary": "National and, where applicable, regional law-enforcement authorities in Sweden."
+      },
+      {
+        "name": "Sweden Civil Protection and Fire Authorities",
+        "category": "Fire & Civil Protection",
+        "summary": "National civil-protection coordination and fire-service structure in Sweden."
+      },
+      {
+        "name": "Sweden Emergency Medical Services",
+        "category": "Ambulance / Medical",
+        "summary": "National or regional emergency medical response structure in Sweden."
+      },
+      {
+        "name": "Sweden Search and Rescue Authorities",
+        "category": "Search & Rescue",
+        "summary": "Aeronautical, maritime and inland search-and-rescue authorities in Sweden."
+      },
+      {
+        "name": "Sweden Civil Aviation Authority",
+        "category": "Aviation Regulator",
+        "summary": "National civil aviation and UAS oversight for Sweden."
+      }
+    ]
+  }
+}

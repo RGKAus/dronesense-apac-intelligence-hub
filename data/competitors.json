@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Axon Air",
+    "category": "Public-safety ecosystem",
+    "focus": "Evidence, dispatch and public-safety drone ecosystem",
+    "markets": [
+      "australia",
+      "canada",
+      "united-kingdom",
+      "european-union",
+      "south-africa"
+    ]
+  },
+  {
+    "name": "Skydio",
+    "category": "Aircraft and autonomy",
+    "focus": "Autonomous aircraft, docks and remote operations",
+    "markets": [
+      "australia",
+      "canada",
+      "united-kingdom",
+      "european-union"
+    ]
+  },
+  {
+    "name": "DJI Enterprise",
+    "category": "Aircraft and dock ecosystem",
+    "focus": "Enterprise aircraft, docks, payloads and fleet management",
+    "markets": [
+      "australia",
+      "canada",
+      "united-kingdom",
+      "european-union",
+      "south-africa"
+    ]
+  },
+  {
+    "name": "Motorola Solutions / CAPE",
+    "category": "Public-safety platform",
+    "focus": "DFR and public-safety operational integration",
+    "markets": [
+      "canada",
+      "united-kingdom",
+      "european-union"
+    ]
+  },
+  {
+    "name": "Flock Safety",
+    "category": "Public-safety technology",
+    "focus": "Public-safety sensors and DFR-adjacent platform capability",
+    "markets": [
+      "canada",
+      "united-kingdom"
+    ]
+  },
+  {
+    "name": "FlytBase",
+    "category": "Remote operations software",
+    "focus": "Dock orchestration and remote drone operations",
+    "markets": [
+      "australia",
+      "canada",
+      "united-kingdom",
+      "european-union",
+      "south-africa"
+    ]
+  },
+  {
+    "name": "Unmanned Life",
+    "category": "Autonomy platform",
+    "focus": "Multi-robot orchestration and autonomous response",
+    "markets": [
+      "united-kingdom",
+      "european-union"
+    ]
+  },
+  {
+    "name": "Fotokite",
+    "category": "Tethered public-safety aircraft",
+    "focus": "Persistent situational awareness for fire and emergency services",
+    "markets": [
+      "canada",
+      "united-kingdom",
+      "european-union",
+      "australia"
+    ]
+  }
+]

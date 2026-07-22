@@ -1,0 +1,24 @@
+{
+  "queries": [
+    {
+      "country": "australia",
+      "query": "Australia drone RPAS police fire emergency budget regulation"
+    },
+    {
+      "country": "canada",
+      "query": "Canada drone RPAS police fire emergency budget regulation"
+    },
+    {
+      "country": "united-kingdom",
+      "query": "UK drone UAS police fire emergency budget CAA"
+    },
+    {
+      "country": "european-union",
+      "query": "European Union drone UAS police civil protection EASA budget"
+    },
+    {
+      "country": "south-africa",
+      "query": "South Africa drone RPAS police fire disaster budget regulation"
+    }
+  ]
+}
