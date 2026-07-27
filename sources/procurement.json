@@ -1,0 +1,42 @@
+[
+  {
+    "name": "AusTender",
+    "country": "Australia",
+    "category": "Procurement",
+    "homepage": "https://www.tenders.gov.au/",
+    "interval_minutes": 30,
+    "default_impact": 5
+  },
+  {
+    "name": "CanadaBuys",
+    "country": "Canada",
+    "category": "Procurement",
+    "homepage": "https://canadabuys.canada.ca/",
+    "interval_minutes": 30,
+    "default_impact": 5
+  },
+  {
+    "name": "Find a Tender",
+    "country": "United Kingdom",
+    "category": "Procurement",
+    "homepage": "https://www.find-tender.service.gov.uk/",
+    "interval_minutes": 30,
+    "default_impact": 5
+  },
+  {
+    "name": "TED",
+    "country": "European Union",
+    "category": "Procurement",
+    "homepage": "https://ted.europa.eu/",
+    "interval_minutes": 30,
+    "default_impact": 5
+  },
+  {
+    "name": "South African eTenders",
+    "country": "South Africa",
+    "category": "Procurement",
+    "homepage": "https://www.etenders.gov.za/",
+    "interval_minutes": 30,
+    "default_impact": 5
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "DJI Newsroom",
+    "country": "Global",
+    "category": "Technology",
+    "homepage": "https://www.dji.com/newsroom",
+    "interval_minutes": 60,
+    "default_impact": 3
+  },
+  {
+    "name": "Skydio News",
+    "country": "Global",
+    "category": "Technology",
+    "homepage": "https://www.skydio.com/blog",
+    "interval_minutes": 60,
+    "default_impact": 3
+  },
+  {
+    "name": "Flyability News",
+    "country": "Global",
+    "category": "Technology",
+    "homepage": "https://www.flyability.com/news",
+    "interval_minutes": 120,
+    "default_impact": 3
+  }
+]

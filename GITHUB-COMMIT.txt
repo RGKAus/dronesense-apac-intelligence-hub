@@ -1,0 +1,1 @@
+v8A: launch live intelligence feed with business impact scoring and Supabase foundation

@@ -1,0 +1,118 @@
+[
+  {
+    "id": "sample-regulation-001",
+    "headline": "Sample: national regulator publishes updated BVLOS guidance",
+    "summary": "Demonstration record showing how a regulatory update appears in the live intelligence feed. Replace this sample with a verified source before publishing.",
+    "category": "Regulation",
+    "business_impact": 5,
+    "impact_reason": "A change to BVLOS requirements could directly affect DFR, dock deployments, customer programme design, approval timelines and solution engineering advice.",
+    "confidence": "Demonstration only",
+    "country": "Australia",
+    "region": "",
+    "agency": "",
+    "manufacturer": "",
+    "technology": "BVLOS",
+    "tags": [
+      "BVLOS",
+      "Regulation",
+      "DFR",
+      "Remote Operations"
+    ],
+    "source_name": "Replace with official regulator",
+    "source_url": "https://www.casa.gov.au/",
+    "published_date": "2026-07-27",
+    "status": "draft"
+  },
+  {
+    "id": "sample-procurement-001",
+    "headline": "Sample: public-safety agency issues an RPAS procurement notice",
+    "summary": "Demonstration procurement item for testing impact badges, filters and business-impact wording.",
+    "category": "Procurement",
+    "business_impact": 5,
+    "impact_reason": "This may represent an immediate sales opportunity. Confirm scope, closing date, incumbent suppliers, procurement route and account ownership.",
+    "confidence": "Demonstration only",
+    "country": "Canada",
+    "region": "Alberta",
+    "agency": "Example public-safety agency",
+    "manufacturer": "",
+    "technology": "RPAS platform",
+    "tags": [
+      "Tender",
+      "Public Safety",
+      "Procurement"
+    ],
+    "source_name": "Replace with official procurement portal",
+    "source_url": "https://canadabuys.canada.ca/",
+    "published_date": "2026-07-26",
+    "status": "draft"
+  },
+  {
+    "id": "sample-technology-001",
+    "headline": "Sample: manufacturer releases a dock or aircraft software update",
+    "summary": "Demonstration technology update showing a medium-impact item.",
+    "category": "Technology",
+    "business_impact": 3,
+    "impact_reason": "Review whether the update changes compatibility, remote-operation capability, security posture, customer workflows or integration requirements.",
+    "confidence": "Demonstration only",
+    "country": "Global",
+    "region": "",
+    "agency": "",
+    "manufacturer": "Example manufacturer",
+    "technology": "Dock software",
+    "tags": [
+      "Firmware",
+      "Dock",
+      "Integration"
+    ],
+    "source_name": "Replace with manufacturer newsroom",
+    "source_url": "https://www.dji.com/newsroom",
+    "published_date": "2026-07-25",
+    "status": "draft"
+  },
+  {
+    "id": "sample-budget-001",
+    "headline": "Sample: government announces emergency-services technology funding",
+    "summary": "Demonstration political and budget intelligence record.",
+    "category": "Funding & Budget",
+    "business_impact": 4,
+    "impact_reason": "New funding can accelerate public-safety modernisation and create near-term opportunities. Identify eligible agencies, budget timing and procurement conditions.",
+    "confidence": "Demonstration only",
+    "country": "United Kingdom",
+    "region": "England",
+    "agency": "",
+    "manufacturer": "",
+    "technology": "Public-safety technology",
+    "tags": [
+      "Budget",
+      "Funding",
+      "Emergency Services"
+    ],
+    "source_name": "Replace with official government release",
+    "source_url": "https://www.gov.uk/search/news-and-communications",
+    "published_date": "2026-07-24",
+    "status": "draft"
+  },
+  {
+    "id": "sample-agency-001",
+    "headline": "Sample: police agency announces a DFR trial",
+    "summary": "Demonstration agency update for a high-impact operational programme.",
+    "category": "Agency Programme",
+    "business_impact": 4,
+    "impact_reason": "A DFR trial indicates operational demand, stakeholder momentum and potential requirements for command, livestreaming, evidence, CAD integration and remote operations.",
+    "confidence": "Demonstration only",
+    "country": "South Africa",
+    "region": "Gauteng",
+    "agency": "Example police agency",
+    "manufacturer": "",
+    "technology": "DFR",
+    "tags": [
+      "Police",
+      "DFR",
+      "Trial"
+    ],
+    "source_name": "Replace with official agency newsroom",
+    "source_url": "https://www.gov.za/newsroom",
+    "published_date": "2026-07-23",
+    "status": "draft"
+  }
+]

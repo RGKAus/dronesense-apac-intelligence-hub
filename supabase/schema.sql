@@ -1,0 +1,11 @@
+create extension if not exists pgcrypto;
+create table if not exists public.intelligence_updates (id uuid primary key default gen_random_uuid(),headline text not null,summary text not null,category text not null,business_impact smallint not null check (business_impact between 1 and 5),impact_reason text not null,confidence text not null,country text not null,region text,agency text,manufacturer text,technology text,tags text[] not null default '{}',source_name text not null,source_url text not null,published_at timestamptz not null,ingested_at timestamptz not null default now(),verified boolean not null default false,status text not null default 'review' check (status in ('draft','review','published','rejected')),created_by uuid references auth.users(id),created_at timestamptz not null default now(),updated_at timestamptz not null default now());
+create index if not exists intelligence_updates_published_idx on public.intelligence_updates(status,published_at desc);
+create index if not exists intelligence_updates_tags_idx on public.intelligence_updates using gin(tags);
+alter table public.intelligence_updates enable row level security;
+drop policy if exists "Public can read published intelligence" on public.intelligence_updates;
+create policy "Public can read published intelligence" on public.intelligence_updates for select using (status='published');
+drop policy if exists "Authenticated editors can insert intelligence" on public.intelligence_updates;
+create policy "Authenticated editors can insert intelligence" on public.intelligence_updates for insert to authenticated with check (auth.uid()=created_by);
+drop policy if exists "Authors can update their own intelligence" on public.intelligence_updates;
+create policy "Authors can update their own intelligence" on public.intelligence_updates for update to authenticated using (auth.uid()=created_by) with check (auth.uid()=created_by);

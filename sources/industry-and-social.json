@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Selected RPAS trade press",
+    "country": "Global",
+    "category": "International",
+    "method": "RSS; discovery only; verify important claims against primary sources",
+    "interval_minutes": 60,
+    "default_impact": 2
+  },
+  {
+    "name": "LinkedIn",
+    "country": "Global",
+    "category": "International",
+    "method": "Manual review or approved enterprise tooling only; do not scrape",
+    "interval_minutes": 0,
+    "default_impact": 1
+  }
+]

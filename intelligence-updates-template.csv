@@ -1,0 +1,2 @@
+headline,summary,category,business_impact,impact_reason,confidence,country,region,agency,manufacturer,technology,tags,source_name,source_url,published_at,verified,status
+Example headline,Two or three sentence summary,Procurement,5,Why it matters and recommended action,Confirmed — official source,Australia,Western Australia,WA Police,,RPAS platform,Tender|Police|RPAS,Official portal,https://example.com,2026-07-27T09:00:00+08:00,true,review

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "CASA",
+    "country": "Australia",
+    "category": "Regulation",
+    "homepage": "https://www.casa.gov.au/",
+    "interval_minutes": 60,
+    "default_impact": 4
+  },
+  {
+    "name": "Transport Canada Civil Aviation",
+    "country": "Canada",
+    "category": "Regulation",
+    "homepage": "https://tc.canada.ca/en/aviation",
+    "interval_minutes": 60,
+    "default_impact": 4
+  },
+  {
+    "name": "EASA",
+    "country": "European Union",
+    "category": "Regulation",
+    "homepage": "https://www.easa.europa.eu/",
+    "interval_minutes": 60,
+    "default_impact": 4
+  },
+  {
+    "name": "UK CAA",
+    "country": "United Kingdom",
+    "category": "Regulation",
+    "homepage": "https://www.caa.co.uk/",
+    "interval_minutes": 60,
+    "default_impact": 4
+  },
+  {
+    "name": "SACAA",
+    "country": "South Africa",
+    "category": "Regulation",
+    "homepage": "https://www.caa.co.za/",
+    "interval_minutes": 120,
+    "default_impact": 4
+  }
+]
