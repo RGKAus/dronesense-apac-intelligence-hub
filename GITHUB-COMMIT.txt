@@ -1,1 +1,8 @@
-v8A: launch live intelligence feed with business impact scoring and Supabase foundation
+v8B: expand live intelligence feed and prioritise headline/source view
+
+- Show all matching intelligence updates instead of limiting the visible feed
+- Add 15 demonstration records for layout testing
+- Make compact headline view the default
+- Add direct source link to every visible update
+- Retain business-impact rating, category, country and publication date
+- Add optional detailed-card display mode
