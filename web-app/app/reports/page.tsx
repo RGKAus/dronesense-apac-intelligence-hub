@@ -1,4 +1,4 @@
-import Link from "next/link";
+import AppShell from "../../components/AppShell";
 
 const reports = [
   {
@@ -11,41 +11,24 @@ const reports = [
   },
   {
     title: "Global Regulatory Comparison",
-    description: "Comparison of the US, Australia, Canada, UK, EU and South Africa.",
+    description:
+      "Comparison of the US, Australia, Canada, UK, EU and South Africa.",
   },
   {
     title: "Public-Safety Agency Landscape",
-    description: "Overview of police, fire, emergency and supporting agencies.",
+    description:
+      "Overview of police, fire, emergency and supporting agencies.",
   },
 ];
 
 export default function ReportsPage() {
   return (
-    <main style={{ padding: "40px", maxWidth: "1200px", margin: "0 auto" }}>
-      <Link href="/">← Back to dashboard</Link>
-
-      <div style={{ marginTop: "24px", marginBottom: "32px" }}>
-        <p
-          style={{
-            color: "#2563eb",
-            fontSize: "12px",
-            fontWeight: 700,
-            letterSpacing: "1px",
-          }}
-        >
-          REPORTS & PUBLICATIONS
-        </p>
-
-        <h1 style={{ color: "#0b2e59", fontSize: "36px", marginBottom: "10px" }}>
-          Reports
-        </h1>
-
-        <p style={{ color: "#667085", maxWidth: "750px", lineHeight: 1.6 }}>
-          Access country briefs, regulatory comparisons and public-safety
-          intelligence reports.
-        </p>
-      </div>
-
+    <AppShell
+      activePath="/reports"
+      eyebrow="REPORTS & PUBLICATIONS"
+      title="Reports"
+      description="Access country briefs, regulatory comparisons and public-safety intelligence reports."
+    >
       <section
         style={{
           display: "grid",
@@ -54,15 +37,7 @@ export default function ReportsPage() {
         }}
       >
         {reports.map((report) => (
-          <article
-            key={report.title}
-            style={{
-              background: "#ffffff",
-              border: "1px solid #d9e0e7",
-              borderRadius: "12px",
-              padding: "22px",
-            }}
-          >
+          <article className="panel" key={report.title}>
             <p
               style={{
                 color: "#2563eb",
@@ -73,31 +48,15 @@ export default function ReportsPage() {
               PDF REPORT
             </p>
 
-            <h2 style={{ color: "#0b2e59", fontSize: "18px" }}>
-              {report.title}
-            </h2>
+            <h2>{report.title}</h2>
+            <p>{report.description}</p>
 
-            <p style={{ color: "#667085", lineHeight: 1.6 }}>
-              {report.description}
-            </p>
-
-            <button
-              type="button"
-              style={{
-                background: "#0b2e59",
-                border: 0,
-                borderRadius: "8px",
-                color: "#ffffff",
-                cursor: "pointer",
-                fontWeight: 700,
-                padding: "10px 14px",
-              }}
-            >
+            <button type="button" className="primary-button">
               Open prototype report
             </button>
           </article>
         ))}
       </section>
-    </main>
+    </AppShell>
   );
 }

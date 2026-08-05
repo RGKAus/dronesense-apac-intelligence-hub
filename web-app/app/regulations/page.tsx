@@ -1,4 +1,4 @@
-import Link from "next/link";
+import AppShell from "../../components/AppShell";
 
 const jurisdictions = [
   {
@@ -41,31 +41,12 @@ const jurisdictions = [
 
 export default function RegulationsPage() {
   return (
-    <main style={{ padding: "40px", maxWidth: "1200px", margin: "0 auto" }}>
-      <Link href="/">← Back to dashboard</Link>
-
-      <div style={{ marginTop: "24px", marginBottom: "32px" }}>
-        <p
-          style={{
-            color: "#2563eb",
-            fontSize: "12px",
-            fontWeight: 700,
-            letterSpacing: "1px",
-          }}
-        >
-          REGULATORY COMPARISON
-        </p>
-
-        <h1 style={{ color: "#0b2e59", fontSize: "36px", marginBottom: "10px" }}>
-          Regulations
-        </h1>
-
-        <p style={{ color: "#667085", maxWidth: "750px", lineHeight: 1.6 }}>
-          Compare RPAS and UAS regulatory frameworks, terminology and approval
-          pathways across key jurisdictions.
-        </p>
-      </div>
-
+    <AppShell
+      activePath="/regulations"
+      eyebrow="REGULATORY COMPARISON"
+      title="Regulations"
+      description="Compare RPAS and UAS regulatory frameworks, terminology and approval pathways across key jurisdictions."
+    >
       <div
         style={{
           overflowX: "auto",
@@ -90,7 +71,10 @@ export default function RegulationsPage() {
 
           <tbody>
             {jurisdictions.map((item) => (
-              <tr key={item.country} style={{ borderBottom: "1px solid #d9e0e7" }}>
+              <tr
+                key={item.country}
+                style={{ borderBottom: "1px solid #d9e0e7" }}
+              >
                 <td style={{ padding: "14px", fontWeight: 700 }}>
                   {item.country}
                 </td>
@@ -108,6 +92,6 @@ export default function RegulationsPage() {
           </tbody>
         </table>
       </div>
-    </main>
+    </AppShell>
   );
 }

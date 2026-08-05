@@ -1,4 +1,4 @@
-import Link from "next/link";
+import AppShell from "../../components/AppShell";
 
 const technologies = [
   {
@@ -35,31 +35,12 @@ const technologies = [
 
 export default function TechnologyWatchPage() {
   return (
-    <main style={{ padding: "40px", maxWidth: "1200px", margin: "0 auto" }}>
-      <Link href="/">← Back to dashboard</Link>
-
-      <div style={{ marginTop: "24px", marginBottom: "32px" }}>
-        <p
-          style={{
-            color: "#2563eb",
-            fontSize: "12px",
-            fontWeight: 700,
-            letterSpacing: "1px",
-          }}
-        >
-          TECHNOLOGY INTELLIGENCE
-        </p>
-
-        <h1 style={{ color: "#0b2e59", fontSize: "36px", marginBottom: "10px" }}>
-          Technology Watch
-        </h1>
-
-        <p style={{ color: "#667085", maxWidth: "750px", lineHeight: 1.6 }}>
-          Monitor aircraft, software, autonomy, communications and integration
-          developments relevant to public-safety RPAS programmes.
-        </p>
-      </div>
-
+    <AppShell
+      activePath="/technology-watch"
+      eyebrow="TECHNOLOGY INTELLIGENCE"
+      title="Technology Watch"
+      description="Monitor aircraft, software, autonomy, communications and integration developments relevant to public-safety RPAS programmes."
+    >
       <section
         style={{
           display: "grid",
@@ -68,15 +49,7 @@ export default function TechnologyWatchPage() {
         }}
       >
         {technologies.map((technology) => (
-          <article
-            key={technology.company}
-            style={{
-              background: "#ffffff",
-              border: "1px solid #d9e0e7",
-              borderRadius: "12px",
-              padding: "22px",
-            }}
-          >
+          <article className="panel" key={technology.company}>
             <p
               style={{
                 color: "#2563eb",
@@ -87,13 +60,8 @@ export default function TechnologyWatchPage() {
               {technology.area}
             </p>
 
-            <h2 style={{ color: "#0b2e59", fontSize: "20px" }}>
-              {technology.company}
-            </h2>
-
-            <p style={{ color: "#667085", lineHeight: 1.6 }}>
-              {technology.update}
-            </p>
+            <h2>{technology.company}</h2>
+            <p>{technology.update}</p>
 
             <span style={{ color: "#2563eb", fontWeight: 700 }}>
               View technology profile →
@@ -101,6 +69,6 @@ export default function TechnologyWatchPage() {
           </article>
         ))}
       </section>
-    </main>
+    </AppShell>
   );
 }
