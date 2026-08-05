@@ -1,12 +1,14 @@
+import Link from "next/link";
+
 const navigation = [
-  "Dashboard",
-  "Live Intelligence",
-  "Countries",
-  "Agencies",
-  "Regulations",
-  "Procurement",
-  "Technology Watch",
-  "Reports",
+  { label: "Dashboard", href: "/" },
+  { label: "Live Intelligence", href: "/live-intelligence" },
+  { label: "Countries", href: "/countries" },
+  { label: "Agencies", href: "/agencies" },
+  { label: "Regulations", href: "/regulations" },
+  { label: "Procurement", href: "/procurement" },
+  { label: "Technology Watch", href: "/technology-watch" },
+  { label: "Reports", href: "/reports" },
 ];
 
 const intelligence = [
@@ -31,10 +33,14 @@ export default function Home() {
 
         <nav className="navigation">
           {navigation.map((item, index) => (
-            <a href="#" className={index === 0 ? "nav-item active" : "nav-item"} key={item}>
+            <Link
+              href={item.href}
+              className={index === 0 ? "nav-item active" : "nav-item"}
+              key={item.label}
+            >
               <span className="nav-symbol">{index + 1}</span>
-              {item}
-            </a>
+              {item.label}
+            </Link>
           ))}
         </nav>
 
