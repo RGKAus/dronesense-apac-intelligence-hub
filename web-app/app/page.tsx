@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { logout } from "./logout/actions";
 
 const navigation = [
   { label: "Dashboard", href: "/" },
@@ -62,13 +63,35 @@ export default function Home() {
             <input type="search" placeholder="Search intelligence, agencies and regulations" />
           </div>
 
-          <div className="user-profile">
-            <div className="user-avatar">RG</div>
-            <div>
-              <strong>Rachael</strong>
-              <span>Administrator</span>
-            </div>
-          </div>
+          <div
+  className="user-profile"
+  style={{ display: "flex", alignItems: "center", gap: "16px" }}
+>
+  <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+    <div className="user-avatar">RG</div>
+
+    <div>
+      <strong>Rachael</strong>
+      <span>Administrator</span>
+    </div>
+  </div>
+
+  <form action={logout}>
+    <button
+      type="submit"
+      style={{
+        padding: "8px 14px",
+        borderRadius: "8px",
+        border: "1px solid #d0d5dd",
+        background: "#ffffff",
+        cursor: "pointer",
+        fontWeight: 600,
+      }}
+    >
+      Log out
+    </button>
+  </form>
+</div>
         </header>
 
         <div className="content">
@@ -126,19 +149,40 @@ export default function Home() {
             </article>
           </section>
 
-          <section className="panel country-panel">
+                    <section className="panel country-panel">
             <div className="panel-heading">
-              <div><h2>Geographic intelligence</h2><p>Explore intelligence by country or region</p></div>
-              <a href="#">Explore countries</a>
+              <div>
+                <h2>Global intelligence coverage</h2>
+                <p>
+                  Select a highlighted country or region to open its
+                  intelligence portal.
+                </p>
+              </div>
+
+              <Link href="/countries">View all countries</Link>
             </div>
 
-            <div className="country-grid">
-              {countries.map((country) => (
-                <button className="country-card" key={country}>
-                  <div className="country-symbol">{country.slice(0, 2).toUpperCase()}</div>
-                  <div><strong>{country}</strong><span>View intelligence →</span></div>
-                </button>
-              ))}
+            <div
+              style={{
+                overflow: "hidden",
+                border: "1px solid #d9e0e7",
+                borderRadius: "12px",
+                background: "#f8fafc",
+              }}
+            >
+              <object
+                data="/maps/world.svg"
+                type="image/svg+xml"
+                aria-label="Interactive global intelligence coverage map"
+                style={{
+                  display: "block",
+                  width: "100%",
+                  minHeight: "480px",
+                  border: 0,
+                }}
+              >
+                Global intelligence map
+              </object>
             </div>
           </section>
         </div>

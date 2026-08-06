@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { logout } from "../app/logout/actions";
 import type { ReactNode } from "react";
 
 const navigation = [
@@ -76,14 +77,37 @@ export default function AppShell({
             />
           </div>
 
-          <div className="user-profile">
-            <div className="user-avatar">RG</div>
+          <div
+  className="user-profile"
+  style={{ display: "flex", alignItems: "center", gap: "16px" }}
+>
+  <div
+    style={{ display: "flex", alignItems: "center", gap: "12px" }}
+  >
+    <div className="user-avatar">RG</div>
 
-            <div>
-              <strong>Rachael</strong>
-              <span>Administrator</span>
-            </div>
-          </div>
+    <div>
+      <strong>Rachael</strong>
+      <span>Administrator</span>
+    </div>
+  </div>
+
+  <form action={logout}>
+    <button
+      type="submit"
+      style={{
+        padding: "8px 14px",
+        borderRadius: "8px",
+        border: "1px solid #d0d5dd",
+        background: "#ffffff",
+        cursor: "pointer",
+        fontWeight: 600,
+      }}
+    >
+      Log out
+    </button>
+  </form>
+</div>
         </header>
 
         <div className="content">
