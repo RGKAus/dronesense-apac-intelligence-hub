@@ -9,8 +9,11 @@ const navigation = [
   { label: "Agencies", href: "/agencies" },
   { label: "Regulations", href: "/regulations" },
   { label: "Procurement", href: "/procurement" },
-  { label: "Technology Watch", href: "/technology-watch" },
-  { label: "Reports", href: "/reports" },
+    { label: "Technology Watch", href: "/technology-watch" },
+    { label: "Hardware", href: "/hardware" },
+    { label: "Competitors", href: "/competitors" },
+    { label: "Partners", href: "/partners" },
+    { label: "Reports", href: "/reports" },
 ];
 
 type AppShellProps = {
