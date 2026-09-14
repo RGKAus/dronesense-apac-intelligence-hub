@@ -1,143 +1,85 @@
 import Link from "next/link";
-import { logout } from "./logout/actions";
+import { formatPublishedDate, getDashboardSnapshot } from "../lib/intelligence";
+import DashboardRefreshButton from "../components/DashboardRefreshButton";
+import AppShell from "../components/AppShell";
 
-const navigation = [
-  { label: "Dashboard", href: "/" },
-  { label: "Live Intelligence", href: "/live-intelligence" },
-  { label: "Countries", href: "/countries" },
-  { label: "Agencies", href: "/agencies" },
-  { label: "Regulations", href: "/regulations" },
-  { label: "Procurement", href: "/procurement" },
-  { label: "Technology Watch", href: "/technology-watch" },
-  { label: "Reports", href: "/reports" },
-];
+function titleCase(value: string): string {
+  return value
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
 
-const intelligence = [
-  { headline: "CASA publishes updated BVLOS guidance", country: "Australia", impact: "Critical", impactClass: "critical" },
-  { headline: "New police drone procurement announced", country: "Canada", impact: "High", impactClass: "high" },
-  { headline: "EASA issues operational update", country: "European Union", impact: "Medium", impactClass: "medium" },
-];
+function buildItemMeta(item: {
+  source: string;
+  publishedDate: string | null;
+  country: string | null;
+  tags: string[];
+}) {
+  const parts = [item.source, formatPublishedDate(item.publishedDate)];
 
-const countries = ["Australia", "Canada", "United Kingdom", "European Union", "South Africa"];
+  if (item.country) {
+    parts.push(item.country);
+  }
 
-export default function Home() {
+  const visibleTags = item.tags.filter((tag) => tag !== item.source && tag !== "news" && tag !== "events" && tag !== "position-papers");
+  if (visibleTags.length > 0) {
+    parts.push(visibleTags.slice(0, 2).join(" · "));
+  }
+
+  return parts.join(" · ");
+}
+
+export default async function Home() {
+  const dashboard = await getDashboardSnapshot();
+  const criticalHref = "/live-intelligence";
+
   return (
-    <div className="app-shell">
-      <aside className="sidebar">
-        <div className="brand">
-          <div className="brand-mark">DS</div>
-          <div>
-            <p className="brand-name">Versaterm DroneSense</p>
-            <p className="brand-subtitle">Intelligence Platform</p>
-          </div>
-        </div>
-
-        <nav className="navigation">
-          {navigation.map((item, index) => (
-            <Link
-              href={item.href}
-              className={index === 0 ? "nav-item active" : "nav-item"}
-              key={item.label}
-            >
-              <span className="nav-symbol">{index + 1}</span>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="sidebar-footer">
-          <a href="#" className="nav-item">
-            <span className="nav-symbol">A</span>
-            Administration
-          </a>
-          <p>Platform v2.0</p>
-        </div>
-      </aside>
-
-      <main className="main-area">
-        <header className="topbar">
-          <div className="mobile-brand">DS Intelligence</div>
-
-          <div className="search-box">
-            <span>⌕</span>
-            <input type="search" placeholder="Search intelligence, agencies and regulations" />
-          </div>
-
-          <div
-  className="user-profile"
-  style={{ display: "flex", alignItems: "center", gap: "16px" }}
->
-  <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-    <div className="user-avatar">RG</div>
-
-    <div>
-      <strong>Rachael</strong>
-      <span>Administrator</span>
-    </div>
-  </div>
-
-  <form action={logout}>
-    <button
-      type="submit"
-      style={{
-        padding: "8px 14px",
-        borderRadius: "8px",
-        border: "1px solid #d0d5dd",
-        background: "#ffffff",
-        cursor: "pointer",
-        fontWeight: 600,
-      }}
+    <AppShell
+      activePath="/"
+      eyebrow="GLOBAL RPAS INTELLIGENCE"
+      title="Dashboard"
+      description="Public safety, regulatory and market intelligence across global RPAS operations."
+      headingAction={<DashboardRefreshButton />}
     >
-      Log out
-    </button>
-  </form>
-</div>
-        </header>
-
-        <div className="content">
-          <section className="page-heading">
-            <div>
-              <p className="eyebrow">GLOBAL RPAS INTELLIGENCE</p>
-              <h1>Dashboard</h1>
-              <p>Public safety, regulatory and market intelligence across global RPAS operations.</p>
-            </div>
-            <button className="primary-button">+ Add intelligence</button>
-          </section>
 
           <section className="metric-grid">
-            <article className="metric-card">
+            <Link className="metric-card metric-card-link" href="/live-intelligence">
               <div className="metric-top"><span>Critical intelligence</span><span className="metric-icon">!</span></div>
-              <strong>4</strong><p>Two new updates today</p>
-            </article>
-            <article className="metric-card">
-              <div className="metric-top"><span>New procurements</span><span className="metric-icon">P</span></div>
-              <strong>6</strong><p>Across three countries</p>
-            </article>
-            <article className="metric-card">
+              <strong>{dashboard.metrics.critical}</strong><p>No critical items currently classified</p>
+            </Link>
+            <Link className="metric-card metric-card-link" href="/procurement">
+              <div className="metric-top"><span>Procurements</span><span className="metric-icon">P</span></div>
+              <strong>{dashboard.metrics.procurement}</strong><p>Items categorised as procurement</p>
+            </Link>
+            <Link className="metric-card metric-card-link" href="/regulations">
               <div className="metric-top"><span>Regulatory changes</span><span className="metric-icon">R</span></div>
-              <strong>3</strong><p>Requiring review</p>
-            </article>
-            <article className="metric-card">
+              <strong>{dashboard.metrics.regulation}</strong><p>Items categorised as regulation</p>
+            </Link>
+            <Link className="metric-card metric-card-link" href="/countries">
               <div className="metric-top"><span>Countries covered</span><span className="metric-icon">G</span></div>
-              <strong>5</strong><p>Global expansion underway</p>
-            </article>
+              <strong>{dashboard.metrics.countries}</strong><p>Countries represented in ingested intelligence</p>
+            </Link>
           </section>
 
           <section className="dashboard-grid">
             <article className="panel intelligence-panel">
               <div className="panel-heading">
                 <div><h2>Latest intelligence</h2><p>Recent developments requiring attention</p></div>
-                <a href="#">View all</a>
+                <Link href="/live-intelligence">View all</Link>
               </div>
 
               <div className="intelligence-list">
-                {intelligence.map((item) => (
-                  <div className="intelligence-row" key={item.headline}>
+                {dashboard.items.length > 0 ? dashboard.items.map((item) => (
+                  <a className="intelligence-row" href={item.sourceUrl} key={item.id} rel="noreferrer" target="_blank">
                     <div className="intelligence-marker" />
-                    <div className="intelligence-content"><strong>{item.headline}</strong><span>{item.country}</span></div>
-                    <span className={`impact ${item.impactClass}`}>{item.impact}</span>
-                  </div>
-                ))}
+                    <div className="intelligence-content">
+                      <span className="intelligence-meta">{buildItemMeta(item)}</span>
+                      <strong>{item.title}</strong>
+                    </div>
+                    <span className="intelligence-type-badge">{titleCase(item.intelligenceType)}</span>
+                  </a>
+                )) : <div className="intelligence-empty">No ingested intelligence yet. Run Refresh Intelligence from Live Intelligence.</div>}
               </div>
             </article>
 
@@ -163,11 +105,13 @@ export default function Home() {
             </div>
 
             <div
+              className="dashboard-map-shell"
               style={{
                 overflow: "hidden",
                 border: "1px solid #d9e0e7",
                 borderRadius: "12px",
                 background: "#f8fafc",
+                position: "relative",
               }}
             >
               <object
@@ -185,8 +129,6 @@ export default function Home() {
               </object>
             </div>
           </section>
-        </div>
-      </main>
-    </div>
+    </AppShell>
   );
 }

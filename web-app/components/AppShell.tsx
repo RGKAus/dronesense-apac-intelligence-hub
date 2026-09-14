@@ -1,26 +1,14 @@
 import Link from "next/link";
 import { logout } from "../app/logout/actions";
 import type { ReactNode } from "react";
-
-const navigation = [
-  { label: "Dashboard", href: "/" },
-  { label: "Live Intelligence", href: "/live-intelligence" },
-  { label: "Countries", href: "/countries" },
-  { label: "Agencies", href: "/agencies" },
-  { label: "Regulations", href: "/regulations" },
-  { label: "Procurement", href: "/procurement" },
-    { label: "Technology Watch", href: "/technology-watch" },
-    { label: "Hardware", href: "/hardware" },
-    { label: "Competitors", href: "/competitors" },
-    { label: "Partners", href: "/partners" },
-    { label: "Reports", href: "/reports" },
-];
+import { primaryNavigation } from "./navigation";
 
 type AppShellProps = {
   activePath: string;
   eyebrow: string;
   title: string;
   description: string;
+  headingAction?: ReactNode;
   children: ReactNode;
 };
 
@@ -29,6 +17,7 @@ export default function AppShell({
   eyebrow,
   title,
   description,
+  headingAction,
   children,
 }: AppShellProps) {
   return (
@@ -37,14 +26,15 @@ export default function AppShell({
         <div className="brand">
           <div className="brand-mark">DS</div>
 
-          <div>
-            <p className="brand-name">Versaterm DroneSense</p>
-            <p className="brand-subtitle">Intelligence Platform</p>
+          <div className="brand-copy">
+            <p className="brand-name">DroneSense</p>
+            <p className="brand-subtitle">by Versaterm</p>
+            <p className="brand-product">Intelligence Hub</p>
           </div>
         </div>
 
         <nav className="navigation">
-          {navigation.map((item, index) => (
+          {primaryNavigation.map((item, index) => (
             <Link
               href={item.href}
               className={
@@ -59,18 +49,54 @@ export default function AppShell({
         </nav>
 
         <div className="sidebar-footer">
-          <a href="#" className="nav-item">
-            <span className="nav-symbol">A</span>
-            Administration
-          </a>
-
           <p>Platform v2.0</p>
         </div>
       </aside>
 
       <main className="main-area">
         <header className="topbar">
-          <div className="mobile-brand">DS Intelligence</div>
+          <div className="mobile-brand">
+            <strong>DroneSense</strong>
+            <span>by Versaterm · Intelligence Hub</span>
+          </div>
+
+          <details className="mobile-nav-menu">
+            <summary className="mobile-menu-button">
+              <span className="mobile-menu-icon" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </span>
+              <span className="mobile-menu-label mobile-menu-label-open">Menu</span>
+              <span className="mobile-menu-label mobile-menu-label-close">Close</span>
+            </summary>
+
+            <div className="mobile-nav-backdrop">
+              <aside className="mobile-nav-drawer" aria-label="Primary navigation">
+                <div className="mobile-nav-drawer-header">
+                  <div className="mobile-nav-brand">
+                    <strong>DroneSense</strong>
+                    <span>by Versaterm · Intelligence Hub</span>
+                  </div>
+
+                  <span className="mobile-nav-close">Close</span>
+                </div>
+
+                <nav className="mobile-nav-links" aria-label="Mobile primary navigation">
+                  {primaryNavigation.map((item, index) => (
+                    <Link
+                      href={item.href}
+                      className={item.href === activePath ? "nav-item active" : "nav-item"}
+                      key={`mobile-${item.label}`}
+                    >
+                      <span className="nav-symbol">{index + 1}</span>
+                      {item.label}
+                    </Link>
+                  ))}
+                </nav>
+              </aside>
+            </div>
+          </details>
 
           <div className="search-box">
             <span>⌕</span>
@@ -80,37 +106,22 @@ export default function AppShell({
             />
           </div>
 
-          <div
-  className="user-profile"
-  style={{ display: "flex", alignItems: "center", gap: "16px" }}
->
-  <div
-    style={{ display: "flex", alignItems: "center", gap: "12px" }}
-  >
-    <div className="user-avatar">RG</div>
+          <div className="user-profile" style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+              <div className="user-avatar">RG</div>
 
-    <div>
-      <strong>Rachael</strong>
-      <span>Administrator</span>
-    </div>
-  </div>
+              <div>
+                <strong>Rachael</strong>
+                <span>Administrator</span>
+              </div>
+            </div>
 
-  <form action={logout}>
-    <button
-      type="submit"
-      style={{
-        padding: "8px 14px",
-        borderRadius: "8px",
-        border: "1px solid #d0d5dd",
-        background: "#ffffff",
-        cursor: "pointer",
-        fontWeight: 600,
-      }}
-    >
-      Log out
-    </button>
-  </form>
-</div>
+            <form action={logout}>
+              <button className="secondary-button" type="submit">
+                Log out
+              </button>
+            </form>
+          </div>
         </header>
 
         <div className="content">
@@ -120,6 +131,8 @@ export default function AppShell({
               <h1>{title}</h1>
               <p>{description}</p>
             </div>
+
+            {headingAction ?? null}
           </section>
 
           {children}

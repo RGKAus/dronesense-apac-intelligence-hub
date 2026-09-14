@@ -1,59 +1,57 @@
 import AppShell from "../../components/AppShell";
-
-const opportunities = [
-  {
-    title: "Public-safety RPAS capability",
-    country: "Australia",
-    organisation: "Example government agency",
-    stage: "Open",
-  },
-  {
-    title: "Drone programme support services",
-    country: "Canada",
-    organisation: "Example police service",
-    stage: "Market research",
-  },
-  {
-    title: "Remote aviation technology",
-    country: "United Kingdom",
-    organisation: "Example emergency service",
-    stage: "Upcoming",
-  },
-];
+import Link from "next/link";
+import { listProcurementGuides } from "../../lib/procurementData";
 
 export default function ProcurementPage() {
+  const guides = listProcurementGuides();
+
   return (
     <AppShell
       activePath="/procurement"
-      eyebrow="COMMERCIAL INTELLIGENCE"
+      eyebrow="PROCUREMENT"
       title="Procurement"
-      description="Track public-sector tenders, market research, contract awards and upcoming procurement activity."
+      description="Understand how public-sector organisations buy, where opportunities appear, and how suppliers can engage throughout the procurement lifecycle."
     >
-      <div style={{ display: "grid", gap: "14px" }}>
-        {opportunities.map((item) => (
-          <article className="panel" key={item.title}>
-            <p
-              style={{
-                color: "#2563eb",
-                fontSize: "12px",
-                fontWeight: 700,
-                margin: 0,
-              }}
-            >
-              {item.country}
-            </p>
+      <section className="panel proc-top-actions">
+        <div>
+          <h2>Country procurement guides</h2>
+          <p>Start with Australia for detailed guidance. Other jurisdictions remain explicitly verification-pending.</p>
+        </div>
 
-            <h2>{item.title}</h2>
-            <p>{item.organisation}</p>
+        <div className="proc-action-buttons">
+          <Link href="/procurement/australia" className="primary-button">View Australia Guide</Link>
+        </div>
+      </section>
 
-            <span className="country-status">{item.stage}</span>
+      <section className="proc-country-grid">
+        {guides.map((guide) => (
+          <article className="panel proc-country-card" key={guide.countrySlug}>
+            <div className="proc-country-header">
+              <h2>{guide.country}</h2>
+              <span className="country-status">
+                {guide.detailStatus === "full" ? "Detailed guide available" : "Procurement guide being verified"}
+              </span>
+            </div>
+
+            <div className="proc-country-details">
+              <p><strong>Authority:</strong> {guide.procurementAuthority}</p>
+              <p><strong>Framework:</strong> {guide.framework}</p>
+              <p><strong>Procurement model:</strong> {guide.procurementModel}</p>
+              <p>
+                <strong>Opportunity portal:</strong>{" "}
+                {guide.opportunityPortals[0] ? guide.opportunityPortals[0].name : "Being verified"}
+              </p>
+              <p><strong>Last verified:</strong> {guide.lastVerified}</p>
+              <p><strong>Confidence:</strong> {guide.confidence}</p>
+            </div>
+
+            <div className="proc-country-actions">
+              <Link href={`/procurement/${guide.countrySlug}`} className="secondary-button">View Procurement Guide</Link>
+              <Link href={`/countries/${guide.countrySlug}`} className="secondary-button">View Country Intelligence</Link>
+            </div>
           </article>
         ))}
-      </div>
-
-      <p style={{ color: "#667085", fontSize: "12px", marginTop: "24px" }}>
-        Prototype records shown for demonstration purposes.
-      </p>
+      </section>
     </AppShell>
   );
 }
