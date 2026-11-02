@@ -2,6 +2,7 @@ import Link from "next/link";
 import { logout } from "../app/logout/actions";
 import type { ReactNode } from "react";
 import { primaryNavigation } from "./navigation";
+import MobileNavigation from "./MobileNavigation";
 
 type AppShellProps = {
   activePath: string;
@@ -60,43 +61,7 @@ export default function AppShell({
             <span>by Versaterm · Intelligence Hub</span>
           </div>
 
-          <details className="mobile-nav-menu">
-            <summary className="mobile-menu-button">
-              <span className="mobile-menu-icon" aria-hidden="true">
-                <span />
-                <span />
-                <span />
-              </span>
-              <span className="mobile-menu-label mobile-menu-label-open">Menu</span>
-              <span className="mobile-menu-label mobile-menu-label-close">Close</span>
-            </summary>
-
-            <div className="mobile-nav-backdrop">
-              <aside className="mobile-nav-drawer" aria-label="Primary navigation">
-                <div className="mobile-nav-drawer-header">
-                  <div className="mobile-nav-brand">
-                    <strong>DroneSense</strong>
-                    <span>by Versaterm · Intelligence Hub</span>
-                  </div>
-
-                  <span className="mobile-nav-close">Close</span>
-                </div>
-
-                <nav className="mobile-nav-links" aria-label="Mobile primary navigation">
-                  {primaryNavigation.map((item, index) => (
-                    <Link
-                      href={item.href}
-                      className={item.href === activePath ? "nav-item active" : "nav-item"}
-                      key={`mobile-${item.label}`}
-                    >
-                      <span className="nav-symbol">{index + 1}</span>
-                      {item.label}
-                    </Link>
-                  ))}
-                </nav>
-              </aside>
-            </div>
-          </details>
+          <MobileNavigation activePath={activePath} />
 
           <div className="search-box">
             <span>⌕</span>

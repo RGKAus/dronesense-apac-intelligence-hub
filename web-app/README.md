@@ -36,3 +36,148 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 Production deployment test.
 Deployment refresh 18 Aug.
+
+## Customers & Opportunities - demonstration handover workflow
+
+Visit `/customers` after the existing prototype login. The directory supports AU/NZ,
+state/territory/region, organisation-name search, classification, handover status and
+outstanding-action filters. Filters and edits survive navigation within this module.
+
+### Demonstration boundary
+
+- Every handover is explicitly fictional. Fictional free-text editing is available
+  in memory only. Names/text must include "fictional" or "demo"; emails, telephone
+  numbers and URLs are rejected in these text fields. These client-side guards
+  are demonstration aids, not authorization or proof that content is non-sensitive.
+  Do not enter real information, even if labelled fictional.
+- Select Country and State/Region, click Add Customer, enter a fictional name and
+  confirm fictional use. A new profile inherits that jurisdiction, starts blank,
+  Unclassified and Not yet reviewed, with no products, contacts or contracts.
+- Names are normalized for case, punctuation, spacing and the fictional label
+  before matching existing country-level identities. Matches open the existing
+  profile, preserving its jurisdiction. Matching real Agencies opens read-only
+  profiles, with no handover or duplicate identity created.
+- Every editable profile section has independent Edit/Save/Cancel. Multiple drafts
+  can be open at once; a save patches only its named section into the latest state.
+  Identity edits likewise do not overwrite intelligence sections.
+- Products use the shared [canonical list](./lib/versatermProducts.ts): IAPro, Adashi,
+  Mindbase, Visual Labs, CAD and DroneSense. Selecting catalogue entries is not
+  evidence of use without an explicit review status and source.
+- Competitor intelligence is flexible fictional free text with its own evidence
+  and attribution. It is never automatically promoted to confirmed.
+- Save changes memory only. Reloading or leaving the customer layout resets it.
+  There is no customer API, server action, Supabase query, browser storage or seed.
+- No real Salesforce URL was supplied, so all demo Salesforce buttons are unavailable.
+  The reusable button accepts only direct HTTPS Salesforce Account-record URLs,
+  rejecting login/home pages, non-Salesforce hosts, credentials, queries and fragments.
+- Never replace the fictional source fixtures with customer intelligence.
+
+### Completeness and evidence
+
+Eight equally weighted review areas: classification, Versaterm usage, competitor intelligence,
+contacts (names/job titles only), notes, opportunities/next steps, procurement and
+Commercial & Contract History. The commercial section replaces the old dates-only
+area rather than duplicating dates or counting contracts twice.
+
+Not yet reviewed is separate from Reviewed Unknown. Reviewed Unknown counts fully
+toward handover review completeness without implying confirmed knowledge. Reported
+and confirmed values need sources. Counts remain visible separately; an inventory
+section's evidence does not override individual contracts' evidence or establish
+that every financial/date field is known. Salesforce is optional.
+
+Completed requires 8/8 reviewed and no outstanding actions. Setting a reviewed area
+back to unreviewed, or adding outstanding work to a Completed profile, returns it
+to In Progress. Follow-up actions remain visible near the top of the profile.
+
+### Commercial & Contract History
+
+The section supports multiple independent contracts with canonical product IDs,
+value, currency, tax treatment/details, payment arrangement, multiple invoice and
+payment entries, start/expiry/renewal dates, procurement category and local legal
+terminology, tender/reference, renewal plans, source and per-record evidence.
+
+Blank amounts/dates/currency stay null (Unknown); zero is explicit, never a default.
+Amounts are exact decimal strings with up to two fractional digits, not floating-point
+calculations. No totals, inferred balances, tax rates, exchange rates or contract facts
+are generated. All financial entries share their contract's currency and evidence.
+An empty new contract has no products, amounts, dates or source.
+
+Procurement categories are handover grouping labels, not legal equivalences between
+Australian jurisdictions and New Zealand. Preserve jurisdiction-specific terms/legal
+basis in the separate field; do not infer thresholds or procurement legality.
+
+### Canonical identity and unapplied database design
+
+[The identity adapter](./lib/customerOrganisations.ts) reads IDs, names, geography
+and sectors directly from the existing Agencies source. It does not copy leadership
+or infer customer relationships. Canonical Agencies are an opt-in, read-only view;
+demo records never attach fictional intelligence to real organisations.
+User-created `demo-custom-*` identities exist only in the provider's memory. Their
+route can reopen during module navigation; after reload it explains that the temporary
+profile was cleared. No entered names or notes are placed in URLs or sent to a server.
+
+[Migration 0008](./db/migrations/0008_customer_handover_foundation.sql) is a review-only
+proposal, not executed or wired to the application. It contains two tables in a
+non-public `customer_intelligence` schema:
+
+1. `private_organisations`: identities not already present in Agencies.
+2. `handovers`: either an existing canonical agency ID or a private organisation
+   foreign key (exactly one), classification, status, seven typed JSON sections,
+   follow-up actions, optional Salesforce URL and attributable change metadata.
+
+Existing canonical identity fields are not duplicated in handovers. A TypeScript
+ID cannot have a database foreign key: a future authorized service must resolve
+and validate canonical IDs, deduplicate new organisations against Agencies, and
+provide one identity resolver to both views before new real identities are enabled.
+Private identities must never be published through Agencies by accident. An eventual
+shared persistent identity registry requires a separately reviewed cutover, not a
+second public organisation dataset.
+
+No existing table is modified. Both new tables have forced RLS, no policies, explicit
+revocations for PUBLIC, anon, authenticated and service_role, and restricted default
+privileges. This is intentionally unusable by application roles. JSON shape, forbidden
+contact information, completeness and authorization still require validated server
+boundaries before any permissions are granted. Database ownership/BYPASSRLS is not
+a customer authorization model.
+
+The original review-only migration is unchanged by these UI refinements. Before any
+future activation it also needs an approved review-state column/payload design for
+classification and the expanded contract JSON validation. It is not a ready-to-enable
+persistence implementation.
+
+### Required before persistent customer intelligence
+
+1. Company approval of data handling, access scope, retention and deployment.
+2. Named-user authentication through approved SSO/Supabase Auth; the shared prototype
+   session and displayed Administrator label are not individual authorization.
+3. Reviewed membership/role/territory permissions and least-privilege RLS policies.
+4. An authorized server-side repository with per-operation checks, typed payload
+   validation, canonical identity resolution, conflict handling and audit history.
+   Do not reuse the elevated Supabase client as the authorization boundary.
+5. Reject emails/telephone numbers in **every** field, including notes, sources and
+   URLs; pattern matching alone is insufficient. Contacts contain names/titles only.
+6. Private/no-store responses and exclusion from static datasets, public APIs,
+   telemetry/log payloads, reports, exports, public Agency views and GitHub.
+7. Manual schema review/application and negative authorization/RLS tests for
+   anonymous, shared-login, unapproved and out-of-scope users.
+8. Independently review and approve activation; there is no real-data feature flag
+   or environment switch in Phase 1.
+
+### Validation
+
+```sh
+npm run test:customers
+npx eslint app/customers components/Customer*.tsx components/CustomersDirectory.tsx \
+  components/MobileNavigation.tsx components/AppShell.tsx components/navigation.ts \
+  lib/customer*.ts lib/versatermProducts.ts tests/customers.test.mjs
+npx tsc --noEmit
+npm run build
+```
+
+The focused tests use the installed TypeScript compiler and Node's built-in runner;
+no dependency is added. Compilation uses a temporary directory cleaned after tests.
+Browser checks should cover jurisdiction inheritance, blank creation and duplicates,
+concurrent section Save/Cancel, multi-product selection/removal, multiple contracts
+and invoice/payment entries, competitor free text/evidence, reviewed unknowns,
+completion guards, follow-up, reload reset, canonical read-only profiles and mobile
+layouts at 390px/430px.

@@ -9,6 +9,7 @@ export const primaryNavigation: NavigationItem[] = [
   { label: "Market Environment", href: "/market-environment" },
   { label: "Countries", href: "/countries" },
   { label: "Agencies", href: "/agencies" },
+  { label: "Customers & Opportunities", href: "/customers" },
   { label: "Regulations", href: "/regulations" },
   { label: "Procurement", href: "/procurement" },
   { label: "Technology Watch", href: "/technology-watch" },

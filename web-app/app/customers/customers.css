@@ -1,0 +1,81 @@
+.customer-stack { display: grid; gap: 16px; min-width: 0; }
+.customer-stack h2 { color: var(--navy); font-size: 19px; margin: 0; }
+.customer-stack p { font-size: 13px; line-height: 1.65; margin: 0; }
+.customer-demo-notice { background: #fff2e8; border: 1px solid #edc7ab; border-left: 4px solid var(--brand-orange); border-radius: 12px; color: var(--text); margin-bottom: 22px; padding: 16px 18px; }
+.customer-demo-notice strong { color: var(--brand-teal-deep); font-size: 14px; }
+.customer-demo-notice p { font-size: 12px; line-height: 1.7; margin: 6px 0 0; }
+.customer-row { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; min-width: 0; }
+.customer-toolbar { align-items: flex-start; }
+.customer-toolbar > div { flex: 1 1 250px; }
+.customer-toolbar p { margin-top: 6px; }
+.customer-muted { color: var(--secondary); font-size: 12px; }
+.customer-filter-grid { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.customer-field { color: var(--text); display: grid; font-size: 12px; font-weight: 700; gap: 7px; min-width: 0; }
+.customer-field .filter-control { max-width: 100%; min-width: 0; width: 100%; }
+.customer-field textarea { font-weight: 400; line-height: 1.7; resize: vertical; }
+.customer-field textarea[readonly] { background: var(--surface-muted); }
+.customer-field select:disabled { background: var(--surface-muted); color: var(--secondary); cursor: not-allowed; }
+.customer-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; }
+.customer-grow { flex: 1 1 240px; }
+.customer-checkbox { align-items: center; display: flex; font-size: 12px; gap: 9px; line-height: 1.6; }
+.customer-checkbox input { accent-color: var(--brand-teal); flex-shrink: 0; height: 18px; width: 18px; }
+.customer-card-grid { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.customer-card { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.customer-card h3 { color: var(--navy); font-size: 18px; line-height: 1.5; margin: 0; }
+.customer-card h3 a:hover, .customer-back-link:hover { text-decoration: underline; }
+.customer-card-footer { border-top: 1px solid var(--border); margin-top: auto; padding-top: 14px; }
+.customer-badge { background: var(--brand-teal-soft); border-radius: 8px; color: var(--brand-teal-deep); display: inline-block; font-size: 11px; font-weight: 700; line-height: 1.5; padding: 5px 8px; width: fit-content; }
+.customer-evidence-unknown { background: #f0f2f4; color: #4a5760; }
+.customer-evidence-reported { background: #fff2e8; color: #8e4511; }
+.customer-evidence-confirmed { background: #e9f8f0; color: #096b48; }
+.customer-completeness { display: grid; font-size: 12px; gap: 8px; }
+.customer-completeness p { color: var(--secondary); font-size: 12px; margin: 0; }
+.customer-completeness progress { accent-color: var(--brand-teal); height: 12px; width: 100%; }
+.customer-completeness details { background: var(--surface-muted); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+.customer-completeness summary { color: var(--navy); cursor: pointer; font-weight: 700; }
+.customer-completeness details p { margin-top: 8px; }
+.customer-completeness li { line-height: 1.8; }
+.customer-completeness a { text-decoration: underline; }
+.customer-results { color: var(--secondary); font-size: 12px; }
+.customer-profile-header { align-items: flex-start; }
+.customer-profile-header > div:first-child { flex: 1 1 300px; }
+.customer-profile-header h2 { font-size: 24px; line-height: 1.4; margin: 12px 0 8px; }
+.customer-salesforce { display: grid; gap: 8px; justify-items: start; max-width: 100%; }
+.customer-salesforce small { color: var(--secondary); font-size: 11px; }
+.customer-stack button:disabled { cursor: not-allowed; opacity: 0.6; }
+.customer-back-link { color: var(--navy); font-size: 13px; font-weight: 700; width: fit-content; }
+.customer-section-value { white-space: pre-wrap; }
+.customer-action-list { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
+.customer-action-list li { background: var(--surface-muted); border-left: 3px solid var(--brand-orange); display: grid; font-size: 13px; gap: 6px; padding: 12px; }
+.customer-action-list span, .customer-follow-up small { color: var(--secondary); display: block; font-size: 11px; }
+.customer-follow-up { background: var(--surface-muted); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+.customer-save-bar { border-top: 3px solid var(--brand-orange); display: grid; gap: 12px; }
+.customer-error, .customer-warning, .customer-success { border: 1px solid; border-radius: 8px; padding: 12px; }
+.customer-error { background: #fff1f1; border-color: #efb5b5; color: var(--critical); }
+.customer-warning { background: #fff2e8; border-color: #edc7ab; color: #8e4511; }
+.customer-success { background: #e9f8f0; border-color: #b6dfcb; color: #096b48; }
+.customer-stack section[id] { scroll-margin-top: 100px; }
+.customer-product-select, .customer-contract-fields { border: 1px solid var(--border); border-radius: 10px; margin: 0; min-width: 0; padding: 16px; }
+.customer-product-select legend, .customer-contract-fields legend { color: var(--navy); font-size: 13px; font-weight: 700; max-width: 100%; padding: 0 6px; }
+.customer-product-options { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); margin: 8px 0 16px; }
+.customer-product-select small { color: var(--secondary); font-size: 11px; }
+.customer-contract-fields { background: var(--surface-muted); }
+.customer-contract-fields h3, .customer-contract-fields h4 { color: var(--navy); font-size: 15px; margin: 0; }
+.customer-contract-details { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; }
+.customer-contract-details dt { color: var(--navy); font-size: 12px; font-weight: 700; }
+.customer-contract-details dd { font-size: 13px; line-height: 1.6; margin: 5px 0 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+.customer-stack nav.customer-actions a { color: var(--navy); font-size: 12px; text-decoration: underline; }
+@media (min-width: 1300px) {
+  .customer-filter-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 1000px) {
+  .customer-card-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .customer-contract-details { grid-template-columns: 1fr; }
+  .customer-contract-fields { padding: 12px; }
+  .customer-filter-grid { grid-template-columns: 1fr; }
+  .customer-stack .panel { padding: 16px; }
+  .customer-profile-header h2 { font-size: 21px; }
+  .customer-actions > button, .customer-toolbar > button { max-width: 100%; white-space: normal; }
+}
