@@ -6,7 +6,14 @@ import HardwareImage from "../../../components/HardwareImage";
 
 export default function FotokiteSigmaPage() {
   return (
-    <AppShell activePath="/hardware" eyebrow="HARDWARE" title="Fotokite Sigma" description="Supported hardware profile">
+    <AppShell activePath="/technology-watch" eyebrow="HARDWARE" title="Fotokite Sigma" description="Supported hardware profile">
+      <nav className="breadcrumb" aria-label="Breadcrumb">
+        <Link href="/technology-watch">Technology Watch</Link>
+        <span>/</span>
+        <Link href="/hardware">Hardware</Link>
+        <span>/</span>
+        <strong>Fotokite Sigma</strong>
+      </nav>
       <section className="product-hero">
         <div className="hero-left">
           <div className="eyebrow-small">SUPPORTED HARDWARE</div>

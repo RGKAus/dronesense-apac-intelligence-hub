@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { primaryNavigation } from "./navigation";
+import { applicationBrand } from "../lib/branding";
 
 export default function MobileNavigation({ activePath }: { activePath: string }) {
   const menu = useRef<HTMLDetailsElement>(null);
@@ -28,8 +29,8 @@ export default function MobileNavigation({ activePath }: { activePath: string })
         <aside className="mobile-nav-drawer" aria-label="Primary navigation">
           <div className="mobile-nav-drawer-header">
             <div className="mobile-nav-brand">
-              <strong>DroneSense</strong>
-              <span>by Versaterm · Intelligence Hub</span>
+              <strong>{applicationBrand.name}</strong>
+              <span>{applicationBrand.product}</span>
             </div>
             <button type="button" className="mobile-nav-close" onClick={() => close(true)}>Close</button>
           </div>

@@ -1,5 +1,9 @@
 import AppShell from "../../components/AppShell";
 import HardwareCard from "../../components/HardwareCard";
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Hardware | Technology Watch" };
 
 const hardware = [
   {
@@ -16,11 +20,16 @@ const hardware = [
 export default function HardwarePage() {
   return (
     <AppShell
-      activePath="/hardware"
+      activePath="/technology-watch"
       eyebrow="HARDWARE"
       title="Supported Hardware"
       description="Hardware, aircraft, sensors and technology integrations supported by the DroneSense platform."
     >
+      <nav className="breadcrumb" aria-label="Breadcrumb">
+        <Link href="/technology-watch">Technology Watch</Link>
+        <span>/</span>
+        <strong>Hardware</strong>
+      </nav>
       <section className="country-grid">
         {hardware.map((h) => (
           <HardwareCard

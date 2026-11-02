@@ -1,4 +1,8 @@
 import { login } from "./actions";
+import type { Metadata } from "next";
+import { applicationBrand } from "../../lib/branding";
+
+export const metadata: Metadata = { title: "Sign in" };
 
 type LoginPageProps = {
   searchParams: Promise<{
@@ -16,12 +20,11 @@ export default async function LoginPage({
     <main className="auth-shell">
       <section className="auth-card">
         <div className="auth-brand">
-          <div className="brand-mark auth-brand-mark">DS</div>
+          <div className="brand-mark auth-brand-mark">{applicationBrand.mark}</div>
 
           <div className="brand-copy">
-            <p className="brand-name">DroneSense</p>
-            <p className="brand-subtitle">by Versaterm</p>
-            <p className="brand-product">Intelligence Hub</p>
+            <p className="brand-name">{applicationBrand.name}</p>
+            <p className="brand-product">{applicationBrand.product}</p>
           </div>
         </div>
 

@@ -1,3 +1,5 @@
+# Versaterm Intelligence Hub
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -36,6 +38,57 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 Production deployment test.
 Deployment refresh 18 Aug.
+
+## Versaterm portfolio and application identity
+
+The shared sidebar, mobile header/drawer, login and root metadata use
+[one application identity](./lib/branding.ts): **Versaterm Intelligence Hub**.
+DroneSense remains a portfolio product and existing specialist intelligence is
+preserved. The repository name, authentication, deployment configuration and
+Customers & Opportunities data model are unchanged by this phase.
+
+`/versaterm-products` replaces Hardware in shared primary navigation. It and all
+six profiles consume [the canonical products](./lib/versatermProducts.ts) already
+used by customer handovers:
+
+- `/versaterm-products/iapro`
+- `/versaterm-products/adashi`
+- `/versaterm-products/mindbase`
+- `/versaterm-products/visual-labs`
+- `/versaterm-products/cad`
+- `/versaterm-products/dronesense`
+
+[The shared profile component](./components/VersatermProductProfile.tsx) covers
+overview, capabilities, customers/sectors, integrations, competitors, ANZ/Europe,
+documents/sources and verification status. [Typed evidence sections](./lib/versatermProductIntelligence.ts)
+are deliberately empty: no product capabilities, pricing, integrations, market
+availability, source URLs or verification dates were invented. All six profiles
+show Research Required until primary-source review is performed. Product identity
+comes from the requested catalogue, not a claim that detailed research is complete.
+CAD scope/edition must be established before attributing specific capabilities.
+
+Future research should establish product scope/version, primary documentation,
+capability limits, named integrations and compatibility versions, intended users,
+evidence-backed competitive analysis, Australia/New Zealand/European availability,
+localization, hosting, regulation and procurement considerations. Add reviewed
+claims with source references and verification dates; do not copy specialist facts
+into conflicting product datasets.
+
+Hardware is now reached through **Technology Watch > Hardware intelligence**.
+`/hardware` and `/hardware/fotokite-sigma` remain unchanged URLs with compatible
+links and Technology Watch breadcrumbs/active navigation. The existing hardware
+record, image component and specialist profiles are preserved; no redirect is
+needed. Technology Watch filters, ecosystem data and existing Axon routes remain.
+
+Validation:
+
+```sh
+node --test tests/customers.test.mjs tests/portfolio.test.mjs
+npx tsc --noEmit
+npm run build
+```
+
+No dependencies, database changes or migrations are required for this phase.
 
 ## Customers & Opportunities - demonstration handover workflow
 

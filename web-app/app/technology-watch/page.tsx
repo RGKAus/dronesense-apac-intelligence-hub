@@ -1,4 +1,6 @@
 import AppShell from "../../components/AppShell";
+import Link from "next/link";
+import type { Metadata } from "next";
 import TechnologyWatchBrowser from "../../components/TechnologyWatchBrowser";
 import {
   getTechnologyCompanies,
@@ -14,6 +16,8 @@ import {
 } from "../../lib/technologyWatchData";
 
 type SearchParams = Record<string, string | string[] | undefined>;
+
+export const metadata: Metadata = { title: "Technology Watch" };
 
 function readSingleValue(value: string | string[] | undefined): string {
   if (Array.isArray(value)) return value[0] ?? "";
@@ -65,6 +69,7 @@ export default async function TechnologyWatchPage(props: {
       eyebrow="TECHNOLOGY INTELLIGENCE"
       title="TECHNOLOGY WATCH"
       description="Understand the technologies, companies and integrations shaping public-safety drone operations."
+      headingAction={<Link className="secondary-button" href="/hardware">Hardware intelligence</Link>}
     >
       <section className="panel market-intro-panel">
         <p>

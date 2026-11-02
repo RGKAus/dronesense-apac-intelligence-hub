@@ -13,7 +13,7 @@ export const primaryNavigation: NavigationItem[] = [
   { label: "Regulations", href: "/regulations" },
   { label: "Procurement", href: "/procurement" },
   { label: "Technology Watch", href: "/technology-watch" },
-  { label: "Hardware", href: "/hardware" },
+  { label: "Versaterm Products", href: "/versaterm-products" },
   { label: "Competitors", href: "/competitors" },
   { label: "Partners", href: "/partners" },
   { label: "Reports", href: "/reports" },

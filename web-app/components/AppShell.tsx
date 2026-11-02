@@ -3,6 +3,7 @@ import { logout } from "../app/logout/actions";
 import type { ReactNode } from "react";
 import { primaryNavigation } from "./navigation";
 import MobileNavigation from "./MobileNavigation";
+import { applicationBrand } from "../lib/branding";
 
 type AppShellProps = {
   activePath: string;
@@ -25,12 +26,11 @@ export default function AppShell({
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark">DS</div>
+          <div className="brand-mark">{applicationBrand.mark}</div>
 
           <div className="brand-copy">
-            <p className="brand-name">DroneSense</p>
-            <p className="brand-subtitle">by Versaterm</p>
-            <p className="brand-product">Intelligence Hub</p>
+            <p className="brand-name">{applicationBrand.name}</p>
+            <p className="brand-product">{applicationBrand.product}</p>
           </div>
         </div>
 
@@ -42,6 +42,7 @@ export default function AppShell({
                 item.href === activePath ? "nav-item active" : "nav-item"
               }
               key={item.label}
+              aria-current={item.href === activePath ? "page" : undefined}
             >
               <span className="nav-symbol">{index + 1}</span>
               {item.label}
@@ -57,8 +58,8 @@ export default function AppShell({
       <main className="main-area">
         <header className="topbar">
           <div className="mobile-brand">
-            <strong>DroneSense</strong>
-            <span>by Versaterm · Intelligence Hub</span>
+            <strong>{applicationBrand.name}</strong>
+            <span>{applicationBrand.product}</span>
           </div>
 
           <MobileNavigation activePath={activePath} />

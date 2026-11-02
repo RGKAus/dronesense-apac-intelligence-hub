@@ -1,0 +1,18 @@
+.portfolio-stack { display: grid; gap: 16px; min-width: 0; }
+.portfolio-stack h2 { color: var(--navy); font-size: 19px; margin: 0; }
+.portfolio-stack p { font-size: 13px; line-height: 1.7; margin: 0; }
+.portfolio-stack .secondary-button, .portfolio-stack .badge-early-access { width: fit-content; max-width: 100%; }
+.portfolio-directory { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.portfolio-directory article { align-content: start; }
+.portfolio-directory h2 a:hover { text-decoration: underline; }
+.portfolio-row { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; }
+.portfolio-section-links { display: flex; flex-wrap: wrap; gap: 12px 20px; }
+.portfolio-section-links a { color: var(--navy); font-size: 12px; text-decoration: underline; }
+.portfolio-research { color: var(--warning); font-size: 13px; }
+.portfolio-muted { color: var(--secondary); }
+.portfolio-stack section[id] { scroll-margin-top: 100px; }
+@media (max-width: 1100px) { .portfolio-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .portfolio-directory { grid-template-columns: 1fr; }
+  .portfolio-stack .panel { padding: 16px; }
+}
