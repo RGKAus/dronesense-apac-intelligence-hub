@@ -1,0 +1,52 @@
+.log-stack { display: grid; gap: 16px; min-width: 0; }
+.log-stack h2 { color: var(--navy); font-size: 19px; margin: 0; }
+.log-stack h3 { color: var(--navy); font-size: 18px; margin: 0; }
+.log-stack h4 { color: var(--navy); font-size: 13px; margin: 0; }
+.log-stack p { font-size: 13px; line-height: 1.7; margin: 0; }
+.log-row { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; min-width: 0; }
+.log-toolbar { align-items: flex-start; }
+.log-toolbar > div { flex: 1 1 240px; }
+.log-toolbar p { margin-top: 6px; }
+.log-muted { color: var(--secondary); font-size: 12px; }
+.log-demo-notice { background: #fff2e8; border: 1px solid #edc7ab; border-left: 4px solid var(--brand-orange); border-radius: 12px; padding: 16px 18px; }
+.log-demo-notice strong { color: var(--brand-teal-deep); font-size: 14px; }
+.log-demo-notice p { margin-top: 6px; }
+.log-field { display: grid; font-size: 12px; font-weight: 700; gap: 7px; min-width: 0; }
+.log-field .filter-control { max-width: 100%; min-width: 0; width: 100%; }
+.log-field textarea { font-weight: 400; resize: vertical; }
+.log-notes-input { font-size: 15px; line-height: 1.8; min-height: 340px; white-space: pre-wrap; }
+.log-form-grid, .log-filter-grid { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.log-tag-picker, .log-organisation-picker, .log-action-editor { border: 1px solid var(--border); border-radius: 10px; margin: 0; min-width: 0; padding: 12px; }
+.log-tag-picker legend, .log-organisation-picker legend, .log-action-editor legend { color: var(--navy); font-size: 12px; font-weight: 700; max-width: 100%; padding: 0 5px; }
+.log-tag-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.log-tag-option { align-items: center; background: var(--surface-muted); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; display: flex; font-size: 12px; gap: 7px; min-height: 40px; padding: 7px 10px; }
+.log-tag-option.selected { background: var(--brand-teal-soft); border-color: var(--brand-teal); }
+.log-tag-option input, .log-checkbox input { accent-color: var(--brand-teal); flex-shrink: 0; height: 17px; width: 17px; }
+.log-checkbox { align-items: center; display: flex; font-size: 12px; gap: 9px; line-height: 1.6; min-height: 36px; }
+.log-checkbox small { color: var(--secondary); display: block; font-size: 11px; }
+.log-organisation-options { display: grid; gap: 8px; max-height: 260px; overflow-y: auto; padding: 4px; }
+.log-details { background: var(--surface-muted); border: 1px solid var(--border); border-radius: 10px; min-width: 0; padding: 12px; }
+.log-details > summary { color: var(--navy); cursor: pointer; font-size: 13px; font-weight: 700; line-height: 1.6; }
+.log-details > .log-stack, .log-details > p { margin-top: 16px; }
+.log-transcript { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-size: 15px; line-height: 1.9; margin: 14px auto; max-height: 65vh; max-width: 80ch; overflow-wrap: anywhere; overflow-y: auto; padding: 16px; white-space: pre-wrap; }
+.log-badge { background: var(--brand-teal-soft); border-radius: 8px; color: var(--brand-teal-deep); font-size: 11px; font-weight: 700; line-height: 1.6; padding: 5px 8px; }
+.log-meta { color: var(--secondary); font-size: 12px; justify-content: flex-start; }
+.log-entry-card > .log-row h3 { flex: 1 1 240px; }
+.log-follow-ups { border-left: 3px solid var(--brand-orange); padding-left: 14px; }
+.log-follow-ups ul { font-size: 12px; line-height: 1.8; margin: 8px 0 0; padding-left: 18px; }
+.log-editor-actions { background: var(--surface); border-top: 2px solid var(--brand-orange); display: grid; gap: 8px; padding-top: 16px; }
+.log-editor-actions .log-row { justify-content: flex-start; }
+.log-editor-actions p { color: var(--secondary); font-size: 11px; }
+.log-error, .log-success { border: 1px solid; border-radius: 8px; padding: 12px; }
+.log-error { background: #fff1f1; border-color: #efb5b5; color: var(--critical); }
+.log-success { background: #e9f8f0; border-color: #b6dfcb; color: #096b48; }
+.log-stack button:disabled { cursor: not-allowed; opacity: 0.6; }
+.log-stack .secondary-button { max-width: 100%; width: fit-content; }
+@media (min-width: 1300px) { .log-filter-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .log-form-grid, .log-filter-grid { grid-template-columns: 1fr; }
+  .log-stack .panel { padding: 16px; }
+  .log-notes-input { font-size: 16px; min-height: 360px; }
+  .log-field input, .log-field select { font-size: 16px; }
+  .log-tag-option { min-height: 44px; }
+}

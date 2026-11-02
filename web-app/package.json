@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test:customers": "node --test tests/customers.test.mjs",
-    "test:portfolio": "node --test tests/portfolio.test.mjs"
+    "test:portfolio": "node --test tests/portfolio.test.mjs",
+    "test:intelligence-log": "node --test tests/intelligence-log.test.mjs"
   },
   "dependencies": {
     "jose": "^6.2.8",

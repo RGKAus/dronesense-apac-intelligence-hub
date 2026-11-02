@@ -2,6 +2,53 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Intelligence Log - fictional notebook demonstration
+
+`/intelligence-log` is available in shared desktop/mobile navigation. Use **New
+Entry** to start writing immediately; only notes are mandatory. The date defaults
+to the current local time and type defaults to General. Titles, multiple quick
+tags, multiple organisation links, AU/NZ location, source/evidence and follow-up
+actions are optional. Save and Cancel affect only the open entry. Finish that
+entry before editing another; filtering does not discard drafts.
+
+The directory sorts by entry date (newest first), searches entire transcripts,
+and combines type, country, jurisdiction, organisation, all selected tags and
+outstanding-follow-up filters. Full transcripts preserve line breaks in a
+keyboard-scrollable reading area. Notes support up to 200,000 characters.
+
+**Fictional examples only.** All nonempty free-text fields must be labelled
+`Fictional:` or `Demo:`. A demonstration guard rejects common emails, phone
+numbers and URLs; it cannot detect every sensitive disclosure and is **not a
+security control or approval for real information**. Do not paste real notes
+or transcripts, even temporarily. Save changes React memory only; reloading or
+leaving the module resets entries and drafts. No database/API writes, browser
+storage, AI, external transcription or ingestion are introduced.
+
+[The domain model](./lib/intelligenceLog.ts) references existing Agency IDs and
+the fixed fictional customer-directory identities. It neither creates
+organisations nor infers customer relationships, geography or confirmed evidence.
+Links to real Agencies are demonstration associations only, not claims that a
+meeting or customer relationship exists. Customer-created temporary identities
+remain scoped to the Customers module and are not available after leaving it;
+this phase deliberately preserves that module's reset semantics.
+`organisationIds` already supports multiple links, and
+`getLogEntriesForOrganisation` supports a future customer-profile view without
+changing customer records.
+
+The model carries nullable individual-attribution fields and a revision counter
+for stale-draft detection. These are preparation only, **not an audit trail**:
+shared login cannot identify a user, and no authors or audit events are invented.
+Before real entry/persistence, company approval, named-user authentication,
+organisation/role authorization, isolated authenticated APIs, explicit RLS and
+permissions, retention/deletion policy, audit history, secure transcript search
+and sensitive-data handling must be designed and reviewed. Future AI summaries
+or action extraction require separate approval and are not implemented.
+
+Run `npm run test:intelligence-log` for domain tests, plus existing customer and
+portfolio regression suites. Reusable UI is in
+[IntelligenceLogEditor](./components/IntelligenceLogEditor.tsx) and
+[IntelligenceLogBrowser](./components/IntelligenceLogBrowser.tsx).
+
 ## Getting Started
 
 First, run the development server:
