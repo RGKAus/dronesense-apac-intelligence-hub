@@ -33,7 +33,7 @@ function IntelligenceSection<T>({
   id, title, field, emptyValue, onSave, renderValue, children,
 }: {
   id: string; title: string; field: IntelligenceValue<T>; emptyValue: T;
-  onSave: (field: IntelligenceValue<T>) => string | null;
+  onSave: (field: IntelligenceValue<T>) => string | null | Promise<string | null>;
   renderValue: (value: T, onChange: (value: T) => void) => ReactNode;
   children: ReactNode;
 }) {
@@ -56,7 +56,7 @@ function IntelligenceSection<T>({
 }
 
 export default function CustomerProfile({ organisationId }: { organisationId: string }) {
-  const { organisations, handovers, saveField, saveOrganisation, createCustomer } = useCustomerDemo();
+  const { organisations, handovers, saveField, saveOrganisation, createCustomer, persistence } = useCustomerDemo();
   const organisation = organisations.find((item) => item.id === organisationId);
   const record = handovers.find((item) => item.organisationId === organisationId);
   const [error, setError] = useState<string | null>(null);
@@ -64,8 +64,8 @@ export default function CustomerProfile({ organisationId }: { organisationId: st
   if (!organisation) {
     return (
       <section className="panel customer-stack">
-        <h2>Temporary demonstration profile unavailable</h2>
-        <p>This in-memory profile was cleared by a reload or leaving the module. Create a new fictional profile from the directory; nothing was saved permanently.</p>
+        <h2>{persistence === "local" ? "Local fictional profile unavailable" : "Temporary demonstration profile unavailable"}</h2>
+        <p>{persistence === "local" ? "This identity is not in the saved workspace. It may have been deleted or removed by a restore. Return to the directory." : "This in-memory profile was cleared by a reload or leaving the module. Create a new fictional profile from the directory; nothing was saved permanently."}</p>
         <Link className="customer-back-link" href="/customers">Return to directory</Link>
       </section>
     );
@@ -99,8 +99,8 @@ export default function CustomerProfile({ organisationId }: { organisationId: st
         <section className="panel customer-stack">
           <h2>{organisation.origin === "agency" ? "Real customer intelligence is locked" : "No demonstration handover yet"}</h2>
           <p>Canonical Agency identities remain read-only. No commercial relationship is inferred and no fictional intelligence is attached to real organisations.</p>
-          {organisation.origin === "agency" ? <Link className="customer-back-link" href="/agencies">Open Agencies directory</Link> : (
-            <button type="button" className="primary-button" onClick={() => setError(createCustomer(organisation.name, organisation.country, organisation.region).error)}>Start blank demonstration handover</button>
+          {organisation.origin === "agency" ? (persistence === "local" ? <p>This is an identity-only reference from the canonical public directory.</p> : <Link className="customer-back-link" href="/agencies">Open Agencies directory</Link>) : (
+            <button type="button" className="primary-button" onClick={async () => setError((await createCustomer(organisation.name, organisation.country, organisation.region)).error)}>Start blank demonstration handover</button>
           )}
         </section>
       ) : (

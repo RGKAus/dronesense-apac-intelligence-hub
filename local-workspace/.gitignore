@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.runtime/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+*.sqlite*
+*.db*
+/backups/

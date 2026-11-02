@@ -36,7 +36,7 @@ export default function CustomersDirectory() {
     return record ? [record] : [];
   });
 
-  function submitAdd(event: FormEvent<HTMLFormElement>) {
+  async function submitAdd(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if ((filters.country !== "AU" && filters.country !== "NZ") || !canCreate) {
       setError("Select Country and State/Region in the directory before adding a customer.");
@@ -46,7 +46,7 @@ export default function CustomersDirectory() {
       setError("Confirm that you are using a fictional demonstration organisation only.");
       return;
     }
-    const result = createCustomer(organisationName, filters.country, filters.region);
+    const result = await createCustomer(organisationName, filters.country, filters.region);
     setError(result.error);
     if (!result.error && result.organisationId) router.push(`/customers/${result.organisationId}`);
   }

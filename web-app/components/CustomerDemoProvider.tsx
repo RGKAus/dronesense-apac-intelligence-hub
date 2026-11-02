@@ -11,17 +11,18 @@ import {
   type EditableHandoverFields, type EditableHandoverKey,
 } from "../lib/customers";
 
-type CustomerDemoContextValue = {
+export type CustomerDemoContextValue = {
   organisations: CustomerOrganisation[];
   handovers: CustomerHandover[];
   filters: CustomerFilters;
   setFilters: (filters: CustomerFilters) => void;
-  createCustomer: (name: string, country: CustomerCountry, region: string) => { error: string | null; organisationId?: string };
-  saveField: <K extends EditableHandoverKey>(id: string, key: K, value: EditableHandoverFields[K]) => string | null;
-  saveOrganisation: (organisation: CustomerOrganisation) => string | null;
+  createCustomer: (name: string, country: CustomerCountry, region: string) => { error: string | null; organisationId?: string } | Promise<{ error: string | null; organisationId?: string }>;
+  saveField: <K extends EditableHandoverKey>(id: string, key: K, value: EditableHandoverFields[K]) => string | null | Promise<string | null>;
+  saveOrganisation: (organisation: CustomerOrganisation) => string | null | Promise<string | null>;
+  persistence?: "local";
 };
 
-const CustomerDemoContext = createContext<CustomerDemoContextValue | null>(null);
+export const CustomerDemoContext = createContext<CustomerDemoContextValue | null>(null);
 
 export default function CustomerDemoProvider({
   canonicalOrganisations, children,

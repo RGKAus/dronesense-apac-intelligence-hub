@@ -3,6 +3,7 @@
 import { useRef, useState, type ReactNode, type FormEvent } from "react";
 import type { IntelligenceValue } from "../lib/customers";
 import { versatermProducts, type VersatermProductId } from "../lib/versatermProducts";
+import { useCustomerDemo } from "./CustomerDemoProvider";
 
 export default function CustomerSectionEditor<T>({
   id, title, value, onSave, children, renderEditor, locked = false,
@@ -10,7 +11,7 @@ export default function CustomerSectionEditor<T>({
   id: string;
   title: string;
   value: T;
-  onSave: (value: T) => string | null;
+  onSave: (value: T) => string | null | Promise<string | null>;
   children: ReactNode;
   renderEditor: (draft: T, setDraft: (value: T) => void) => ReactNode;
   locked?: boolean;
@@ -19,15 +20,19 @@ export default function CustomerSectionEditor<T>({
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const editButton = useRef<HTMLButtonElement>(null);
+  const [saving, setSaving] = useState(false);
+  const { persistence } = useCustomerDemo();
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (draft === null) return;
-    const saveError = onSave(draft);
+    if (draft === null || saving) return;
+    setSaving(true);
+    const saveError = await onSave(draft);
+    setSaving(false);
     setError(saveError);
     if (!saveError) {
       setDraft(null);
-      setMessage("Section saved in memory only. Any other open section drafts are unchanged.");
+      setMessage(persistence === "local" ? "Section saved to the local fictional workspace. Other section drafts are unchanged." : "Section saved in memory only. Any other open section drafts are unchanged.");
       editButton.current?.focus();
     }
   }
@@ -45,8 +50,8 @@ export default function CustomerSectionEditor<T>({
           {renderEditor(draft, setDraft)}
           {error && <p className="customer-error" role="alert">{error}</p>}
           <div className="customer-actions">
-            <button type="submit" className="primary-button">Save section</button>
-            <button type="button" className="secondary-button" onClick={() => {
+            <button type="submit" className="primary-button" disabled={saving}>{saving ? "Saving..." : "Save section"}</button>
+            <button type="button" className="secondary-button" disabled={saving} onClick={() => {
               setDraft(null); setError(null); editButton.current?.focus();
             }}>Cancel</button>
           </div>

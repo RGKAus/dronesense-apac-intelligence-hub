@@ -2,6 +2,15 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Separate local workspace prototype
+
+[The isolated local application](../local-workspace/README.md) reuses the customer
+and notebook UI with acknowledged local SQLite persistence for fictional records
+only. Start it separately with `cd ../local-workspace && npm start`.
+It is not part of this application's deployment or routes. This public Hub's
+Customers and Intelligence Log remain memory-only demonstrations; no local
+database, storage API or private configuration is imported into its build.
+
 ## Intelligence Log - fictional notebook demonstration
 
 `/intelligence-log` is available in shared desktop/mobile navigation. Use **New

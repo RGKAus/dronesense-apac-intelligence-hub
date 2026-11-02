@@ -13,13 +13,22 @@ const subscribeToLocalTime = () => () => {};
 const localTimeReady = () => true;
 const serverTimeReady = () => false;
 
-export default function IntelligenceLogBrowser({ organisations }: { organisations: CustomerOrganisation[] }) {
+export default function IntelligenceLogBrowser({ organisations, storage }: {
+  organisations: CustomerOrganisation[];
+  storage?: {
+    entries: IntelligenceLogEntry[];
+    save: (entry: IntelligenceLogEntry) => Promise<string | null>;
+    remove: (id: string) => Promise<string | null>;
+  };
+}) {
   // Match server HTML before formatting in the browser's own timezone.
   const canFormatLocalTime = useSyncExternalStore(subscribeToLocalTime, localTimeReady, serverTimeReady);
-  const [entries, setEntries] = useState(getDemoLogEntries);
+  const [memoryEntries, setEntries] = useState(getDemoLogEntries);
+  const entries = storage?.entries ?? memoryEntries;
   const [filters, setFilters] = useState<LogFilters>(emptyLogFilters);
   const [draft, setDraft] = useState<IntelligenceLogEntry | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [operationError, setOperationError] = useState<string | null>(null);
   const newEntry = useRef<HTMLButtonElement>(null);
   const savedHeading = useRef<HTMLHeadingElement>(null);
   const names = new Map(organisations.map((organisation) => [organisation.id, organisation.name]));
@@ -28,12 +37,15 @@ export default function IntelligenceLogBrowser({ organisations }: { organisation
   const outstanding = entries.reduce((sum, entry) => sum + entry.actions.filter((action) => !action.completed).length, 0);
   const displayDate = (timestamp: string) => canFormatLocalTime ? formatLogDate(timestamp) : `${timestamp.slice(0, 16).replace("T", " ")} UTC`;
 
-  function save(value: IntelligenceLogEntry): string | null {
+  async function save(value: IntelligenceLogEntry): Promise<string | null> {
     const result = saveLogEntry(entries, value, organisations, new Date());
     if (result.error) return result.error;
-    setEntries(result.entries);
+    if (storage) {
+      const error = await storage.save(value);
+      if (error) return error;
+    } else setEntries(result.entries);
     setDraft(null);
-    setMessage("Entry saved in memory only. Active filters may hide it; clear filters to see every entry.");
+    setMessage(storage ? "Entry saved to local SQLite. Active filters may hide it." : "Entry saved in memory only. Active filters may hide it; clear filters to see every entry.");
     requestAnimationFrame(() => savedHeading.current?.focus());
     return null;
   }
@@ -42,7 +54,7 @@ export default function IntelligenceLogBrowser({ organisations }: { organisation
     <div className="log-stack">
       <aside className="log-demo-notice" aria-label="Demonstration notebook boundary">
         <strong>Fictional notebook only - not approved for real intelligence or transcripts.</strong>
-        <p>Write fictional examples only, labelled &quot;Fictional:&quot; or &quot;Demo:&quot;. No confidential information, emails, phone numbers or URLs. All entries and drafts are memory-only and reset on reload or leaving this module. No database, browser storage, AI or transcription service is used.</p>
+        <p>{storage ? 'Fictional examples only. Saved entries persist in local SQLite; unsaved drafts do not. No real transcripts, contact details, external services or browser storage.' : 'Write fictional examples only, labelled "Fictional:" or "Demo:". No confidential information, emails, phone numbers or URLs. All entries and drafts are memory-only and reset on reload or leaving this module. No database, browser storage, AI or transcription service is used.'}</p>
       </aside>
       <div className="log-row log-toolbar">
         <div><h2>Daily intelligence notebook</h2><p className="log-muted">Write first, organise later. {outstanding} outstanding follow-up {outstanding === 1 ? "action" : "actions"} across all entries.</p></div>
@@ -51,11 +63,12 @@ export default function IntelligenceLogBrowser({ organisations }: { organisation
         }}>New Entry</button>
       </div>
       {draft && (
-        <IntelligenceLogEditor key={`${draft.id}-${draft.revision}`} entry={draft} organisations={organisations} onSave={save} onCancel={() => {
+        <IntelligenceLogEditor key={`${draft.id}-${draft.revision}`} entry={draft} organisations={organisations} onSave={save} persistence={storage ? "local" : "memory"} onCancel={() => {
           setDraft(null); setMessage("Draft cancelled. Saved entries are unchanged."); requestAnimationFrame(() => newEntry.current?.focus());
         }} />
       )}
       {message && <p className="log-success" role="status">{message}</p>}
+      {operationError && <p className="log-error" role="alert">{operationError}</p>}
       {draft && <p className="log-muted">Finish Save or Cancel on this entry before opening another. Search and filters do not discard your draft.</p>}
       <section className="panel log-stack" aria-labelledby="log-filters-heading">
         <h2 id="log-filters-heading">Find entries</h2>
@@ -104,6 +117,12 @@ export default function IntelligenceLogBrowser({ organisations }: { organisation
             <div className="log-row">
               <h3 id={`log-title-${entry.id}`}>{entry.title}</h3>
               <button type="button" className="secondary-button" aria-label={`Edit ${entry.title}`} disabled={draft !== null} onClick={() => { setDraft(entry); setMessage(null); }}>Edit</button>
+              {storage && <button type="button" className="secondary-button" disabled={draft !== null} aria-label={`Delete ${entry.title}`} onClick={async () => {
+                if (!window.confirm("Delete this fictional entry and its follow-ups? Backups are retained.")) return;
+                const error = await storage.remove(entry.id);
+                setOperationError(error);
+                setMessage(error ? null : "Entry deleted from local SQLite.");
+              }}>Delete</button>}
             </div>
             <div className="log-row log-meta">
               <time dateTime={entry.occurredAt}>{displayDate(entry.occurredAt)}</time>

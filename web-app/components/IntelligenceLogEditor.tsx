@@ -28,17 +28,19 @@ export function LogTagPicker({
 }
 
 export default function IntelligenceLogEditor({
-  entry, organisations, onSave, onCancel,
+  entry, organisations, onSave, onCancel, persistence = "memory",
 }: {
   entry: IntelligenceLogEntry;
   organisations: CustomerOrganisation[];
-  onSave: (draft: IntelligenceLogEntry) => string | null;
+  onSave: (draft: IntelligenceLogEntry) => string | null | Promise<string | null>;
   onCancel: () => void;
+  persistence?: "memory" | "local";
 }) {
   const [draft, setDraft] = useState(() => structuredClone(entry));
   const [localDateTime, setLocalDateTime] = useState(() => toLocalDateTime(entry.occurredAt));
   const [organisationSearch, setOrganisationSearch] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [saving, setSaving] = useState(false);
   const notes = useRef<HTMLTextAreaElement>(null);
   const errorSummary = useRef<HTMLParagraphElement>(null);
 
@@ -48,14 +50,17 @@ export default function IntelligenceLogEditor({
     draft.organisationIds.includes(organisation.id) || organisation.name.toLowerCase().includes(organisationSearch.trim().toLowerCase()),
   );
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const occurredAt = fromLocalDateTime(localDateTime);
     if (!occurredAt) {
       setError("Enter a valid local date and time. Nonexistent daylight-saving times are not accepted.");
       return;
     }
-    const saveError = onSave({ ...draft, occurredAt });
+    if (saving) return;
+    setSaving(true);
+    const saveError = await onSave({ ...draft, occurredAt });
+    setSaving(false);
     setError(saveError);
     if (saveError) requestAnimationFrame(() => errorSummary.current?.focus());
   }
@@ -64,7 +69,7 @@ export default function IntelligenceLogEditor({
     <section className="panel log-stack log-editor" aria-labelledby="log-editor-heading">
       <div className="log-row">
         <h2 id="log-editor-heading">{entry.revision ? "Edit entry" : "New entry"}</h2>
-        <span className="log-badge">Fictional · memory only</span>
+        <span className="log-badge">{persistence === "local" ? "Fictional · local SQLite" : "Fictional · memory only"}</span>
       </div>
       <p className="log-muted" id="log-writing-help">Start writing below. Only notes are required; title defaults to &quot;Untitled fictional entry&quot;. Label fictional text with &quot;Fictional:&quot;. Never paste real meeting notes, contact details or confidential transcripts.</p>
       <form className="log-stack" onSubmit={submit} aria-label={entry.revision ? "Edit intelligence entry" : "New intelligence entry"}>
@@ -96,7 +101,7 @@ export default function IntelligenceLogEditor({
             value={draft.notes} onChange={(event) => setDraft({ ...draft, notes: event.target.value })}
           />
         </label>
-        <p className="log-muted" id="log-character-count">{draft.notes.length.toLocaleString("en-AU")} / {MAX_LOG_NOTES.toLocaleString("en-AU")} characters · Text stays in this tab&apos;s memory only</p>
+        <p className="log-muted" id="log-character-count">{draft.notes.length.toLocaleString("en-AU")} / {MAX_LOG_NOTES.toLocaleString("en-AU")} characters · {persistence === "local" ? "Draft stays in memory until Save" : "Text stays in this tab's memory only"}</p>
         <LogTagPicker label="Quick tags (optional)" value={draft.tags} onChange={(tags) => setDraft({ ...draft, tags })} />
         <details className="log-details">
           <summary>Organisation links, location and evidence (optional)</summary>
@@ -173,10 +178,10 @@ export default function IntelligenceLogEditor({
         {error && <p className="log-error" role="alert" ref={errorSummary} tabIndex={-1}>{error}</p>}
         <div className="log-editor-actions">
           <div className="log-row">
-            <button className="primary-button" type="submit">Save entry</button>
-            <button className="secondary-button" type="button" onClick={onCancel}>Cancel</button>
+            <button className="primary-button" type="submit" disabled={saving}>{saving ? "Saving..." : "Save entry"}</button>
+            <button className="secondary-button" type="button" disabled={saving} onClick={onCancel}>Cancel</button>
           </div>
-          <p>Save updates memory only. Reloading or leaving this module discards entries and drafts.</p>
+          <p>{persistence === "local" ? "Save persists fictional records to local SQLite. Unsaved drafts are discarded on navigation." : "Save updates memory only. Reloading or leaving this module discards entries and drafts."}</p>
         </div>
       </form>
     </section>
